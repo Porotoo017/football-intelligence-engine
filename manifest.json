@@ -1,0 +1,8 @@
+{
+  "name": "Football Intel",
+  "short_name": "FIE",
+  "start_url": "/football-intelligence-engine/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#10b981"
+}
