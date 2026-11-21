@@ -1,0 +1,23 @@
+{
+  "combinada": {
+    "fecha": "2026-11-21",
+    "total_odds": 4.35,
+    "juegos": [
+      {
+        "partido": "River Plate vs Boca Juniors",
+        "prediccion": "Victoria River",
+        "confianza": "Alta"
+      },
+      {
+        "partido": "Racing Club vs Independiente",
+        "prediccion": "Ambos anotan",
+        "confianza": "Media-Alta"
+      },
+      {
+        "partido": "San Lorenzo vs Huracán",
+        "prediccion": "Menos de 2.5 goles",
+        "confianza": "Media"
+      }
+    ]
+  }
+}
