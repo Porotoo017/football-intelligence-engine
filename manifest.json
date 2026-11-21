@@ -1,8 +1,16 @@
 {
-  "name": "Football Intel",
-  "short_name": "FIE",
-  "start_url": "/football-intelligence-engine/",
+  "name": "Football Intelligence Engine",
+  "short_name": "FootballIntel",
+  "description": "Motor táctico de fútbol para LPF",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#09090b",
-  "theme_color": "#10b981"
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/activity.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
 }

@@ -1,4 +1,20 @@
 [
-    {"partido": "Boca vs Racing", "pick": "Más de 8.5 Corners"},
-    {"partido": "River vs Independiente", "pick": "Doble Oportunidad: River o Empate"}
+    {
+        "partido": "Boca Juniors vs Racing Club",
+        "pick": "Doble Oportunidad: Boca o Empate",
+        "corners": "Más de 8.5 Córners (78%)",
+        "remates": "Cavani 2+ tiros al arco"
+    },
+    {
+        "partido": "River Plate vs Independiente",
+        "pick": "Doble Oportunidad: River o Empate",
+        "corners": "Más de 9.5 Córners (82%)",
+        "remates": "Borja 2+ tiros al arco"
+    },
+    {
+        "partido": "San Lorenzo vs Huracán",
+        "pick": "Menos de 3.5 Goles",
+        "corners": "Más de 8.5 Córners",
+        "remates": "Remates totales > 22.5"
+    }
 ]
