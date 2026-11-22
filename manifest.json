@@ -1,15 +1,9 @@
 {
   "name": "Football Intelligence Pro",
-  "short_name": "FootPro",
+  "short_name": "Football AI",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0a0e14",
-  "theme_color": "#00d4ff",
-  "icons": [
-    {
-      "src": "https://r2.thesportsdb.com/images/media/team/badge/bm7krb1775741582.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [{ "src": "icon.png", "sizes": "192x192", "type": "image/png" }]
 }
