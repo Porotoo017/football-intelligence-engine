@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Intelligence Pro</title>
+    <link rel="manifest" href="manifest.json">
     <style>
-        :root { --bg: #020617; --card: #0f172a; --accent: #38bdf8; --text: #f8fafc; }
-        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .grid { display: grid; gap: 20px; }
-        .card { background: var(--card); padding: 20px; border-radius: 16px; border: 1px solid #1e293b; }
-        h1 { color: var(--accent); text-align: center; }
-        .leg { border-left: 4px solid var(--accent); padding-left: 15px; margin: 10px 0; }
-        .score { font-size: 1.5em; font-weight: bold; color: var(--accent); }
+        body { background: #0a0e14; color: white; font-family: sans-serif; margin: 0; padding: 15px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 15px; margin-bottom: 10px; border-radius: 12px; }
+        h1 { font-size: 1.5rem; color: #58a6ff; }
+        .odd { font-weight: bold; color: #238636; }
     </style>
 </head>
 <body>
     <h1>Football Intelligence Pro</h1>
-    <div id="dashboard" class="grid"></div>
+    <div id="dashboard">Cargando análisis táctico masivo...</div>
     <script>
         fetch('parlay_engine_output.json')
-            .then(res => res.json())
+            .then(r => r.json())
             .then(data => {
-                const ticket = data.parlay_ticket;
-                let html = `<div class='card'><h2>Combinada Premium: x${ticket.combined_multiplier_estimate}</h2>`;
-                ticket.legs.forEach(leg => {
-                    html += `<div class='leg'><p><strong>${leg.market}</strong><br>${leg.selection}<br><small>${leg.statistical_backing}</small></p></div>`;
-                });
-                html += `</div>`;
-                document.getElementById('dashboard').innerHTML = html;
+                const d = document.getElementById('dashboard');
+                d.innerHTML = data.map(i => \`
+                    <div class="card">
+                        <h3>\${i.match}</h3>
+                        <p>Mercado: \${i.market}</p>
+                        <p>Probabilidad: \${i.probability}%</p>
+                        <p class="odd">Cuota: \${i.odds}</p>
+                        <small>\${i.analysis}</small>
+                    </div>
+                \`).join('');
             });
     </script>
 </body>

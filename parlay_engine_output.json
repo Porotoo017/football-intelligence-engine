@@ -1,23 +1,5 @@
-{
-  "combinada": {
-    "fecha": "2026-11-21",
-    "total_odds": 4.35,
-    "juegos": [
-      {
-        "partido": "River Plate vs Boca Juniors",
-        "prediccion": "Victoria River",
-        "confianza": "Alta"
-      },
-      {
-        "partido": "Racing Club vs Independiente",
-        "prediccion": "Ambos anotan",
-        "confianza": "Media-Alta"
-      },
-      {
-        "partido": "San Lorenzo vs Huracán",
-        "prediccion": "Menos de 2.5 goles",
-        "confianza": "Media"
-      }
-    ]
-  }
-}
+[
+    {"match": "River Plate vs Boca Juniors", "market": "Over 2.5 Goles", "probability": "78", "odds": "1.95", "analysis": "Estadística histórica de enfrentamientos + alta presión ofensiva."},
+    {"match": "Real Madrid vs Barcelona", "market": "Remates al arco", "probability": "85", "odds": "1.75", "analysis": "Promedio de remates superior a 5.5 en los últimos 5 partidos."},
+    {"match": "Manchester City vs Liverpool", "market": "Más de 9.5 Corners", "probability": "82", "odds": "1.80", "analysis": "Alta tasa de corners generados por banda en ambos equipos."}
+]
