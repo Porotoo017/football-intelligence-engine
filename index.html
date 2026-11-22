@@ -7,46 +7,22 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f172a">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: white; margin: 0; padding: 15px; }
-        .dashboard-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .card { background: #1e293b; border-radius: 16px; padding: 20px; border: 1px solid #334155; }
-        h1 { font-size: 1.5rem; text-align: center; color: #38bdf8; }
-        .tag { display: inline-block; background: #0ea5e9; padding: 4px 10px; border-radius: 8px; font-size: 0.8rem; font-weight: bold; margin-top: 10px; }
-        .data-point { color: #94a3b8; font-size: 0.9rem; margin: 5px 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto; background: #020617; color: white; margin: 0; padding: 15px; }
+        .header { text-align: center; padding: 20px 0; color: #38bdf8; }
+        .dashboard { display: grid; gap: 15px; }
+        .card { background: #0f172a; padding: 20px; border-radius: 12px; border: 1px solid #1e293b; }
+        .data-point { color: #94a3b8; }
     </style>
 </head>
 <body>
-    <h1>Football Intelligence Pro</h1>
-    <div class="dashboard-container">
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Boca_Juniors_logo18.svg" alt="Boca" width="40" />
-            <h3>Boca Juniors</h3>
-            <p class="data-point"><strong>DT:</strong> R. Arruabarrena</p>
-            <span class="tag">TOP 3 LPF</span>
-        </div>
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Escudo_de_Racing_Club_%282014%29.svg" alt="Racing" width="40" />
-            <h3>Racing Club</h3>
-            <p class="data-point"><strong>DT:</strong> Gustavo Costas</p>
-            <span class="tag">HIGH VOLATILITY</span>
-        </div>
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Club_Atl%C3%A9tico_River_Plate_logo.svg" alt="River" width="40" />
-            <h3>River Plate</h3>
-            <p class="data-point"><strong>DT:</strong> Leonardo Ponzio</p>
-            <span class="tag">STABLE</span>
-        </div>
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Escudo_del_Club_Atl%C3%A9tico_V%C3%A9lez_Sarsfield.svg" alt="Velez" width="40" />
-            <h3>Vélez Sarsfield</h3>
-            <p class="data-point"><strong>DT:</strong> G. Barros Schelotto</p>
-            <span class="tag">AGGRESSIVE</span>
-        </div>
+    <div class="header"><h1>Football Intelligence Pro</h1></div>
+    <div id="app" class="dashboard">
+        <!-- Dashboard dinámico -->
     </div>
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
+        fetch('REPORT_ACTUAL.md').then(res => res.text()).then(md => {
+            document.getElementById('app').innerHTML = md.split('---')[1];
+        });
     </script>
 </body>
 </html>
