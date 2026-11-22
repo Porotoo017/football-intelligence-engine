@@ -1,17 +1,48 @@
 (function () {
   const TARGET_LEAGUES = [
-    { slug: 'all', name: 'Todas (10)' },
-    { slug: 'arg.1', name: 'Liga Argentina' },
-    { slug: 'arg.copa', name: 'Copa Argentina' },
-    { slug: 'esp.1', name: 'LaLiga' },
-    { slug: 'ita.1', name: 'Serie A' },
-    { slug: 'ger.1', name: 'Bundesliga' },
-    { slug: 'ned.1', name: 'Eredivisie' },
-    { slug: 'fra.1', name: 'Ligue 1' },
-    { slug: 'conmebol.libertadores', name: 'Libertadores' },
-    { slug: 'conmebol.sudamericana', name: 'Sudamericana' },
-    { slug: 'uefa.champions', name: 'Champions UEFA' },
+    // Argentina (incl. Primera Nacional)
+    { slug: 'arg.1', name: 'Liga Argentina', group: 'arg' },
+    { slug: 'arg.2', name: 'Primera Nacional', group: 'arg' },
+    { slug: 'arg.copa', name: 'Copa Argentina', group: 'arg' },
+    { slug: 'arg.supercopa', name: 'Supercopa Arg.', group: 'arg' },
+    // Brasil
+    { slug: 'bra.1', name: 'Brasileirão A', group: 'bra' },
+    { slug: 'bra.2', name: 'Brasileirão B', group: 'bra' },
+    // Todos los campeonatos UEFA
+    { slug: 'uefa.champions', name: 'Champions UEFA', group: 'uefa' },
+    { slug: 'uefa.europa', name: 'Europa League', group: 'uefa' },
+    { slug: 'uefa.europa.conf', name: 'Conference League', group: 'uefa' },
+    { slug: 'uefa.nations', name: 'UEFA Nations League', group: 'uefa_nat' },
+    { slug: 'uefa.euro', name: 'UEFA Eurocopa', group: 'uefa_nat' },
+    { slug: 'uefa.euroq', name: 'Elim. Euro UEFA', group: 'uefa_nat' },
+    { slug: 'uefa.super_cup', name: 'UEFA Super Cup', group: 'uefa' },
+    { slug: 'uefa.wchampions', name: 'UEFA Champions Fem.', group: 'uefa' },
+    // Selecciones Nacionales
+    { slug: 'fifa.friendly', name: 'Amistosos FIFA', group: 'nat' },
+    { slug: 'fifa.world', name: 'Mundial FIFA', group: 'nat' },
+    { slug: 'fifa.worldq.conmebol', name: 'Elim. CONMEBOL', group: 'nat' },
+    { slug: 'fifa.worldq.uefa', name: 'Elim. Mundial UEFA', group: 'uefa_nat' },
+    { slug: 'fifa.worldq.concacaf', name: 'Elim. Concacaf', group: 'nat' },
+    { slug: 'fifa.worldq.afc', name: 'Elim. Asia AFC', group: 'nat' },
+    { slug: 'fifa.worldq.caf', name: 'Elim. África CAF', group: 'nat' },
+    { slug: 'fifa.worldq.ofc', name: 'Elim. Oceanía OFC', group: 'nat' },
+    { slug: 'conmebol.america', name: 'Copa América', group: 'nat' },
+    { slug: 'concacaf.nations.league', name: 'Concacaf Nations', group: 'nat' },
+    { slug: 'concacaf.gold', name: 'Concacaf Gold Cup', group: 'nat' },
+    { slug: 'caf.nations', name: 'Copa Africana', group: 'nat' },
+    // Sudamérica Clubes + Europa Doméstica
+    { slug: 'conmebol.libertadores', name: 'Libertadores', group: 'conmebol' },
+    { slug: 'conmebol.sudamericana', name: 'Sudamericana', group: 'conmebol' },
+    { slug: 'conmebol.recopa', name: 'Recopa CONMEBOL', group: 'conmebol' },
+    { slug: 'esp.1', name: 'LaLiga', group: 'euro_dom' },
+    { slug: 'ita.1', name: 'Serie A', group: 'euro_dom' },
+    { slug: 'ger.1', name: 'Bundesliga', group: 'euro_dom' },
+    { slug: 'ned.1', name: 'Eredivisie', group: 'euro_dom' },
+    { slug: 'fra.1', name: 'Ligue 1', group: 'euro_dom' },
+    { slug: 'eng.1', name: 'Premier League', group: 'euro_dom' },
   ];
+
+  const GROUP_BY_SLUG = new Map(TARGET_LEAGUES.map((l) => [l.slug, l.group]));
 
   const state = {
     activeTab: 'matches',
@@ -198,6 +229,31 @@
     if (el) el.textContent = msg;
   }
 
+  function getStatusCounts(list) {
+    let live = 0, scheduled = 0, finished = 0;
+    (list || []).forEach((m) => {
+      if (m.status === 'live') live++;
+      else if (m.status === 'scheduled') scheduled++;
+      else finished++;
+    });
+    return { live, scheduled, finished, total: live + scheduled + finished };
+  }
+
+  function updateAccurateStatusHeader() {
+    const c = getStatusCounts(state.matches);
+    setStatus('🔴 ' + c.live + ' en vivo · 🕒 ' + c.scheduled + ' próximos · ✅ ' + c.finished + ' fin.');
+  }
+
+  function matchesLeagueFilter(m, filterKey) {
+    if (!filterKey || filterKey === 'all') return true;
+    const grp = m.leagueGroup || GROUP_BY_SLUG.get(m.leagueSlug) || 'other';
+    if (filterKey === 'group:nat') return grp === 'nat' || grp === 'uefa_nat';
+    if (filterKey === 'group:uefa') return grp === 'uefa' || grp === 'uefa_nat';
+    if (filterKey === 'group:arg') return grp === 'arg';
+    if (filterKey === 'group:bra') return grp === 'bra';
+    return m.leagueSlug === filterKey;
+  }
+
   async function loadCachedBackendOutputs() {
     try {
       const ts = Date.now();
@@ -217,6 +273,7 @@
         if (Array.isArray(hist.recentLoggedMatches)) state.historyLog = hist.recentLoggedMatches;
         if (hist.dbStats) state.dbStats = hist.dbStats;
       }
+      updateAccurateStatusHeader();
       renderAll();
     } catch {
       // ignore offline error, live ESPN fetch runs next
@@ -224,39 +281,57 @@
   }
 
   async function refreshFromEspnLive() {
-    setStatus('Actualizando 10 ligas en vivo...');
+    setStatus('Actualizando UEFA, Selecciones y Ligas en tiempo real...');
     const btn = document.getElementById('refresh-live-btn');
     if (btn) btn.disabled = true;
 
     const existingById = new Map();
     state.matches.forEach((m) => existingById.set(String(m.id), m));
 
-    const leaguesToFetch = TARGET_LEAGUES.filter((l) => l.slug !== 'all');
+    const nowMs = Date.now();
+    const cutoffPastMs = nowMs - 10 * 24 * 60 * 60 * 1000;
+    const cutoffFutureMs = nowMs + 28 * 24 * 60 * 60 * 1000;
+
+    const seenIds = new Set();
     const liveMatches = [];
 
     await Promise.all(
-      leaguesToFetch.map(async (lg) => {
+      TARGET_LEAGUES.map(async (lg) => {
         try {
           const res = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + lg.slug + '/scoreboard', { cache: 'no-store' });
           if (!res.ok) return;
           const data = await res.json();
           const events = Array.isArray(data.events) ? data.events : [];
           events.forEach((ev) => {
+            const eid = String(ev.id || '');
+            if (!eid || seenIds.has(eid)) return;
+
             const comp = (ev.competitions && ev.competitions[0]) || {};
             const comps = comp.competitors || [];
             const hc = comps.find((c) => c.homeAway === 'home') || comps[0];
             const ac = comps.find((c) => c.homeAway === 'away') || comps[1];
             if (!hc || !ac) return;
 
-            const rawState = String((ev.status && ev.status.type && ev.status.type.state) || 'pre').toLowerCase();
-            const status = rawState === 'in' ? 'live' : rawState === 'post' ? 'finished' : 'scheduled';
-            const prev = existingById.get(String(ev.id));
+            const stType = (ev.status && ev.status.type) || {};
+            const rawState = String(stType.state || 'pre').toLowerCase();
+            const completed = Boolean(stType.completed);
+            const status = rawState === 'post' || completed ? 'finished' : rawState === 'in' ? 'live' : 'scheduled';
+
+            const evMs = Date.parse(ev.date || '');
+            if (status === 'finished' && isFinite(evMs) && evMs < cutoffPastMs) return;
+            if (status === 'scheduled' && isFinite(evMs) && evMs > cutoffFutureMs) return;
+
+            seenIds.add(eid);
+            const prev = existingById.get(eid);
 
             if (prev) {
               liveMatches.push(
                 Object.assign({}, prev, {
+                  leagueSlug: lg.slug,
+                  league: lg.name,
+                  leagueGroup: lg.group,
                   status: status,
-                  statusText: (ev.status && ev.status.type && ev.status.type.shortDetail) || status,
+                  statusText: stType.shortDetail || status,
                   homeScore: String(hc.score != null ? hc.score : prev.homeScore || '0'),
                   awayScore: String(ac.score != null ? ac.score : prev.awayScore || '0'),
                   date: formatArgDate(ev.date),
@@ -271,13 +346,14 @@
               const prob = pick1X ? mk.prob1X : mk.probX2;
               const odds = (0.94 / Math.max(0.2, prob)).toFixed(2);
               liveMatches.push({
-                id: String(ev.id),
+                id: eid,
                 leagueSlug: lg.slug,
                 league: lg.name,
+                leagueGroup: lg.group,
                 dateUtc: ev.date || '',
                 date: formatArgDate(ev.date),
                 status: status,
-                statusText: (ev.status && ev.status.type && ev.status.type.shortDetail) || status,
+                statusText: stType.shortDetail || status,
                 venue: (comp.venue && comp.venue.fullName) || '',
                 home: hName,
                 away: aName,
@@ -297,10 +373,10 @@
                 corners: 'Más de 8.5 Córners',
                 cards: 'Más de 3.5 Tarjetas',
                 shots: 'Remates esp.: 8.0+',
-                topShooter: 'Tocá Alineación y Remates para ranking en vivo',
+                topShooter: 'Tocá Rematadores y Plantel para ranking en vivo',
                 likelyScore: mk.likelyScore,
                 markets: mk,
-                analysis: 'Actualizado en vivo desde ESPN Public Soccer API.',
+                analysis: 'Actualizado en tiempo real desde ESPN Public Soccer API.',
               });
             }
           });
@@ -316,17 +392,41 @@
       state.matches = liveMatches;
       state.lastUpdated = formatArgDate(new Date().toISOString());
     }
-    setStatus('En vivo · ' + state.matches.length + ' partidos reales');
+    updateAccurateStatusHeader();
     if (btn) btn.disabled = false;
     renderAll();
   }
 
   function renderChips() {
+    const countsBySlug = new Map();
+    state.matches.forEach((m) => {
+      countsBySlug.set(m.leagueSlug, (countsBySlug.get(m.leagueSlug) || 0) + 1);
+    });
+    const natCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:nat')).length;
+    const uefaCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:uefa')).length;
+    const argCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:arg')).length;
+    const braCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:bra')).length;
+
+    const leagueChips = [
+      { key: 'all', label: 'Todas (' + state.matches.length + ')' },
+      { key: 'group:nat', label: '🌍 Selecciones (' + natCount + ')' },
+      { key: 'group:uefa', label: '🏆 Toda UEFA (' + uefaCount + ')' },
+      { key: 'group:arg', label: '🇦🇷 Arg + Nac. B (' + argCount + ')' },
+      { key: 'group:bra', label: '🇧🇷 Brasil A/B (' + braCount + ')' },
+    ];
+
+    TARGET_LEAGUES.forEach((lg) => {
+      const n = countsBySlug.get(lg.slug) || 0;
+      if (n > 0 || lg.slug === state.selectedLeague || lg.slug === 'arg.2' || lg.slug === 'bra.1' || lg.slug === 'uefa.europa') {
+        leagueChips.push({ key: lg.slug, label: lg.name + ' (' + n + ')' });
+      }
+    });
+
     const lBox = document.getElementById('league-chips');
     if (lBox) {
-      lBox.innerHTML = TARGET_LEAGUES.map((lg) => {
-        const cls = lg.slug === state.selectedLeague ? 'chip active' : 'chip';
-        return '<button class="' + cls + '" data-league="' + escHtml(lg.slug) + '">' + escHtml(lg.name) + '</button>';
+      lBox.innerHTML = leagueChips.map((item) => {
+        const cls = item.key === state.selectedLeague ? 'chip active' : 'chip';
+        return '<button class="' + cls + '" data-league="' + escHtml(item.key) + '">' + escHtml(item.label) + '</button>';
       }).join('');
       lBox.querySelectorAll('button').forEach((b) => {
         b.onclick = () => {
@@ -337,11 +437,13 @@
       });
     }
 
+    const byLeagueList = state.matches.filter((m) => matchesLeagueFilter(m, state.selectedLeague));
+    const sc = getStatusCounts(byLeagueList);
     const statuses = [
-      { id: 'all', label: 'Todos' },
-      { id: 'live', label: '🔴 En Vivo' },
-      { id: 'scheduled', label: '🕒 Próximos' },
-      { id: 'finished', label: '✅ Finalizados' },
+      { id: 'all', label: 'Todos (' + sc.total + ')' },
+      { id: 'live', label: '🔴 En Vivo (' + sc.live + ')' },
+      { id: 'scheduled', label: '🕒 Próximos (' + sc.scheduled + ')' },
+      { id: 'finished', label: '✅ Finalizados (' + sc.finished + ')' },
     ];
     const sBox = document.getElementById('status-chips');
     if (sBox) {
@@ -365,7 +467,7 @@
     const aLead = (ts.away && ts.away[0]) || null;
 
     if (!hLead && !aLead) {
-      return '<div style="font-size:0.74rem;margin-top:8px;color:#cbd5e1;">🔥 Mejores chances de remate: <b>' + escHtml(m.topShooter || 'Ver en Alineación y Remates') + '</b></div>';
+      return '<div style="font-size:0.74rem;margin-top:8px;color:#cbd5e1;">🔥 Mejores chances de remate: <b>' + escHtml(m.topShooter || 'Ver en Rematadores y Plantel') + '</b></div>';
     }
 
     const pill = (s) => {
@@ -400,27 +502,35 @@
     if (!list) return;
 
     const filtered = state.matches.filter((m) => {
-      if (state.selectedLeague !== 'all' && m.leagueSlug !== state.selectedLeague) return false;
+      if (!matchesLeagueFilter(m, state.selectedLeague)) return false;
       if (state.selectedStatus !== 'all' && m.status !== state.selectedStatus) return false;
       return true;
     });
 
-    if (counter) counter.textContent = filtered.length + ' partidos mostrados · 10 ligas activas';
+    const fc = getStatusCounts(filtered);
+    if (counter) {
+      counter.textContent =
+        filtered.length + ' partidos (' + fc.live + ' en vivo · ' + fc.scheduled + ' próximos · ' + fc.finished + ' fin.)';
+    }
     if (updatedTag) updatedTag.textContent = state.lastUpdated;
 
     if (filtered.length === 0) {
-      list.innerHTML = '<div class="card"><p style="color:var(--muted);font-size:0.85rem;">No hay partidos para ese filtro en esta ventana.</p></div>';
+      list.innerHTML =
+        '<div class="card"><p style="color:var(--muted);font-size:0.85rem;">No hay partidos ' +
+        (state.selectedStatus === 'live' ? 'en vivo en este instante ' : '') +
+        'para ese filtro en la ventana actual.</p></div>';
       return;
     }
 
     list.innerHTML = filtered.map((m) => {
       const stClass = m.status === 'live' ? 'state-live' : m.status === 'finished' ? 'state-finished' : 'state-scheduled';
+      const statePrefix = m.status === 'live' ? '🔴 EN VIVO · ' : '';
       const inParlay = state.parlayLegs.some((l) => l.matchId === m.id);
       return (
         '<article class="card">' +
           '<div class="card-head">' +
             '<span class="league-pill">' + escHtml(m.league) + '</span>' +
-            '<span class="state-pill ' + stClass + '">' + escHtml(m.statusText || m.status) + ' · ' + escHtml(m.date) + '</span>' +
+            '<span class="state-pill ' + stClass + '">' + statePrefix + escHtml(m.statusText || m.status) + ' · ' + escHtml(m.date) + '</span>' +
           '</div>' +
           '<div class="teams-row">' +
             '<div class="team-side">' +
@@ -573,7 +683,7 @@
     };
     let list = await loadSlug(slug);
     const totShots = list.reduce((acc, p) => acc + (p.totalShots || 0), 0);
-    if (totShots === 0 && slug === 'arg.copa') {
+    if (totShots === 0 && (slug === 'arg.copa' || slug === 'arg.supercopa')) {
       const argList = await loadSlug('arg.1');
       if (argList.reduce((acc, p) => acc + (p.totalShots || 0), 0) > 0) list = argList;
     }
@@ -742,7 +852,7 @@
       if (!q) return true;
       if (t.teamName.toLowerCase().includes(q)) return true;
       return (t.players || []).some((p) => (p.name || '').toLowerCase().includes(q));
-    }).slice(0, 36);
+    }).slice(0, 48);
 
     box.innerHTML = arr.map((t) => (
       '<div class="card">' +
@@ -787,7 +897,7 @@
   function renderHistory() {
     const statsBox = document.getElementById('db-stats-grid');
     const histList = document.getElementById('history-matches-list');
-    const s = state.dbStats || { teamsInXgCache: 655, seasonHistoryRows: 1672, liveMatchesLogged: 0, teamRostersCached: 0 };
+    const s = state.dbStats || { teamsInXgCache: 656, seasonHistoryRows: 1672, liveMatchesLogged: 0, teamRostersCached: 0 };
 
     if (statsBox) {
       statsBox.innerHTML =

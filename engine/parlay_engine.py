@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Football Intelligence Pro — Live 10-League Quant Engine & Self-Growing SQLite History
-Queries ESPN Public Soccer API across 10 leagues, merges empirical Poisson xG & Bayesian
-player shooting models from data/quant_master.db + ESPN player statistics, appends every
-newly finished match into match_history_log, updates team_rosters, and exports JSON + report.
+Football Intelligence Pro — Live Multi-League Quant Engine & Self-Growing SQLite History
+Queries ESPN Public Soccer API across Argentina (LPF, Primera Nacional, Copa, Supercopa),
+Brazil (Brasileirao Serie A & B), ALL UEFA competitions, ALL National Team competitions
+(FIFA World Cup & Qualifiers, Friendlies, Copa America, Concacaf, AFCON, Nations League),
+CONMEBOL (Libertadores, Sudamericana, Recopa), and Top European Leagues.
 """
 
 from __future__ import annotations
@@ -31,16 +32,46 @@ ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer"
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36"
 
 TARGET_LEAGUES: List[Dict[str, str]] = [
-    {"slug": "arg.1", "name": "Liga Profesional Argentina"},
-    {"slug": "arg.copa", "name": "Copa Argentina"},
-    {"slug": "esp.1", "name": "LaLiga (España)"},
-    {"slug": "ita.1", "name": "Serie A (Italia)"},
-    {"slug": "ger.1", "name": "Bundesliga (Alemania)"},
-    {"slug": "ned.1", "name": "Eredivisie (Países Bajos)"},
-    {"slug": "fra.1", "name": "Ligue 1 (Francia)"},
-    {"slug": "conmebol.libertadores", "name": "Copa Libertadores"},
-    {"slug": "conmebol.sudamericana", "name": "Copa Sudamericana"},
-    {"slug": "uefa.champions", "name": "UEFA Champions League"},
+    # Argentina (incl. Primera Nacional)
+    {"slug": "arg.1", "name": "Liga Profesional Argentina", "group": "arg"},
+    {"slug": "arg.2", "name": "Primera Nacional (Argentina)", "group": "arg"},
+    {"slug": "arg.copa", "name": "Copa Argentina", "group": "arg"},
+    {"slug": "arg.supercopa", "name": "Supercopa Argentina", "group": "arg"},
+    # Brasil
+    {"slug": "bra.1", "name": "Brasileirão Série A", "group": "bra"},
+    {"slug": "bra.2", "name": "Brasileirão Série B", "group": "bra"},
+    # Todos los campeonatos UEFA
+    {"slug": "uefa.champions", "name": "UEFA Champions League", "group": "uefa"},
+    {"slug": "uefa.europa", "name": "UEFA Europa League", "group": "uefa"},
+    {"slug": "uefa.europa.conf", "name": "UEFA Conference League", "group": "uefa"},
+    {"slug": "uefa.nations", "name": "UEFA Nations League", "group": "uefa_nat"},
+    {"slug": "uefa.euro", "name": "UEFA Eurocopa", "group": "uefa_nat"},
+    {"slug": "uefa.euroq", "name": "UEFA Eliminatorias Euro", "group": "uefa_nat"},
+    {"slug": "uefa.super_cup", "name": "UEFA Super Cup", "group": "uefa"},
+    {"slug": "uefa.wchampions", "name": "UEFA Champions Femenina", "group": "uefa"},
+    # Selecciones Nacionales
+    {"slug": "fifa.friendly", "name": "Amistosos Selecciones FIFA", "group": "nat"},
+    {"slug": "fifa.world", "name": "Copa del Mundo FIFA", "group": "nat"},
+    {"slug": "fifa.worldq.conmebol", "name": "Eliminatorias CONMEBOL", "group": "nat"},
+    {"slug": "fifa.worldq.uefa", "name": "Eliminatorias Mundial UEFA", "group": "uefa_nat"},
+    {"slug": "fifa.worldq.concacaf", "name": "Eliminatorias Concacaf", "group": "nat"},
+    {"slug": "fifa.worldq.afc", "name": "Eliminatorias Asia (AFC)", "group": "nat"},
+    {"slug": "fifa.worldq.caf", "name": "Eliminatorias África (CAF)", "group": "nat"},
+    {"slug": "fifa.worldq.ofc", "name": "Eliminatorias Oceanía (OFC)", "group": "nat"},
+    {"slug": "conmebol.america", "name": "Copa América", "group": "nat"},
+    {"slug": "concacaf.nations.league", "name": "Concacaf Nations League", "group": "nat"},
+    {"slug": "concacaf.gold", "name": "Concacaf Gold Cup", "group": "nat"},
+    {"slug": "caf.nations", "name": "Copa Africana de Naciones", "group": "nat"},
+    # Sudamérica Clubes y Top Ligas Europeas
+    {"slug": "conmebol.libertadores", "name": "Copa Libertadores", "group": "conmebol"},
+    {"slug": "conmebol.sudamericana", "name": "Copa Sudamericana", "group": "conmebol"},
+    {"slug": "conmebol.recopa", "name": "Recopa Sudamericana", "group": "conmebol"},
+    {"slug": "esp.1", "name": "LaLiga (España)", "group": "euro_dom"},
+    {"slug": "ita.1", "name": "Serie A (Italia)", "group": "euro_dom"},
+    {"slug": "ger.1", "name": "Bundesliga (Alemania)", "group": "euro_dom"},
+    {"slug": "ned.1", "name": "Eredivisie (Países Bajos)", "group": "euro_dom"},
+    {"slug": "fra.1", "name": "Ligue 1 (Francia)", "group": "euro_dom"},
+    {"slug": "eng.1", "name": "Premier League (Inglaterra)", "group": "euro_dom"},
 ]
 
 GENERIC_TOKENS = {
@@ -67,7 +98,7 @@ def norm_name(s: str) -> str:
     return " ".join("".join(out).split())
 
 
-def fetch_json(url: str, timeout: int = 10) -> Optional[Dict[str, Any]]:
+def fetch_json(url: str, timeout: int = 8) -> Optional[Dict[str, Any]]:
     req = urllib.request.Request(
         url,
         headers={
@@ -256,6 +287,13 @@ def to_arg_time(iso_utc: str) -> str:
         return iso_utc
 
 
+def parse_utc_dt(iso_utc: str) -> Optional[datetime]:
+    try:
+        return datetime.fromisoformat(iso_utc.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
 def extract_athlete_stats(athlete: Dict[str, Any]) -> Dict[str, float]:
     out = {"appearances": 0.0, "totalShots": 0.0, "shotsOnTarget": 0.0, "totalGoals": 0.0, "goalAssists": 0.0}
     cats = ((athlete.get("statistics") or {}).get("splits") or {}).get("categories") or []
@@ -290,7 +328,7 @@ def fetch_team_roster_cached(slug: str, tid: str) -> List[Dict[str, Any]]:
             return _ROSTER_CACHE[key]
 
     def parse_roster(target_slug: str) -> List[Dict[str, Any]]:
-        rdata = fetch_json(f"{ESPN_BASE}/{target_slug}/teams/{urllib.parse.quote(tid)}/roster", timeout=8)
+        rdata = fetch_json(f"{ESPN_BASE}/{target_slug}/teams/{urllib.parse.quote(tid)}/roster", timeout=7)
         athletes = (rdata or {}).get("athletes") or []
         squad: List[Dict[str, Any]] = []
         for a in athletes:
@@ -317,8 +355,7 @@ def fetch_team_roster_cached(slug: str, tid: str) -> List[Dict[str, Any]]:
     squad = parse_roster(slug)
     total_shots_sum = sum(p.get("totalShots", 0) for p in squad)
 
-    # Copa Argentina / continental cups occasionally omit competition-scoped shot stats; enrich from domestic league
-    if total_shots_sum == 0 and slug in ("arg.copa",):
+    if total_shots_sum == 0 and slug in ("arg.copa", "arg.supercopa"):
         fallback = parse_roster("arg.1")
         if sum(p.get("totalShots", 0) for p in fallback) > 0:
             squad = fallback
@@ -371,11 +408,9 @@ def compute_top_shooters(
         starter = bool(p.get("starter"))
         in_match_squad = bool(p.get("inMatchSquad"))
 
-        # Empirical season averages when player has appearances
         shots_pg = round(tot_shots / app, 2) if app >= 1.0 else 0.0
         sot_pg = round(sot / app, 2) if app >= 1.0 else 0.0
 
-        # Bayesian shrinkage averages prevent 1-appearance noise from skewing rankings
         adj_shots_pg = (tot_shots + 0.65) / (app + 2.5)
         adj_sot_pg = (sot + 0.22) / (app + 2.5)
         adj_goals_pg = (goals + 0.12) / (app + 3.0)
@@ -399,6 +434,7 @@ def compute_top_shooters(
             + reg_bonus
             + avail_bonus
         )
+
         exp_sot = max(0.08, adj_sot_pg * scale * role_factor)
         exp_shots = max(0.20, adj_shots_pg * scale * role_factor)
         prob_1plus_sot = min(0.91, max(0.08, 1.0 - math.exp(-exp_sot)))
@@ -433,12 +469,15 @@ def compute_top_shooters(
     return [c[2] for c in candidates[:limit]]
 
 
-def fetch_espn_scoreboard(league: Dict[str, str]) -> List[Dict[str, Any]]:
+def fetch_espn_scoreboard(league: Dict[str, str], now_utc: datetime) -> List[Dict[str, Any]]:
     url = f"{ESPN_BASE}/{league['slug']}/scoreboard"
-    data = fetch_json(url)
+    data = fetch_json(url, timeout=7)
     if not data:
         return []
     out: List[Dict[str, Any]] = []
+    cutoff_past = now_utc - timedelta(days=10)
+    cutoff_future = now_utc + timedelta(days=28)
+
     for ev in data.get("events") or []:
         comp = (ev.get("competitions") or [{}])[0]
         competitors = comp.get("competitors") or []
@@ -446,17 +485,32 @@ def fetch_espn_scoreboard(league: Dict[str, str]) -> List[Dict[str, Any]]:
         away_c = next((c for c in competitors if c.get("homeAway") == "away"), competitors[1] if len(competitors) > 1 else None)
         if not home_c or not away_c:
             continue
-        state = str((ev.get("status") or {}).get("type", {}).get("state", "pre")).lower()
-        status = "live" if state == "in" else "finished" if state == "post" else "scheduled"
+
+        st_type = (ev.get("status") or {}).get("type") or {}
+        state = str(st_type.get("state") or "pre").lower()
+        completed = bool(st_type.get("completed"))
+        if state == "post" or completed:
+            status = "finished"
+        elif state == "in":
+            status = "live"
+        else:
+            status = "scheduled"
+
+        ev_dt = parse_utc_dt(str(ev.get("date") or ""))
+        # Exclude stale off-season finals (>10 days old) from tournaments not currently in season
+        if status == "finished" and ev_dt is not None and ev_dt < cutoff_past:
+            continue
+        if status == "scheduled" and ev_dt is not None and ev_dt > cutoff_future:
+            continue
+
         out.append({"league": league, "event": ev, "comp": comp, "home_c": home_c, "away_c": away_c, "status": status})
     return out
 
 
 def fetch_espn_summary_and_roster(slug: str, event_id: str, home_id: str, away_id: str) -> Dict[str, Any]:
     sum_url = f"{ESPN_BASE}/{slug}/summary?event={urllib.parse.quote(event_id)}"
-    sum_data = fetch_json(sum_url, timeout=8) or {}
+    sum_data = fetch_json(sum_url, timeout=7) or {}
 
-    # Always fetch season rosters with shooting stats (cached per run)
     home_season = fetch_team_roster_cached(slug, home_id)
     away_season = fetch_team_roster_cached(slug, away_id)
 
@@ -499,14 +553,12 @@ def fetch_espn_summary_and_roster(slug: str, event_id: str, home_id: str, away_i
 
         if starter_count >= 7:
             seen_keys = {p.get("id") or norm_name(p["name"]) for p in match_roster}
-            # Include remaining season players after matchday roster so squad search & stats stay complete
             for sp in season_list:
                 k = sp.get("id") or norm_name(sp["name"])
                 if k not in seen_keys:
                     match_roster.append({**sp, "starter": False, "inMatchSquad": False})
             return match_roster[:36], True
 
-        # Lineups not released yet -> return season squad sorted with top shooters & regulars easy to inspect
         ranked_season = sorted(
             season_list,
             key=lambda x: (
@@ -550,10 +602,11 @@ def fetch_espn_summary_and_roster(slug: str, event_id: str, home_id: str, away_i
 
 def main() -> None:
     init_and_migrate_db(DB_PATH)
+    now_utc = datetime.now(timezone.utc)
 
     raw_items: List[Dict[str, Any]] = []
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        futs = [pool.submit(fetch_espn_scoreboard, lg) for lg in TARGET_LEAGUES]
+    with ThreadPoolExecutor(max_workers=10) as pool:
+        futs = [pool.submit(fetch_espn_scoreboard, lg, now_utc) for lg in TARGET_LEAGUES]
         for fut in as_completed(futs):
             raw_items.extend(fut.result())
 
@@ -566,10 +619,10 @@ def main() -> None:
 
     prio = {"live": 0, "scheduled": 1, "finished": 2}
     items.sort(key=lambda x: (prio[x["status"]], x["event"].get("date", "")))
-    enrich_targets = items[:45]
+    enrich_targets = items[:85]
 
     details_by_eid: Dict[str, Dict[str, Any]] = {}
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=10) as pool:
         fut_map = {}
         for it in enrich_targets:
             eid = str(it["event"].get("id"))
@@ -725,6 +778,7 @@ def main() -> None:
                     "id": eid,
                     "leagueSlug": lg["slug"],
                     "league": lg["name"],
+                    "leagueGroup": lg.get("group", "other"),
                     "dateUtc": str(ev.get("date") or ""),
                     "date": to_arg_time(str(ev.get("date") or "")),
                     "status": it["status"],
@@ -789,13 +843,13 @@ def main() -> None:
             }
             for r in conn.execute(
                 "SELECT event_id, league_name, match_date_utc, home_team, away_team, home_score, away_score, home_corners, away_corners "
-                "FROM match_history_log ORDER BY match_date_utc DESC LIMIT 40"
+                "FROM match_history_log ORDER BY match_date_utc DESC LIMIT 60"
             )
         ]
 
         roster_export = []
         for r in conn.execute(
-            "SELECT team_id, team_name, league_slug, crest_url, roster_json, updated_at FROM team_rosters ORDER BY updated_at DESC LIMIT 80"
+            "SELECT team_id, team_name, league_slug, crest_url, roster_json, updated_at FROM team_rosters ORDER BY updated_at DESC LIMIT 120"
         ):
             try:
                 roster_export.append(
@@ -811,9 +865,16 @@ def main() -> None:
             except Exception:
                 pass
 
+    status_counts = {
+        "live": sum(1 for m in matches_out if m["status"] == "live"),
+        "scheduled": sum(1 for m in matches_out if m["status"] == "scheduled"),
+        "finished": sum(1 for m in matches_out if m["status"] == "finished"),
+    }
+
     payload = {
-        "engineVersion": "3.2.0-SHOOTERS-BAYES",
+        "engineVersion": "3.3.0-ALL-UEFA-NAT-ARG2-BRA",
         "lastUpdated": datetime.now(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M ART"),
+        "statusCounts": status_counts,
         "dbStats": {
             "teamsInXgCache": total_cache_teams,
             "seasonHistoryRows": total_hist_rows,
@@ -844,19 +905,18 @@ def main() -> None:
         )
 
     lines = [
-        "# Football Intelligence Pro — Reporte en Vivo (10 Ligas)",
+        "# Football Intelligence Pro — Reporte en Vivo (UEFA, Selecciones, Primera Nacional, Brasil y Ligas)",
         "",
         f"- **Última ejecución:** {payload['lastUpdated']}",
+        f"- **En vivo ahora:** {status_counts['live']} | **Próximos:** {status_counts['scheduled']} | **Recién finalizados:** {status_counts['finished']}",
         f"- **Equipos en BD histórica (`quant_master.db`):** {total_cache_teams}",
-        f"- **Registros por temporada:** {total_hist_rows}",
         f"- **Partidos reales acumulados:** {total_logged_matches} (+{new_history_rows} nuevos en esta ejecución)",
         f"- **Planteles actualizados en caché:** {total_rosters}",
-        f"- **Partidos activos/próximos/recientes cargados:** {len(matches_out)}",
         "",
         "| Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |",
         "|---|---|---|---|---|---|---|",
     ]
-    for m in matches_out[:25]:
+    for m in matches_out[:35]:
         lines.append(
             f"| {m['league']} | {m['date']} | {m['home']} ({m['homeScore']}) vs ({m['awayScore']}) {m['away']} | {m['statusText']} | {m['prediction']} | {m['probability']} | {m['topShooter']} |"
         )
@@ -868,6 +928,7 @@ def main() -> None:
             {
                 "ok": True,
                 "matches": len(matches_out),
+                "statusCounts": status_counts,
                 "newHistoryRows": new_history_rows,
                 "totalLoggedMatches": total_logged_matches,
                 "totalRosters": total_rosters,

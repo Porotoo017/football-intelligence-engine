@@ -1,7 +1,7 @@
 {
   "name": "Football Intelligence Pro — Combinadas",
   "short_name": "Football Pro",
-  "description": "Apuestas combinadas en tiempo real, 10 ligas, ranking de rematadores al arco, historial auto-creciente, escudos oficiales y planteles actualizados.",
+  "description": "Apuestas combinadas en tiempo real: Todos los torneos UEFA, Selecciones FIFA, Liga y Primera Nacional Argentina, Brasileirão, ranking de rematadores e historial auto-creciente.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
