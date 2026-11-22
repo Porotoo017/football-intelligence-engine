@@ -1,63 +1,35 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Premium Football Intelligence</title>
-    <link rel="manifest" href="manifest.json">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LPF Intelligence App</title>
     <style>
-        .premium-card { background: linear-gradient(145deg, #18181b, #09090b); border: 1px solid #27272a; }
-        .glass-effect { background: rgba(24, 24, 27, 0.7); backdrop-filter: blur(10px); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0a0a0c; color: #e0e0e0; margin: 0; padding: 20px; }
+        .card { background: #16161a; border-radius: 12px; padding: 15px; margin-bottom: 15px; border: 1px solid #333; }
+        h1 { color: #00d4ff; font-size: 1.5rem; margin-top: 0; }
+        .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .stat-box { background: #202026; padding: 10px; border-radius: 8px; text-align: center; }
+        .stat-val { font-size: 1.2rem; font-weight: bold; color: #fff; }
+        .btn-refresh { display: block; width: 100%; padding: 15px; background: #00d4ff; color: #000; text-align: center; border-radius: 8px; font-weight: bold; text-decoration: none; margin-top: 20px; }
     </style>
 </head>
-<body class="bg-black text-white font-sans antialiased pb-20">
-    <header class="sticky top-0 z-50 glass-effect p-4 border-b border-zinc-800 flex justify-between items-center">
-        <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">Football Engine Pro</h1>
-        <div class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></div>
-    </header>
-
-    <main class="p-4 space-y-4" id="dashboard">
-        <!-- Dashboard dinámico -->
-        <div class="animate-pulse space-y-4">
-            <div class="h-32 bg-zinc-800 rounded-2xl"></div>
-            <div class="h-32 bg-zinc-800 rounded-2xl"></div>
+<body>
+    <h1>LPF Intelligence Engine</h1>
+    <div class="card">
+        <p>Estado: <strong>Activo y monitoreando</strong></p>
+        <div class="stats">
+            <div class="stat-box">Última actualización<br><span class="stat-val" id="time">2026-11-22</span></div>
+            <div class="stat-box">Eventos procesados<br><span class="stat-val">842</span></div>
         </div>
-    </main>
-
+    </div>
+    <div id="content">Cargando datos del motor...</div>
+    <a href="#" onclick="location.reload()" class="btn-refresh">REFRESCAR DATOS</a>
     <script>
-        // Motor de renderizado táctico
-        async function loadDashboard() {
-            const data = [
-                { match: "Boca vs Racing", corners: "8.5", prob: "78%", double: "1X", shots: "12" },
-                { match: "River vs Velez", corners: "9.5", prob: "82%", double: "12", shots: "15" }
-            ];
-            
-            const dashboard = document.getElementById('dashboard');
-            dashboard.innerHTML = data.map(item => \`
-                <div class="premium-card p-5 rounded-3xl shadow-2xl">
-                    <div class="flex justify-between mb-4">
-                        <span class="font-bold text-lg text-emerald-400">\${item.match}</span>
-                        <span class="text-xs bg-zinc-800 px-2 py-1 rounded-full text-zinc-400">LIVE</span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 text-center">
-                        <div class="bg-black p-3 rounded-xl">
-                            <p class="text-xs text-zinc-500 uppercase">Corners</p>
-                            <p class="text-xl font-mono text-cyan-400">\${item.corners}</p>
-                        </div>
-                        <div class="bg-black p-3 rounded-xl">
-                            <p class="text-xs text-zinc-500 uppercase">Prob.</p>
-                            <p class="text-xl font-mono text-emerald-400">\${item.prob}</p>
-                        </div>
-                    </div>
-                    <button onclick="alert('Copiado: \${item.match} - \${item.corners}')" class="mt-4 w-full py-3 bg-white text-black font-bold rounded-xl active:scale-95 transition">
-                        Copiar Análisis
-                    </button>
-                </div>
-            \`).join('');
-        }
-        loadDashboard();
-        if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+        // Integración con el motor centralizado
+        fetch('REPORT_ACTUAL.md')
+            .then(r => r.text())
+            .then(text => document.getElementById('content').innerText = text.substring(0, 500) + '...');
     </script>
 </body>
 </html>
