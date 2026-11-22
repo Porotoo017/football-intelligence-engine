@@ -1,108 +1,404 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Intelligence Pro - Apuestas Combinadas en Tiempo Real</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0d1117">
-    <style>
-        :root {
-            --bg-primary: #0b0f19;
-            --bg-card: #131b2e;
-            --accent: #00f2fe;
-            --accent-green: #10b981;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border: #1e293b;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: var(--bg-primary); color: var(--text-main); padding: 16px; min-height: 100vh; }
-        header { text-align: center; margin-bottom: 24px; padding-top: 10px; }
-        h1 { font-size: 1.5rem; background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .subtitle { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
-        .grid { display: flex; flex-direction: column; gap: 16px; max-width: 600px; margin: 0 auto; }
-        .card { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
-        .match-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        .league-tag { font-size: 0.75rem; background: rgba(0, 242, 254, 0.1); color: var(--accent); padding: 3px 8px; border-radius: 6px; font-weight: 600; }
-        .match-date { font-size: 0.75rem; color: var(--text-muted); }
-        .teams-row { display: flex; justify-content: space-between; align-items: center; margin: 14px 0; }
-        .team { display: flex; align-items: center; gap: 10px; width: 42%; }
-        .team.away { justify-content: flex-end; text-align: right; }
-        .team img { width: 36px; height: 36px; object-fit: contain; }
-        .team span { font-size: 0.95rem; font-weight: 700; }
-        .vs { font-size: 0.8rem; color: var(--text-muted); font-weight: bold; }
-        .bet-box { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 10px; padding: 12px; margin-top: 12px; }
-        .bet-title { font-size: 0.75rem; text-transform: uppercase; color: var(--accent-green); font-weight: 700; margin-bottom: 4px; }
-        .bet-main { display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; font-weight: bold; }
-        .odds { background: var(--accent-green); color: #000; padding: 2px 8px; border-radius: 6px; font-size: 0.9rem; }
-        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; font-size: 0.8rem; color: var(--text-muted); }
-        .details-grid div b { color: var(--text-main); }
-        .analysis { font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 8px; }
-        .loading { text-align: center; color: var(--text-muted); margin-top: 40px; font-size: 0.9rem; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Football Intelligence Pro — Combinadas en Tiempo Real</title>
+  <meta name="description" content="App de apuestas combinadas en tiempo real: 10 ligas, historial auto-creciente, planteles actualizados y escudos oficiales." />
+  <meta name="theme-color" content="#070b14" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-elev: #0e1628;
+      --bg-card: #121c33;
+      --border: #1e2d4d;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --cyan: #22d3ee;
+      --green: #10b981;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-bottom: calc(82px + var(--safe-bottom));
+      min-height: 100vh;
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(7, 11, 20, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 14px;
+    }
+    .topbar-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .brand h1 { font-size: 1rem; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+    .brand p { font-size: 0.72rem; color: var(--cyan); }
+    .top-actions { display: flex; align-items: center; gap: 6px; }
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      padding: 7px 11px;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0891b2, #059669);
+      border-color: transparent;
+      color: #fff;
+    }
+    .btn-sm { padding: 5px 9px; font-size: 0.72rem; border-radius: 8px; }
+    .container { max-width: 780px; margin: 0 auto; padding: 12px 14px; }
+    .chips-scroll {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      scrollbar-width: none;
+    }
+    .chips-scroll::-webkit-scrollbar { display: none; }
+    .chip {
+      white-space: nowrap;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-elev);
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .chip.active {
+      background: rgba(34, 211, 238, 0.16);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .status-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+    .cards-grid { display: flex; flex-direction: column; gap: 12px; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .league-pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .state-pill {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 6px;
+    }
+    .state-live { background: rgba(244, 63, 94, 0.18); color: #fda4af; }
+    .state-scheduled { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
+    .state-finished { background: rgba(148, 163, 184, 0.16); color: #cbd5e1; }
+    .teams-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .team-side { display: flex; align-items: center; gap: 8px; min-width: 0; }
+    .team-side.away { flex-direction: row-reverse; text-align: right; }
+    .team-side img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 2px;
+    }
+    .team-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .score-box {
+      text-align: center;
+      min-width: 66px;
+      padding: 5px 8px;
+      border-radius: 10px;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+    }
+    .score-num { font-size: 1rem; font-weight: 800; color: #fff; }
+    .score-sub { font-size: 0.66rem; color: var(--muted); }
+    .pick-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 8px;
+    }
+    .pick-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .pick-title { font-size: 0.85rem; font-weight: 700; color: #fff; }
+    .odds-badge {
+      background: var(--green);
+      color: #042f2e;
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 7px;
+      white-space: nowrap;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+    .metrics-grid div b { color: var(--text); font-weight: 600; }
+    .card-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+    }
+    .analysis-note { font-size: 0.72rem; color: var(--muted); margin-top: 7px; line-height: 1.35; }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      background: rgba(7, 11, 20, 0.96);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 6px 4px calc(8px + var(--safe-bottom));
+    }
+    .nav-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 4px 2px;
+      cursor: pointer;
+    }
+    .nav-btn.active { color: var(--cyan); }
+    .badge-count {
+      background: var(--green);
+      color: #042f2e;
+      border-radius: 999px;
+      padding: 0 5px;
+      font-size: 0.65rem;
+      font-weight: 800;
+    }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.76);
+      z-index: 60;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 12px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-sheet {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 680px;
+      max-height: 84vh;
+      overflow-y: auto;
+      padding: 16px;
+    }
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .roster-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+    @media (max-width: 540px) { .roster-cols { grid-template-columns: 1fr; } }
+    .player-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 8px;
+      background: var(--bg-card);
+      border-radius: 7px;
+      font-size: 0.76rem;
+      margin-bottom: 4px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .stat-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+    }
+    .stat-box .val { font-size: 1.25rem; font-weight: 800; color: var(--cyan); }
+    .stat-box .lbl { font-size: 0.72rem; color: var(--muted); }
+    .input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 11px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    .hidden { display: none !important; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Football Intelligence Pro</h1>
-        <div class="subtitle">Apuestas Combinadas y Análisis en Tiempo Real</div>
-    </header>
-
-    <div id="app" class="grid">
-        <div class="loading">Sincronizando datos premium...</div>
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="brand">
+        <img src="./icons/icon.svg" alt="Logo" />
+        <div>
+          <h1>Football Intelligence Pro</h1>
+          <p id="live-sync-status">Cargando 10 ligas en tiempo real...</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="install-pwa-btn" class="btn btn-sm hidden" type="button">📲 Instalar App</button>
+        <button id="refresh-live-btn" class="btn btn-primary btn-sm" type="button">🔄 En Vivo</button>
+      </div>
     </div>
+  </header>
 
-    <script>
-        async function loadData() {
-            try {
-                const res = await fetch('parlay_engine_output.json?t=' + Date.now());
-                const data = await res.json();
-                const container = document.getElementById('app');
-                container.innerHTML = '';
+  <main class="container">
+    <section id="tab-matches">
+      <div id="league-chips" class="chips-scroll"></div>
+      <div id="status-chips" class="chips-scroll"></div>
+      <div class="status-strip">
+        <span id="summary-counter">Sincronizando datos reales...</span>
+        <span id="last-updated-tag">--</span>
+      </div>
+      <div id="matches-list" class="cards-grid"></div>
+    </section>
 
-                data.matches.forEach(m => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <div class="match-header">
-                            <span class="league-tag">${m.league}</span>
-                            <span class="match-date">${m.date}</span>
-                        </div>
-                        <div class="teams-row">
-                            <div class="team">
-                                <img src="${m.homeCrest}" alt="${m.home}" referrerPolicy="no-referrer">
-                                <span>${m.home}</span>
-                            </div>
-                            <div class="vs">VS</div>
-                            <div class="team away">
-                                <span>${m.away}</span>
-                                <img src="${m.awayCrest}" alt="${m.away}" referrerPolicy="no-referrer">
-                            </div>
-                        </div>
-                        <div class="bet-box">
-                            <div class="bet-title">Apuesta Combinada Recomendada</div>
-                            <div class="bet-main">
-                                <span>${m.prediction}</span>
-                                <span class="odds">Cuota ${m.odds}</span>
-                            </div>
-                            <div class="details-grid">
-                                <div>Goles: <b>${m.goals}</b></div>
-                                <div>Córners: <b>${m.corners}</b></div>
-                                <div>Remates: <b>${m.shots}</b></div>
-                                <div>Top Rematador: <b>${m.topShooter}</b></div>
-                            </div>
-                        </div>
-                        <div class="analysis">
-                            <b>Análisis Probabilístico (${m.probability}):</b> ${m.analysis}
-                        </div>
-                    `;
-                    container.appendChild(card);
-                });
-            } catch (e) {
-                document.getElementById('app').innerHTML = '<div class="loading" style="color:#ef4444;">Error de conexión. Intenta nuevamente.</div>';
-            }
-        }
-        loadData();
-    </script>
+    <section id="tab-parlay" class="hidden">
+      <div class="card" style="margin-bottom:12px;">
+        <div class="card-head">
+          <span class="league-pill">BOLETO COMBINADO + KELLY</span>
+          <button id="auto-parlay-btn" class="btn btn-primary btn-sm" type="button">⚡ Auto-Armar Óptima</button>
+        </div>
+        <label style="font-size:0.75rem;color:var(--muted);display:block;margin-bottom:4px;">Bankroll disponible ($)</label>
+        <input id="bankroll-input" class="input" type="number" value="10000" min="100" step="500" />
+        <div id="parlay-summary" class="metrics-grid"></div>
+      </div>
+      <div id="parlay-legs-list" class="cards-grid"></div>
+    </section>
+
+    <section id="tab-rosters" class="hidden">
+      <input id="roster-search" class="input" type="search" placeholder="Buscar equipo o jugador actual..." />
+      <div id="rosters-list" class="cards-grid"></div>
+    </section>
+
+    <section id="tab-history" class="hidden">
+      <div id="db-stats-grid" class="stats-grid"></div>
+      <div class="card" style="margin-bottom:12px;">
+        <div class="card-head">
+          <span class="league-pill">APIs PRIVADAS OPCIONALES (SOLO EN TU CELULAR)</span>
+          <button id="save-tokens-btn" class="btn btn-primary btn-sm" type="button">Guardar</button>
+        </div>
+        <p style="font-size:0.73rem;color:var(--muted);margin-bottom:8px;">ESPN Live (10 ligas) funciona gratis sin clave. Si querés sumar tu token de Bzzoiro o Football-Data en este dispositivo, se guarda únicamente en tu Android:</p>
+        <input id="token-bzzoiro" class="input" type="password" placeholder="Token Bzzoiro opcional (localStorage)" />
+        <input id="token-fd" class="input" type="password" placeholder="Token Football-Data.org opcional (localStorage)" />
+      </div>
+      <div id="history-matches-list" class="cards-grid"></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-tab="matches" type="button">⚽<span>Partidos</span></button>
+    <button class="nav-btn" data-tab="parlay" type="button">🎫<span>Combinada <span id="parlay-badge" class="badge-count">0</span></span></button>
+    <button class="nav-btn" data-tab="rosters" type="button">🛡️<span>Planteles</span></button>
+    <button class="nav-btn" data-tab="history" type="button">📊<span>Historial BD</span></button>
+  </nav>
+
+  <div id="match-modal" class="modal-backdrop">
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <strong id="modal-title" style="font-size:0.95rem;">Detalle del Partido</strong>
+        <button id="close-modal-btn" class="btn btn-sm" type="button">Cerrar ✕</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="./app.js?v=3.0.1" defer></script>
 </body>
 </html>

@@ -1,8 +1,19 @@
 {
-    "name": "Football Intelligence Pro",
-    "short_name": "Football Pro",
-    "start_url": "index.html",
-    "display": "standalone",
-    "background_color": "#0a0e14",
-    "icons": [{ "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Football_icon.svg", "sizes": "512x512", "type": "image/svg+xml" }]
+  "name": "Football Intelligence Pro — Combinadas",
+  "short_name": "Football Pro",
+  "description": "Apuestas combinadas en tiempo real, 10 ligas, historial auto-creciente, escudos oficiales y planteles actualizados.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

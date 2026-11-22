@@ -1,0 +1,7074 @@
+{
+  "lastUpdated": "22/11/2026 12:00 ART",
+  "dbStats": {
+    "teamsInXgCache": 655,
+    "seasonHistoryRows": 1672,
+    "liveMatchesLogged": 4,
+    "newMatchesIngestedThisRun": 4,
+    "teamRostersCached": 66
+  },
+  "recentLoggedMatches": [
+    {
+      "event_id": "401875008",
+      "league": "Serie A (Italia)",
+      "date": "22/11/2026 08:30 ART",
+      "home": "Juventus",
+      "away": "Venezia",
+      "score": "4 - 0",
+      "corners": "5.0 / 2.0"
+    },
+    {
+      "event_id": "401875545",
+      "league": "Eredivisie (Países Bajos)",
+      "date": "22/11/2026 08:15 ART",
+      "home": "FC Twente",
+      "away": "Willem II",
+      "score": "2 - 1",
+      "corners": "6.0 / -"
+    },
+    {
+      "event_id": "401913961",
+      "league": "Copa Sudamericana",
+      "date": "21/11/2026 19:30 ART",
+      "home": "Atlético-MG",
+      "away": "Boca Juniors",
+      "score": "0 - 2",
+      "corners": "4.0 / 4.0"
+    },
+    {
+      "event_id": "401926286",
+      "league": "Copa Argentina",
+      "date": "14/11/2026 19:00 ART",
+      "home": "Banfield",
+      "away": "Boca Juniors",
+      "score": "0 - 3",
+      "corners": "3.0 / 2.0"
+    }
+  ],
+  "rosters": [
+    {
+      "teamId": "83",
+      "teamName": "Barcelona",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Joan García"
+        },
+        {
+          "number": "18",
+          "position": "CD-L",
+          "name": "Gerard Martín"
+        },
+        {
+          "number": "21",
+          "position": "CD-R",
+          "name": "Frenkie de Jong"
+        },
+        {
+          "number": "2",
+          "position": "LB",
+          "name": "João Cancelo"
+        },
+        {
+          "number": "24",
+          "position": "RB",
+          "name": "Eric García"
+        },
+        {
+          "number": "22",
+          "position": "CM",
+          "name": "Marc Bernal"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Pedri"
+        },
+        {
+          "number": "7",
+          "position": "RM",
+          "name": "Fermín López"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Raphinha"
+        },
+        {
+          "number": "14",
+          "position": "LF",
+          "name": "Karim Adeyemi"
+        },
+        {
+          "number": "10",
+          "position": "RF",
+          "name": "Lamine Yamal"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "102",
+      "teamName": "Villarreal",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+      "players": [
+        {
+          "number": "25",
+          "position": "G",
+          "name": "Péter Gulácsi"
+        },
+        {
+          "number": "12",
+          "position": "CD-L",
+          "name": "Renato Veiga"
+        },
+        {
+          "number": "6",
+          "position": "CD-R",
+          "name": "Pau Navarro"
+        },
+        {
+          "number": "20",
+          "position": "LB",
+          "name": "Carlos Romero"
+        },
+        {
+          "number": "3",
+          "position": "RB",
+          "name": "Alex Freeman"
+        },
+        {
+          "number": "18",
+          "position": "CM-L",
+          "name": "Pape Gueye"
+        },
+        {
+          "number": "14",
+          "position": "CM-R",
+          "name": "Santi Comesaña"
+        },
+        {
+          "number": "21",
+          "position": "LM",
+          "name": "Tani Oluwaseyi"
+        },
+        {
+          "number": "17",
+          "position": "RM",
+          "name": "Tajon Buchanan"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Georges Mikautadze"
+        },
+        {
+          "number": "10",
+          "position": "RCF",
+          "name": "Alberto Moleiro"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "139",
+      "teamName": "Ajax Amsterdam",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+      "players": [
+        {
+          "number": "26",
+          "position": "G",
+          "name": "Maarten Paes"
+        },
+        {
+          "number": "15",
+          "position": "CD-L",
+          "name": "Youri Baas"
+        },
+        {
+          "number": "30",
+          "position": "CD-R",
+          "name": "Aaron Bouwman"
+        },
+        {
+          "number": "5",
+          "position": "LB",
+          "name": "Owen Wijndal"
+        },
+        {
+          "number": "2",
+          "position": "RB",
+          "name": "Lucas Rosa"
+        },
+        {
+          "number": "24",
+          "position": "CM",
+          "name": "Jorthy Mokio"
+        },
+        {
+          "number": "28",
+          "position": "LM",
+          "name": "Yves Bissouma"
+        },
+        {
+          "number": "18",
+          "position": "RM",
+          "name": "Davy Klaassen"
+        },
+        {
+          "number": "99",
+          "position": "F",
+          "name": "Tolu Arokodare"
+        },
+        {
+          "number": "10",
+          "position": "LF",
+          "name": "Oscar Gloukh"
+        },
+        {
+          "number": "43",
+          "position": "RF",
+          "name": "Rayane Bounida"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2726",
+      "teamName": "ADO Den Haag",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Kilian Nikiema"
+        },
+        {
+          "number": "4",
+          "position": "CD-L",
+          "name": "Matteo Waem"
+        },
+        {
+          "number": "3",
+          "position": "CD-R",
+          "name": "Pascal Mulder"
+        },
+        {
+          "number": "15",
+          "position": "LB",
+          "name": "Milan Hokke"
+        },
+        {
+          "number": "2",
+          "position": "RB",
+          "name": "Othniël Raterink"
+        },
+        {
+          "number": "33",
+          "position": "AM",
+          "name": "Matej Sin"
+        },
+        {
+          "number": "14",
+          "position": "LM",
+          "name": "Mylian Jimenez"
+        },
+        {
+          "number": "25",
+          "position": "RM",
+          "name": "Juho Kilo"
+        },
+        {
+          "number": "46",
+          "position": "F",
+          "name": "Yannick Eduardo"
+        },
+        {
+          "number": "27",
+          "position": "AM-L",
+          "name": "Nigel Thomas"
+        },
+        {
+          "number": "11",
+          "position": "AM-R",
+          "name": "Evan Rottier"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "151",
+      "teamName": "Sparta Rotterdam",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Filip Bednarek"
+        },
+        {
+          "number": "4",
+          "position": "CD-L",
+          "name": "Bruno Martins Indi"
+        },
+        {
+          "number": "3",
+          "position": "CD-R",
+          "name": "Marvin Young"
+        },
+        {
+          "number": "5",
+          "position": "LB",
+          "name": "Bas Kuipers"
+        },
+        {
+          "number": "2",
+          "position": "RB",
+          "name": "Lushendry Martes"
+        },
+        {
+          "number": "10",
+          "position": "AM",
+          "name": "Shunsuke Mito"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Cedric Hatenboer"
+        },
+        {
+          "number": "6",
+          "position": "RM",
+          "name": "Julian Baas"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Milan Zonneveld"
+        },
+        {
+          "number": "7",
+          "position": "AM-L",
+          "name": "Mitchell van Bergen"
+        },
+        {
+          "number": "11",
+          "position": "AM-R",
+          "name": "Isaac Babadi"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "140",
+      "teamName": "AZ Alkmaar",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+      "players": [
+        {
+          "number": "28",
+          "position": "G",
+          "name": "Jari De Busser"
+        },
+        {
+          "number": "29",
+          "position": "CD-L",
+          "name": "Wesley Hoedt"
+        },
+        {
+          "number": "3",
+          "position": "CD-R",
+          "name": "Wouter Goes"
+        },
+        {
+          "number": "5",
+          "position": "LB",
+          "name": "Mateo Chávez"
+        },
+        {
+          "number": "22",
+          "position": "RB",
+          "name": "Elijah Dijkstra"
+        },
+        {
+          "number": "6",
+          "position": "CM",
+          "name": "Peer Koopmeiners"
+        },
+        {
+          "number": "14",
+          "position": "LM",
+          "name": "Calvin Stengs"
+        },
+        {
+          "number": "21",
+          "position": "RM",
+          "name": "Dave Kwakman"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Mexx Meerdink"
+        },
+        {
+          "number": "11",
+          "position": "LF",
+          "name": "Ro-Zangelo Daal"
+        },
+        {
+          "number": "24",
+          "position": "RF",
+          "name": "Ayoub Oufkir"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "107",
+      "teamName": "Bologna",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Lukasz Skorupski"
+        },
+        {
+          "number": "16",
+          "position": "CD",
+          "name": "Nicoló Casale"
+        },
+        {
+          "number": "3",
+          "position": "CD-L",
+          "name": "Arthur Theate"
+        },
+        {
+          "number": "36",
+          "position": "CD-R",
+          "name": "Matteo Darmian"
+        },
+        {
+          "number": "4",
+          "position": "CM-L",
+          "name": "Tommaso Pobega"
+        },
+        {
+          "number": "19",
+          "position": "CM-R",
+          "name": "Lewis Ferguson"
+        },
+        {
+          "number": "28",
+          "position": "LM",
+          "name": "Nicolò Cambiaghi"
+        },
+        {
+          "number": "20",
+          "position": "RM",
+          "name": "Nadir Zortea"
+        },
+        {
+          "number": "21",
+          "position": "F",
+          "name": "Jens Odgaard"
+        },
+        {
+          "number": "10",
+          "position": "CF-L",
+          "name": "Federico Bernardeschi"
+        },
+        {
+          "number": "7",
+          "position": "CF-R",
+          "name": "Riccardo Orsolini"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "118",
+      "teamName": "Udinese",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+      "players": [
+        {
+          "number": "40",
+          "position": "G",
+          "name": "Maduka Okoye"
+        },
+        {
+          "number": "27",
+          "position": "CD",
+          "name": "Christian Kabasele"
+        },
+        {
+          "number": "28",
+          "position": "CD-L",
+          "name": "Oumar Solet"
+        },
+        {
+          "number": "16",
+          "position": "CD-R",
+          "name": "Matteo Palma"
+        },
+        {
+          "number": "24",
+          "position": "CM-L",
+          "name": "Jakub Piotrowski"
+        },
+        {
+          "number": "4",
+          "position": "CM-R",
+          "name": "Sandi Lovric"
+        },
+        {
+          "number": "8",
+          "position": "AM",
+          "name": "Jesper Karlström"
+        },
+        {
+          "number": "11",
+          "position": "LM",
+          "name": "Hassane Kamara"
+        },
+        {
+          "number": "14",
+          "position": "RM",
+          "name": "James Abankwah"
+        },
+        {
+          "number": "32",
+          "position": "CF-L",
+          "name": "Jurgen Ekkelenkamp"
+        },
+        {
+          "number": "10",
+          "position": "CF-R",
+          "name": "Nicolò Zaniolo"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "3997",
+      "teamName": "Sassuolo",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+      "players": [
+        {
+          "number": "49",
+          "position": "G",
+          "name": "Arijanet Muric"
+        },
+        {
+          "number": "21",
+          "position": "CD",
+          "name": "Jay Idzes"
+        },
+        {
+          "number": "5",
+          "position": "CD-L",
+          "name": "Fali Candé"
+        },
+        {
+          "number": "6",
+          "position": "CD-R",
+          "name": "Sebastian Walukiewicz"
+        },
+        {
+          "number": "18",
+          "position": "CM-L",
+          "name": "Nemanja Matic"
+        },
+        {
+          "number": "42",
+          "position": "CM-R",
+          "name": "Kristian Thorstvedt"
+        },
+        {
+          "number": "33",
+          "position": "LM",
+          "name": "Rafael Obrador"
+        },
+        {
+          "number": "20",
+          "position": "RM",
+          "name": "Ignace van der Brempt"
+        },
+        {
+          "number": "94",
+          "position": "F",
+          "name": "Sebastiano Esposito"
+        },
+        {
+          "number": "45",
+          "position": "CF-L",
+          "name": "Armand Laurienté"
+        },
+        {
+          "number": "10",
+          "position": "CF-R",
+          "name": "Domenico Berardi"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "3263",
+      "teamName": "Genoa",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Justin Bijlow"
+        },
+        {
+          "number": "5",
+          "position": "CD",
+          "name": "Leo Østigard"
+        },
+        {
+          "number": "22",
+          "position": "CD-L",
+          "name": "Johan Vásquez"
+        },
+        {
+          "number": "27",
+          "position": "CD-R",
+          "name": "Alessandro Marcandalli"
+        },
+        {
+          "number": "25",
+          "position": "CM-L",
+          "name": "Hamed Traoré"
+        },
+        {
+          "number": "4",
+          "position": "CM-R",
+          "name": "Alexsandro Amorim"
+        },
+        {
+          "number": "77",
+          "position": "LM",
+          "name": "Mikael Ellertsson"
+        },
+        {
+          "number": "3",
+          "position": "RM",
+          "name": "Kingsley Ehizibue"
+        },
+        {
+          "number": "18",
+          "position": "F",
+          "name": "Milutin Osmajic"
+        },
+        {
+          "number": "8",
+          "position": "CF-L",
+          "name": "Tommaso Baldanzi"
+        },
+        {
+          "number": "10",
+          "position": "CF-R",
+          "name": "Junior Messias"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "6851",
+      "teamName": "Paris FC",
+      "leagueSlug": "fra.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Kevin Trapp"
+        },
+        {
+          "number": "42",
+          "position": "CD-L",
+          "name": "Diego Coppola"
+        },
+        {
+          "number": "31",
+          "position": "CD-R",
+          "name": "Samir Chergui"
+        },
+        {
+          "number": "6",
+          "position": "LB",
+          "name": "Otavio"
+        },
+        {
+          "number": "23",
+          "position": "RB",
+          "name": "Rudy Matondo"
+        },
+        {
+          "number": "7",
+          "position": "AM",
+          "name": "Pablo Pagis"
+        },
+        {
+          "number": "33",
+          "position": "LM",
+          "name": "Pierre Lees-Melou"
+        },
+        {
+          "number": "20",
+          "position": "RM",
+          "name": "Maxime López"
+        },
+        {
+          "number": "8",
+          "position": "F",
+          "name": "Zabi Gueu"
+        },
+        {
+          "number": "15",
+          "position": "AM-L",
+          "name": "Luca Koleosho"
+        },
+        {
+          "number": "10",
+          "position": "AM-R",
+          "name": "Ilan Kebbal"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "7868",
+      "teamName": "Angers",
+      "leagueSlug": "fra.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Anthony Lopes"
+        },
+        {
+          "number": "34",
+          "position": "CD-L",
+          "name": "Maël Gernigon"
+        },
+        {
+          "number": "4",
+          "position": "CD-R",
+          "name": "Ousmane Camara"
+        },
+        {
+          "number": "17",
+          "position": "LB",
+          "name": "Joseph Kalulu Kyatengwa"
+        },
+        {
+          "number": "2",
+          "position": "RB",
+          "name": "Carlens Arcus"
+        },
+        {
+          "number": "14",
+          "position": "AM",
+          "name": "Yassin Belkhdim"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Branco van den Boomen"
+        },
+        {
+          "number": "93",
+          "position": "RM",
+          "name": "Haris Belkebla"
+        },
+        {
+          "number": "7",
+          "position": "F",
+          "name": "Mamadou Simbakoli"
+        },
+        {
+          "number": "10",
+          "position": "AM-L",
+          "name": "Amine Sbaï"
+        },
+        {
+          "number": "26",
+          "position": "AM-R",
+          "name": "Anthony Bermont"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "3841",
+      "teamName": "FC Augsburg",
+      "leagueSlug": "ger.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Finn Dahmen"
+        },
+        {
+          "number": "14",
+          "position": "CD",
+          "name": "Yannik Keitel"
+        },
+        {
+          "number": "37",
+          "position": "CD-L",
+          "name": "Tim Schnitzer"
+        },
+        {
+          "number": "35",
+          "position": "CD-R",
+          "name": "Juma Bah"
+        },
+        {
+          "number": "32",
+          "position": "CM-L",
+          "name": "Fabian Rieder"
+        },
+        {
+          "number": "19",
+          "position": "CM-R",
+          "name": "Robin Fellhauer"
+        },
+        {
+          "number": "16",
+          "position": "LM",
+          "name": "Hennes Behrens"
+        },
+        {
+          "number": "27",
+          "position": "RM",
+          "name": "Marius Wolf"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Michael Gregoritsch"
+        },
+        {
+          "number": "20",
+          "position": "CF-L",
+          "name": "Alexis Claude-Maurice"
+        },
+        {
+          "number": "30",
+          "position": "CF-R",
+          "name": "Anton Kade"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2950",
+      "teamName": "Mainz",
+      "leagueSlug": "ger.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+      "players": [
+        {
+          "number": "27",
+          "position": "G",
+          "name": "Robin Zentner"
+        },
+        {
+          "number": "4",
+          "position": "CD",
+          "name": "Stefan Posch"
+        },
+        {
+          "number": "48",
+          "position": "CD-L",
+          "name": "Kacper Potulski"
+        },
+        {
+          "number": "21",
+          "position": "CD-R",
+          "name": "Danny da Costa"
+        },
+        {
+          "number": "6",
+          "position": "SW",
+          "name": "Kaishu Sano"
+        },
+        {
+          "number": "10",
+          "position": "CM-L",
+          "name": "Nadiem Amiri"
+        },
+        {
+          "number": "8",
+          "position": "CM-R",
+          "name": "Paul Nebel"
+        },
+        {
+          "number": "2",
+          "position": "LM",
+          "name": "Phillipp Mwene"
+        },
+        {
+          "number": "19",
+          "position": "RM",
+          "name": "Anthony Caci"
+        },
+        {
+          "number": "9",
+          "position": "CF-L",
+          "name": "Phillip Tietz"
+        },
+        {
+          "number": "23",
+          "position": "CF-R",
+          "name": "Sheraldo Becker"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "87",
+      "teamName": "Racing Santander",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
+      "players": [
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Julen Agirrezabala"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Pedro Felipe"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Pablo Ramon"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Jorge Salinas"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Jeanuël Belocian"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Matteo Prati"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Iñigo Vicente"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Iker Luque"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Sergio Canales"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Iván Martín"
+        },
+        {
+          "number": "21",
+          "position": "F",
+          "name": "Yassir Zabiri"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "89",
+      "teamName": "Real Sociedad",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Álex Remiro"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Sergio Gómez"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Héctor Fort"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Igor Zubeldia"
+        },
+        {
+          "number": "19",
+          "position": "D",
+          "name": "Mamadou Sarr"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Luka Sucic"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Gonçalo Guedes"
+        },
+        {
+          "number": "4",
+          "position": "M",
+          "name": "Jon Gorrotxategi"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Carlos Soler"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Orri Óskarsson"
+        },
+        {
+          "number": "10",
+          "position": "F",
+          "name": "Mikel Oyarzabal"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "3706",
+      "teamName": "Go Ahead Eagles",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
+      "players": [
+        {
+          "number": "24",
+          "position": "G",
+          "name": "Jasper Cillessen"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Joris Kramer"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Julius Dirksen"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Alfons Sampsted"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Thibo Baeten"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Melle Meulensteen"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Victor Edvardsen"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Sören Tengstedt"
+        },
+        {
+          "number": "34",
+          "position": "M",
+          "name": "Yassir Rahmouni"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Mathis Suray"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Stefan Ingi Sigurdarson"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "143",
+      "teamName": "Fortuna Sittard",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Luuk Koopmans"
+        },
+        {
+          "number": "8",
+          "position": "D",
+          "name": "Jasper Dahlhaus"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Justin Hubner"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Syb van Ottele"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Rodrigo Guth"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Ivo Pinto"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Shiloh ’t Zand"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Philip Brittijn"
+        },
+        {
+          "number": "52",
+          "position": "M",
+          "name": "Mohamed Ihattaren"
+        },
+        {
+          "number": "14",
+          "position": "F",
+          "name": "Sven Simons"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Anthony Descotte"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "273",
+      "teamName": "Lorient",
+      "leagueSlug": "fra.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Benjamin Leroy"
+        },
+        {
+          "number": "38",
+          "position": "G",
+          "name": "Yvon Mvogo"
+        },
+        {
+          "number": "21",
+          "position": "G",
+          "name": "Bingourou Kamara"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Formose Mendy"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Alec Georgen"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Montassar Talbi"
+        },
+        {
+          "number": "95",
+          "position": "D",
+          "name": "Isaak Touré"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Srdjan Kuzmic"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Nathaniel Adjei"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Dembo Sylla"
+        },
+        {
+          "number": "77",
+          "position": "D",
+          "name": "Panos Katseris"
+        },
+        {
+          "number": "55",
+          "position": "D",
+          "name": "Nosa Obaretin"
+        },
+        {
+          "number": "43",
+          "position": "D",
+          "name": "Arsène Kouassi"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Jean-Victor Makengo"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Bandiougou Fadiga"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Noah Cadiou"
+        },
+        {
+          "number": "72",
+          "position": "M",
+          "name": "Noah Mbamba"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Théo Le Bris"
+        },
+        {
+          "number": "62",
+          "position": "M",
+          "name": "Arthur Avom"
+        },
+        {
+          "number": "33",
+          "position": "M",
+          "name": "Gabin Bernardeau"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Daniel Semedo"
+        },
+        {
+          "number": "15",
+          "position": "F",
+          "name": "Tosin Aiyegun"
+        },
+        {
+          "number": "19",
+          "position": "F",
+          "name": "Souleymane Faye"
+        },
+        {
+          "number": "10",
+          "position": "F",
+          "name": "Isak Jensen"
+        },
+        {
+          "number": "18",
+          "position": "F",
+          "name": "Ibrahima Baldé"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "169",
+      "teamName": "Stade Rennais",
+      "leagueSlug": "fra.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
+      "players": [
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Brice Samba"
+        },
+        {
+          "number": "16",
+          "position": "G",
+          "name": "Nicolas Lemaitre"
+        },
+        {
+          "number": "60",
+          "position": "G",
+          "name": "Kilian Belazzoug"
+        },
+        {
+          "number": "14",
+          "position": "D",
+          "name": "Bryan Reynolds"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Anthony Rouault"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Charlie Cresswell"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Quentin Merlin"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Mahamadou Nagida"
+        },
+        {
+          "number": "48",
+          "position": "D",
+          "name": "Abdelhamid Aït Boudlal"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Gonçalo Oliveira"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Adrien Thomasson"
+        },
+        {
+          "number": "95",
+          "position": "M",
+          "name": "Przemyslaw Frankowski"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Valentin Rongier"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Sebastian Szymanski"
+        },
+        {
+          "number": "45",
+          "position": "M",
+          "name": "Mahdi Camara"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Djaoui Cissé"
+        },
+        {
+          "number": "-",
+          "position": "M",
+          "name": "Ayanda Sishuba"
+        },
+        {
+          "number": "10",
+          "position": "F",
+          "name": "Ludovic Blas"
+        },
+        {
+          "number": "70",
+          "position": "F",
+          "name": "Arnaud Nordin"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Mousa Al-Tamari"
+        },
+        {
+          "number": "22",
+          "position": "F",
+          "name": "Boulaye Dia"
+        },
+        {
+          "number": "90",
+          "position": "F",
+          "name": "Issa Soumaré"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Esteban Lepaul"
+        },
+        {
+          "number": "12",
+          "position": "F",
+          "name": "Eliezer Mayenda"
+        },
+        {
+          "number": "65",
+          "position": "F",
+          "name": "Henrick Do Marcolino"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "137",
+      "teamName": "Werder Bremen",
+      "leagueSlug": "ger.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+      "players": [
+        {
+          "number": "25",
+          "position": "G",
+          "name": "Markus Kolke"
+        },
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Alexander Schlager"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Karl Hein"
+        },
+        {
+          "number": "37",
+          "position": "G",
+          "name": "Stefan Smarkalev"
+        },
+        {
+          "number": "8",
+          "position": "D",
+          "name": "Mitchell Weiser"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Niklas Stark"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Marco Friedl"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Amos Pieper"
+        },
+        {
+          "number": "27",
+          "position": "D",
+          "name": "Felix Agu"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Olivier Deman"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Oskar Wójcik"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Arthur"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "N'Diaye Moussa"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Mick Schmetgens"
+        },
+        {
+          "number": "36",
+          "position": "D",
+          "name": "Mats Heitmann"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Jens Stage"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Ludovit Reis"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Senne Lynen"
+        },
+        {
+          "number": "44",
+          "position": "M",
+          "name": "Youri Regeer"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Skelly Alvero"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Chuki"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Dariusz Stalmach"
+        },
+        {
+          "number": "34",
+          "position": "M",
+          "name": "Darwin Kaan Soylu"
+        },
+        {
+          "number": "10",
+          "position": "F",
+          "name": "Niclas Füllkrug"
+        },
+        {
+          "number": "26",
+          "position": "F",
+          "name": "Cedric Itten"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "127",
+      "teamName": "Hamburg SV",
+      "leagueSlug": "ger.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Daniel Heuer Fernandes"
+        },
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Sander Tangvik"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "Fernando Dickes"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Miro Muheim"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Jordan Torunarigha"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Sebastiaan Bornauw"
+        },
+        {
+          "number": "44",
+          "position": "D",
+          "name": "Mario Vuskovic"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Warmed Omari"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "David Møller Wolfe"
+        },
+        {
+          "number": "7",
+          "position": "D",
+          "name": "Zakaria El Ouahdi"
+        },
+        {
+          "number": "39",
+          "position": "D",
+          "name": "Joel Agyekum"
+        },
+        {
+          "number": "37",
+          "position": "D",
+          "name": "Louis Lemke"
+        },
+        {
+          "number": "43",
+          "position": "D",
+          "name": "Shafiq Nandja"
+        },
+        {
+          "number": "48",
+          "position": "D",
+          "name": "Jason-Dean Bissi Mouelle"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Fabio Vieira"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Bakery Jatta"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Albert Sambi Lokonga"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Nicolás Capaldo"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Immanuel Pherai"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Albert Grønbaek"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Nicolai Remberg"
+        },
+        {
+          "number": "4",
+          "position": "M",
+          "name": "Bilal Nadir"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Martin Adeline"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Kofi Amoako"
+        },
+        {
+          "number": "15",
+          "position": "F",
+          "name": "Yussuf Poulsen"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "103",
+      "teamName": "AC Milan",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Pietro Terracciano"
+        },
+        {
+          "number": "16",
+          "position": "G",
+          "name": "Mike Maignan"
+        },
+        {
+          "number": "96",
+          "position": "G",
+          "name": "Lorenzo Torriani"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "Léo-Paul Bouyer"
+        },
+        {
+          "number": "37",
+          "position": "G",
+          "name": "Matteo Pittarella"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Pervis Estupiñán"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Fikayo Tomori"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Matteo Gabbia"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Strahinja Pavlovic"
+        },
+        {
+          "number": "42",
+          "position": "D",
+          "name": "Filippo Terracciano"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Koni De Winter"
+        },
+        {
+          "number": "34",
+          "position": "D",
+          "name": "Mario Gila"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Davide Bartesaghi"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Sankhoun Diawara"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Valeri Vladimirov"
+        },
+        {
+          "number": "48",
+          "position": "D",
+          "name": "El Hadji Malick Cissé"
+        },
+        {
+          "number": "47",
+          "position": "D",
+          "name": "Nirash Raffaello Perera"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Luka Modric"
+        },
+        {
+          "number": "12",
+          "position": "M",
+          "name": "Adrien Rabiot"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Ruben Loftus-Cheek"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Christian Pulisic"
+        },
+        {
+          "number": "30",
+          "position": "M",
+          "name": "Ardon Jashari"
+        },
+        {
+          "number": "80",
+          "position": "M",
+          "name": "Yunus Musah"
+        },
+        {
+          "number": "55",
+          "position": "M",
+          "name": "Silvano Vos"
+        },
+        {
+          "number": "70",
+          "position": "M",
+          "name": "Alphadjo Cissè"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "4057",
+      "teamName": "Frosinone",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
+      "players": [
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Matteo Pisseri"
+        },
+        {
+          "number": "91",
+          "position": "G",
+          "name": "Sebastiano Desplanches"
+        },
+        {
+          "number": "22",
+          "position": "G",
+          "name": "Lorenzo Palmisani"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Kevin Akpoguma"
+        },
+        {
+          "number": "71",
+          "position": "D",
+          "name": "Aleksa Terzic"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Ilario Monterisi"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Anthony Oyono"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Wisdom Amey"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Giorgio Cittadini"
+        },
+        {
+          "number": "90",
+          "position": "D",
+          "name": "Enzo Tchato"
+        },
+        {
+          "number": "79",
+          "position": "D",
+          "name": "Gabriele Bracaglia"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Gabriele Calvani"
+        },
+        {
+          "number": "74",
+          "position": "D",
+          "name": "Omar Fayed"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Florian Grillitsch"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Giacomo Calo"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Romano Schmid"
+        },
+        {
+          "number": "4",
+          "position": "M",
+          "name": "Ben Lhassine Kone"
+        },
+        {
+          "number": "96",
+          "position": "M",
+          "name": "Francesco Gelli"
+        },
+        {
+          "number": "34",
+          "position": "M",
+          "name": "Anouar El Azzouzi"
+        },
+        {
+          "number": "73",
+          "position": "M",
+          "name": "Patrizio Masini"
+        },
+        {
+          "number": "70",
+          "position": "M",
+          "name": "Luis Hasa"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Matteo Cichella"
+        },
+        {
+          "number": "24",
+          "position": "F",
+          "name": "Alessio Zerbin"
+        },
+        {
+          "number": "89",
+          "position": "F",
+          "name": "Tomas Bobcek"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Antonio Raimondo"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "97",
+      "teamName": "Osasuna",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+      "players": [
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Aitor Fernández"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Sergio Herrera"
+        },
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Rafa Fernández"
+        },
+        {
+          "number": "32",
+          "position": "G",
+          "name": "Mikel Bermejo Sola"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Diego Rico"
+        },
+        {
+          "number": "19",
+          "position": "D",
+          "name": "Valentin Rosier"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Alejandro Catena"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Abel Bretones"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Jorge Herrando"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Enzo Boyomo"
+        },
+        {
+          "number": "48",
+          "position": "D",
+          "name": "Rockson Yeboah"
+        },
+        {
+          "number": "27",
+          "position": "D",
+          "name": "Iñigo Arguibide"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Unai Santos"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Lucas Torró"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Rubén García"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Jon Moncayola"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Aimar Oroz"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Iker Muñoz"
+        },
+        {
+          "number": "29",
+          "position": "M",
+          "name": "Asier Osambela"
+        },
+        {
+          "number": "26",
+          "position": "M",
+          "name": "Mauro Echegoyen"
+        },
+        {
+          "number": "16",
+          "position": "F",
+          "name": "Moi Gómez"
+        },
+        {
+          "number": "17",
+          "position": "F",
+          "name": "Ante Budimir"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Enrique Barja"
+        },
+        {
+          "number": "20",
+          "position": "F",
+          "name": "Romain Del Castillo"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Raúl García"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "99",
+      "teamName": "Málaga",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Alfonso Herrero"
+        },
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Carlos López"
+        },
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Andres Cespedes"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "José Salinas"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Einar Galilea"
+        },
+        {
+          "number": "15",
+          "position": "F",
+          "name": "Moussa Diarra"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Fernando Calero"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Juan Berrocal"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Álex Pastor"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Ángel Recio"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Carlos Puga"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Diego Murillo"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Rafa Garrido"
+        },
+        {
+          "number": "39",
+          "position": "D",
+          "name": "Adam Aznou"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Juan Cruz"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Pablo Martínez"
+        },
+        {
+          "number": "2",
+          "position": "M",
+          "name": "Jens Cajuste"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Ramón Enríquez"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Carlos Dotor"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Daniel Lorenzo"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Rafa Rodríguez"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Izan Merino"
+        },
+        {
+          "number": "35",
+          "position": "M",
+          "name": "Aarón Moloney"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Otu Junior"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Joaquín Muñoz"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "17",
+      "teamName": "Rosario Central",
+      "leagueSlug": "arg.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Axel Werner"
+        },
+        {
+          "number": "23",
+          "position": "G",
+          "name": "Jeremias Ledesma"
+        },
+        {
+          "number": "38",
+          "position": "G",
+          "name": "Damian Fernandez"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Juan Komar"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Alexis Soto"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Facundo Mallo"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Emanuel Coronel"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Sebastian Zaracho"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Gastón Ávila"
+        },
+        {
+          "number": "35",
+          "position": "M",
+          "name": "Lucas Ramos"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Agustín Sández"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Juan Giménez"
+        },
+        {
+          "number": "47",
+          "position": "D",
+          "name": "Luca Raffin"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Ignacio Ovando"
+        },
+        {
+          "number": "42",
+          "position": "D",
+          "name": "Elías Verón"
+        },
+        {
+          "number": "41",
+          "position": "D",
+          "name": "Leonardo Rios"
+        },
+        {
+          "number": "36",
+          "position": "D",
+          "name": "Alvaro Güich"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Ángel Di María"
+        },
+        {
+          "number": "43",
+          "position": "F",
+          "name": "Kevin Gutiérrez"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Guillermo Fernández"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Franco Cervi"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Jáminton Campaz"
+        },
+        {
+          "number": "31",
+          "position": "M",
+          "name": "Federico Navarro"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Vicente Pizarro"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Franco Ibarra"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "11972",
+      "teamName": "Gimnasia (Mendoza)",
+      "leagueSlug": "arg.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
+      "players": [
+        {
+          "number": "23",
+          "position": "G",
+          "name": "César Rigamonti"
+        },
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Lautaro Petruchi"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Ezequiel Muñoz"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Juan Franco"
+        },
+        {
+          "number": "6",
+          "position": "G",
+          "name": "Imanol González"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Diego Mondino"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Germán Guiffrey"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Franco Saavedra"
+        },
+        {
+          "number": "36",
+          "position": "D",
+          "name": "Ismael Cortez"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Luciano Paredes"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Martín Úbeda"
+        },
+        {
+          "number": "41",
+          "position": "D",
+          "name": "Gerónimo Patritti"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Matias Vargas"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Fermín Antonini"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Tomás Ortiz"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Ulises Sánchez"
+        },
+        {
+          "number": "30",
+          "position": "M",
+          "name": "Esteban Fernández"
+        },
+        {
+          "number": "26",
+          "position": "M",
+          "name": "Facundo Lencioni"
+        },
+        {
+          "number": "3",
+          "position": "M",
+          "name": "Matías Recalde"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Tomas O'Connor"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Nahuel Barboza"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Julián Ceballos"
+        },
+        {
+          "number": "42",
+          "position": "M",
+          "name": "Lautaro Carrera"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Santiago Rodríguez"
+        },
+        {
+          "number": "33",
+          "position": "F",
+          "name": "Brian Andrada"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "105",
+      "teamName": "Atalanta",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+      "players": [
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Francesco Rossi"
+        },
+        {
+          "number": "57",
+          "position": "G",
+          "name": "Marco Sportiello"
+        },
+        {
+          "number": "29",
+          "position": "G",
+          "name": "Marco Carnesecchi"
+        },
+        {
+          "number": "22",
+          "position": "G",
+          "name": "Thomas Pompei"
+        },
+        {
+          "number": "51",
+          "position": "G",
+          "name": "Mattia Sonzogni"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Thomas Kristensen"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Sead Kolasinac"
+        },
+        {
+          "number": "77",
+          "position": "D",
+          "name": "Davide Zappacosta"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Raoul Bellanova"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Odilon Kossounou"
+        },
+        {
+          "number": "47",
+          "position": "D",
+          "name": "Lorenzo Bernasconi"
+        },
+        {
+          "number": "42",
+          "position": "D",
+          "name": "Giorgio Scalvini"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Isak Hien"
+        },
+        {
+          "number": "53",
+          "position": "D",
+          "name": "Matteo Plaia"
+        },
+        {
+          "number": "43",
+          "position": "D",
+          "name": "Jacopo Mirra"
+        },
+        {
+          "number": "40",
+          "position": "D",
+          "name": "Relja Obric"
+        },
+        {
+          "number": "56",
+          "position": "D",
+          "name": "Albert Navarro"
+        },
+        {
+          "number": "55",
+          "position": "D",
+          "name": "Isaac Collins Isoa"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Mario Pasalic"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Franck Kessié"
+        },
+        {
+          "number": "99",
+          "position": "M",
+          "name": "Eljif Elmas"
+        },
+        {
+          "number": "70",
+          "position": "M",
+          "name": "Gianluca Gaetano"
+        },
+        {
+          "number": "13",
+          "position": "M",
+          "name": "Éderson"
+        },
+        {
+          "number": "59",
+          "position": "M",
+          "name": "Nicola Zalewski"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Lazar Samardzic"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "110",
+      "teamName": "Internazionale",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+      "players": [
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Raffaele Di Gennaro"
+        },
+        {
+          "number": "49",
+          "position": "G",
+          "name": "Ivan Provedel"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Josep Martínez"
+        },
+        {
+          "number": "40",
+          "position": "G",
+          "name": "Alain Taho"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "John Stones"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Federico Dimarco"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Manuel Akanji"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Benjamin Pavard"
+        },
+        {
+          "number": "95",
+          "position": "D",
+          "name": "Alessandro Bastoni"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Yann Bisseck"
+        },
+        {
+          "number": "99",
+          "position": "D",
+          "name": "Djed Spence"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Carlos Augusto"
+        },
+        {
+          "number": "51",
+          "position": "D",
+          "name": "Leon Jakirovic"
+        },
+        {
+          "number": "45",
+          "position": "D",
+          "name": "Francesco Stante"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Leonardo Bovio"
+        },
+        {
+          "number": "54",
+          "position": "D",
+          "name": "Mattia Marello"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Henrikh Mkhitaryan"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Hakan Çalhanoglu"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Piotr Zielinski"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Curtis Jones"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Nicolò Barella"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Aleksandar Stankovic"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Andy Diouf"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Petar Sucic"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Marcus Thuram"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "176",
+      "teamName": "Marseille",
+      "leagueSlug": "fra.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+      "players": [
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Jeffrey de Lange"
+        },
+        {
+          "number": "92",
+          "position": "G",
+          "name": "Théo Vermot"
+        },
+        {
+          "number": "40",
+          "position": "G",
+          "name": "Jelle Van Neck"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "Ibrahim Gomis"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Emerson"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Ulisses Garcia"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Derek Cornelius"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Nayef Aguerd"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "CJ Egan-Riley"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Bamo Meïté"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Alexi Koum"
+        },
+        {
+          "number": "80",
+          "position": "D",
+          "name": "Mathis Clement"
+        },
+        {
+          "number": "61",
+          "position": "D",
+          "name": "Rayan Bang Na"
+        },
+        {
+          "number": "66",
+          "position": "D",
+          "name": "Anis Doubal"
+        },
+        {
+          "number": "76",
+          "position": "D",
+          "name": "Hilan Slimani"
+        },
+        {
+          "number": "74",
+          "position": "D",
+          "name": "Kelyann Bezahaf"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Geoffrey Kondogbia"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Pierre-Emile Højbjerg"
+        },
+        {
+          "number": "77",
+          "position": "M",
+          "name": "Amine Harit"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Angel Gomes"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Himad Abdelli"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Tochukwu Nnadi"
+        },
+        {
+          "number": "42",
+          "position": "M",
+          "name": "Nouhoum Kamissoko"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Neal Maupay"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Amine Gouiri"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2697",
+      "teamName": "Le Mans",
+      "leagueSlug": "fra.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
+      "players": [
+        {
+          "number": "98",
+          "position": "G",
+          "name": "Nicolas Kocik"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Ewan Hatfout"
+        },
+        {
+          "number": "55",
+          "position": "G",
+          "name": "Augustin Delbecque"
+        },
+        {
+          "number": "19",
+          "position": "D",
+          "name": "Djibril Sidibé"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Samuel Yohou"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Lucas Buades"
+        },
+        {
+          "number": "76",
+          "position": "D",
+          "name": "Yasser Larouci"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Raúl Torrente"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Lucas Calodat"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Rayan Bamba"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Harold Voyer"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Théo Eyoum"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Noa Boissé"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "João Almeida"
+        },
+        {
+          "number": "23",
+          "position": "F",
+          "name": "Daouda Traoré"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Edwin Quarshie"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Alexandre Lauray"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Jean Vercruysse"
+        },
+        {
+          "number": "29",
+          "position": "M",
+          "name": "Lucas Bretelle"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Martin Rossignol"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Adil Bourabaa"
+        },
+        {
+          "number": "36",
+          "position": "M",
+          "name": "Lenny Videira"
+        },
+        {
+          "number": "13",
+          "position": "F",
+          "name": "Habib Diallo"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Antoine Rabillard"
+        },
+        {
+          "number": "25",
+          "position": "F",
+          "name": "Dame Guèye"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2922",
+      "teamName": "Getafe",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+      "players": [
+        {
+          "number": "13",
+          "position": "G",
+          "name": "David Soria"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Jirí Letácek"
+        },
+        {
+          "number": "35",
+          "position": "G",
+          "name": "Diego Ferrer"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Kiko Femenía"
+        },
+        {
+          "number": "14",
+          "position": "D",
+          "name": "Dani Carvajal"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Johan Mojica"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Djené"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Abdel Abqar"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Zaid Romero"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Saba Sazonov"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Andrés García"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Sebastián Boselli"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Mohamed Hamdoune"
+        },
+        {
+          "number": "29",
+          "position": "D",
+          "name": "Curro Burgos"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Jean Ives Valou"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Davinchi"
+        },
+        {
+          "number": "38",
+          "position": "D",
+          "name": "Vladyslav Kysil"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Nemanja Gudelj"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Orel Mangala"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Francho Serrano"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Ramón Terrats"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Mario Martín"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Alberto Risco"
+        },
+        {
+          "number": "34",
+          "position": "M",
+          "name": "Jesús Martínez"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Christantus Uche"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "1068",
+      "teamName": "Atlético Madrid",
+      "leagueSlug": "esp.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+      "players": [
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Jan Oblak"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Juan Musso"
+        },
+        {
+          "number": "25",
+          "position": "G",
+          "name": "Salvi Esquivel"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Cristian Romero"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Alejandro Grimaldo"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Robin Le Normand"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Dávid Hancko"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Marc Pubill"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Arnau Solà"
+        },
+        {
+          "number": "27",
+          "position": "D",
+          "name": "Jorge Domínguez"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Daniel Martinez"
+        },
+        {
+          "number": "45",
+          "position": "D",
+          "name": "Javier Gil"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Romeo Hueso Moya"
+        },
+        {
+          "number": "4",
+          "position": "M",
+          "name": "Rodrigo Mendoza"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Koke"
+        },
+        {
+          "number": "46",
+          "position": "M",
+          "name": "Jorge Castillo"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Marcos Llorente"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Lee Kang-In"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Morten Hjulmand"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Johnny Cardoso"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Álex Baena"
+        },
+        {
+          "number": "3",
+          "position": "M",
+          "name": "Obed Vargas"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Pablo Barrios"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Alexander Sørloth"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Ademola Lookman"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "16",
+      "teamName": "River Plate",
+      "leagueSlug": "arg.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "players": [
+        {
+          "number": "33",
+          "position": "G",
+          "name": "Ezequiel Centuríon"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "Santiago Beltrán"
+        },
+        {
+          "number": "42",
+          "position": "G",
+          "name": "Franco Jaroszewicz"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Nicolás Otamendi"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Marcos Acuña"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Juan Portillo"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Giovanni González"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Lucas Martínez Quarta"
+        },
+        {
+          "number": "29",
+          "position": "D",
+          "name": "Gonzalo Montiel"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Francisco Ortega"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Tobías Palacio"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Lautaruo Rivero"
+        },
+        {
+          "number": "40",
+          "position": "D",
+          "name": "Lucas Obregón"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Facundo González"
+        },
+        {
+          "number": "48",
+          "position": "D",
+          "name": "Ángel Susano"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Lucas Flores"
+        },
+        {
+          "number": "53",
+          "position": "D",
+          "name": "Thiago Salvatierra"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Juan Meza"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Mauro Arambarri"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Fausto Vera"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Thiago Almada"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Lucas Beltrán"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Aníbal Moreno"
+        },
+        {
+          "number": "26",
+          "position": "M",
+          "name": "Tomás Galván"
+        },
+        {
+          "number": "37",
+          "position": "M",
+          "name": "Thiago Acosta"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "12",
+      "teamName": "Lanús",
+      "leagueSlug": "arg.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "players": [
+        {
+          "number": "26",
+          "position": "G",
+          "name": "Nahuel Losada"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Franco Petroli"
+        },
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Evaristo Dieguiz"
+        },
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Martín Díaz"
+        },
+        {
+          "number": "45",
+          "position": "G",
+          "name": "Tomás Silva"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Gonzalo Pérez"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Carlos Izquierdoz"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Luciano Romero"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "José Canale"
+        },
+        {
+          "number": "40",
+          "position": "D",
+          "name": "Tomás López"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Tomás Guidara"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Nicolás Morgantini"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Sasha Marcich"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Ronaldo de Jesus"
+        },
+        {
+          "number": "42",
+          "position": "G",
+          "name": "Sebastián Leiva"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Óctavio Ontívero"
+        },
+        {
+          "number": "27",
+          "position": "D",
+          "name": "Facunda Sánchez"
+        },
+        {
+          "number": "43",
+          "position": "D",
+          "name": "Mateo Ramírez"
+        },
+        {
+          "number": "34",
+          "position": "D",
+          "name": "Elian Acosta"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Elías Prieto"
+        },
+        {
+          "number": "49",
+          "position": "D",
+          "name": "Gabriel Aguirre"
+        },
+        {
+          "number": "47",
+          "position": "M",
+          "name": "Juan Mujica"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Felipe Peña"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Eduardo Salvio"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Matías Sepúlveda"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2975",
+      "teamName": "Instituto (Córdoba)",
+      "leagueSlug": "arg.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
+      "players": [
+        {
+          "number": "29",
+          "position": "G",
+          "name": "Marcos Ledesma"
+        },
+        {
+          "number": "35",
+          "position": "G",
+          "name": "Emanuel Sittaro"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Diego Sosa"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Jonathan Galván"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Fernando Alarcón"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Leonel Mosevich"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Hernán De La Fuente"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Iván Erquiaga"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Agustín Bravo"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Juan Meli"
+        },
+        {
+          "number": "44",
+          "position": "D",
+          "name": "Giuliano Cerato"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Agustín Massaccesi"
+        },
+        {
+          "number": "70",
+          "position": "D",
+          "name": "Genaro Ordóñez"
+        },
+        {
+          "number": "73",
+          "position": "D",
+          "name": "Lucas Olviera"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Alex Luna"
+        },
+        {
+          "number": "13",
+          "position": "M",
+          "name": "Juan Mendez"
+        },
+        {
+          "number": "20",
+          "position": "F",
+          "name": "Jhon Córdoba"
+        },
+        {
+          "number": "55",
+          "position": "M",
+          "name": "Gustavo Abregú"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Franco Moyano"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Jonás Acevedo"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Wilder Viera"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Matías Gallardo"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Jeremías Lázaro"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Ignacio Rossi"
+        },
+        {
+          "number": "61",
+          "position": "M",
+          "name": "Joaquín Medina"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "10",
+      "teamName": "Huracán",
+      "leagueSlug": "arg.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Hernán Galíndez"
+        },
+        {
+          "number": "32",
+          "position": "G",
+          "name": "Sebastián Meza"
+        },
+        {
+          "number": "27",
+          "position": "G",
+          "name": "Nazareno Durán"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Hugo Nervo"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Lucas Blondel"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Fabio Pereyra"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Federico Vera"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Cesar Ibañez"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Daniel Zabala"
+        },
+        {
+          "number": "19",
+          "position": "D",
+          "name": "Leandro Lescano"
+        },
+        {
+          "number": "34",
+          "position": "D",
+          "name": "Ignacio Campo"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Máximo Palazzo"
+        },
+        {
+          "number": "51",
+          "position": "D",
+          "name": "Martín Soto"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Fabrizio Martínez"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Leonardo Gil"
+        },
+        {
+          "number": "5",
+          "position": "F",
+          "name": "Rodrigo Fernández"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Óscar Romero"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Emmanuel Ojeda"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Facundo Waller"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Thaiel Peralta"
+        },
+        {
+          "number": "52",
+          "position": "M",
+          "name": "Facundo Kalinger"
+        },
+        {
+          "number": "48",
+          "position": "M",
+          "name": "Santino Raynelli"
+        },
+        {
+          "number": "23",
+          "position": "F",
+          "name": "Ignacio Pussetto"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Jordy Caicedo"
+        },
+        {
+          "number": "33",
+          "position": "F",
+          "name": "Bruno Barticciotto"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2980",
+      "teamName": "Bodo/Glimt",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
+      "players": [
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Nikita Haykin"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Julian Faye Lund"
+        },
+        {
+          "number": "45",
+          "position": "G",
+          "name": "Isak Sjong"
+        },
+        {
+          "number": "43",
+          "position": "G",
+          "name": "Martin Lund Andersen"
+        },
+        {
+          "number": "36",
+          "position": "D",
+          "name": "Mathias Olsen"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Haitam Aleesami"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Jostein Gundersen"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Fredrik André Bjørkan"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Odin Bjørtuft"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Isak Dybvik Määttä"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Fredrik Sjøvold"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Villads Nielsen"
+        },
+        {
+          "number": "-",
+          "position": "D",
+          "name": "Tobias Solbakken"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Matias Bobo Høgsæt Jaiteh"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Ulrik Saltnes"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Patrick Berg"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Sondre Brunstad Fet"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Jens Petter Hauge"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Joshua Kitolano"
+        },
+        {
+          "number": "26",
+          "position": "M",
+          "name": "Hakon Evjen"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Sondre Auklend"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Ole Didrik Blomberg"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Magnus Riisnaes"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Joel Mvuka"
+        },
+        {
+          "number": "-",
+          "position": "M",
+          "name": "Teo Ingilæ"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "4411",
+      "teamName": "LASK Linz",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+      "players": [
+        {
+          "number": "33",
+          "position": "G",
+          "name": "Tobias Schützenauer"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Lukas Jungwirth"
+        },
+        {
+          "number": "50",
+          "position": "G",
+          "name": "Fabian Schillinger"
+        },
+        {
+          "number": "39",
+          "position": "G",
+          "name": "Christof Katzmayr"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Andrés Andrade"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "George Bello"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Xavier Mbuyamba"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Kasper Jørgensen"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Melayro Bogarde"
+        },
+        {
+          "number": "43",
+          "position": "D",
+          "name": "Alemão"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Miguel Freckleton"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Yvan Dibango"
+        },
+        {
+          "number": "47",
+          "position": "D",
+          "name": "Jonas Ilk"
+        },
+        {
+          "number": "52",
+          "position": "D",
+          "name": "Cheikne Kebe"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Manoël Louis-Philippe Verhaeghe"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Christoph Lang"
+        },
+        {
+          "number": "30",
+          "position": "M",
+          "name": "Sascha Horvath"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Alessandro Schöpf"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Robert Ljubicic"
+        },
+        {
+          "number": "9",
+          "position": "M",
+          "name": "Krystof Danek"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Art Smakaj"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Daniel Elfadli"
+        },
+        {
+          "number": "51",
+          "position": "M",
+          "name": "Mate Ivkovic"
+        },
+        {
+          "number": "-",
+          "position": "F",
+          "name": "Amin Ibrahim"
+        },
+        {
+          "number": "29",
+          "position": "F",
+          "name": "Florian Flecker"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "432",
+      "teamName": "Galatasaray",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+      "players": [
+        {
+          "number": "19",
+          "position": "G",
+          "name": "Günay Güvenc"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Ugurcan Çakir"
+        },
+        {
+          "number": "24",
+          "position": "G",
+          "name": "Jankat Yilmaz"
+        },
+        {
+          "number": "70",
+          "position": "G",
+          "name": "Enes Büyük"
+        },
+        {
+          "number": "60",
+          "position": "G",
+          "name": "Arda Yilmaz"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Kaan Ayhan"
+        },
+        {
+          "number": "42",
+          "position": "D",
+          "name": "Abdülkerim Bardakçi"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Davinson Sánchez"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Ismail Jakobs"
+        },
+        {
+          "number": "90",
+          "position": "D",
+          "name": "Wilfried Singo"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Eren Elmali"
+        },
+        {
+          "number": "88",
+          "position": "D",
+          "name": "Kazimcan Karatas"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "El Chadaille Bitshiabu"
+        },
+        {
+          "number": "91",
+          "position": "D",
+          "name": "Arda Ünyay"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Ilkay Gündogan"
+        },
+        {
+          "number": "99",
+          "position": "M",
+          "name": "Mario Lemina"
+        },
+        {
+          "number": "34",
+          "position": "M",
+          "name": "Lucas Torreira"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Gabriel Sara"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Lesley Ugochukwu"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Eyüp Aydin"
+        },
+        {
+          "number": "83",
+          "position": "M",
+          "name": "Alexey Batrakov"
+        },
+        {
+          "number": "-",
+          "position": "M",
+          "name": "Furkan Koçak"
+        },
+        {
+          "number": "74",
+          "position": "M",
+          "name": "Renato Nhaga"
+        },
+        {
+          "number": "-",
+          "position": "M",
+          "name": "Eyüp Karasu"
+        },
+        {
+          "number": "10",
+          "position": "F",
+          "name": "Leroy Sané"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "362",
+      "teamName": "Aston Villa",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "players": [
+        {
+          "number": "40",
+          "position": "G",
+          "name": "Marco Bizot"
+        },
+        {
+          "number": "42",
+          "position": "G",
+          "name": "James Wright"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Zion Suzuki"
+        },
+        {
+          "number": "60",
+          "position": "G",
+          "name": "Owen Asemota"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Tyrone Mings"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Victor Lindelöf"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Matty Cash"
+        },
+        {
+          "number": "29",
+          "position": "D",
+          "name": "Aaron Wan-Bissaka"
+        },
+        {
+          "number": "14",
+          "position": "D",
+          "name": "Pau Torres"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Taylor Harwood-Bellis"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Ian Maatsen"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Matteo Ruggeri"
+        },
+        {
+          "number": "48",
+          "position": "D",
+          "name": "Modou Cissé"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Ross Barkley"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "John McGinn"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Leon Goretzka"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Emiliano Buendía"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Boubacar Kamara"
+        },
+        {
+          "number": "35",
+          "position": "M",
+          "name": "João Gomes"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Amadou Onana"
+        },
+        {
+          "number": "26",
+          "position": "M",
+          "name": "Lamare Bogarde"
+        },
+        {
+          "number": "53",
+          "position": "M",
+          "name": "George Hemmings"
+        },
+        {
+          "number": "44",
+          "position": "M",
+          "name": "Johan Manzambi"
+        },
+        {
+          "number": "18",
+          "position": "F",
+          "name": "Tammy Abraham"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Nicolas Jackson"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "359",
+      "teamName": "Arsenal",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+      "players": [
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Kepa Arrizabalaga"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "David Raya"
+        },
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Illan Meslier"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Ezri Konsa"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Gabriel Magalhães"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Ben White"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "William Saliba"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Jurriën Timber"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Piero Hincapié"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Riccardo Calafiori"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Cristhian Mosquera"
+        },
+        {
+          "number": "49",
+          "position": "D",
+          "name": "Myles Lewis-Skelly"
+        },
+        {
+          "number": "60",
+          "position": "D",
+          "name": "Marcell Washington"
+        },
+        {
+          "number": "89",
+          "position": "D",
+          "name": "Marli Salmon"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Martin Ødegaard"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Mikel Merino"
+        },
+        {
+          "number": "39",
+          "position": "M",
+          "name": "Bruno Guimarães"
+        },
+        {
+          "number": "41",
+          "position": "M",
+          "name": "Declan Rice"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Eberechi Eze"
+        },
+        {
+          "number": "36",
+          "position": "M",
+          "name": "Martín Zubimendi"
+        },
+        {
+          "number": "45",
+          "position": "M",
+          "name": "Theo Julienne"
+        },
+        {
+          "number": "74",
+          "position": "M",
+          "name": "Maalik Hashi"
+        },
+        {
+          "number": "44",
+          "position": "M",
+          "name": "Ife Ibrahim"
+        },
+        {
+          "number": "29",
+          "position": "F",
+          "name": "Kai Havertz"
+        },
+        {
+          "number": "14",
+          "position": "F",
+          "name": "Viktor Gyökeres"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "124",
+      "teamName": "Borussia Dortmund",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+      "players": [
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Patrick Drewes"
+        },
+        {
+          "number": "33",
+          "position": "G",
+          "name": "Alexander Meyer"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Gregor Kobel"
+        },
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Silas Ostrzinski"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Ramy Bensebaini"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Waldemar Anton"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Julian Ryerson"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Nico Schlotterbeck"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Daniel Svensson"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Kouakou Gadou"
+        },
+        {
+          "number": "39",
+          "position": "D",
+          "name": "Filippo Mané"
+        },
+        {
+          "number": "36",
+          "position": "D",
+          "name": "Kauã Prates"
+        },
+        {
+          "number": "49",
+          "position": "D",
+          "name": "Luca Reggiani"
+        },
+        {
+          "number": "47",
+          "position": "D",
+          "name": "Miguel Adje"
+        },
+        {
+          "number": "42",
+          "position": "D",
+          "name": "Jan-Luca Riedl"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "Emre Can"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Marcel Sabitzer"
+        },
+        {
+          "number": "25",
+          "position": "M",
+          "name": "Joey Veerman"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Felix Nmecha"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Carney Chukwuemeka"
+        },
+        {
+          "number": "45",
+          "position": "M",
+          "name": "Giannis Konstantelias"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Jobe Bellingham"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Ethan Nwaneri"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Konstantinos Karetsas"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Justin Lerma"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2572",
+      "teamName": "Como",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+      "players": [
+        {
+          "number": "97",
+          "position": "G",
+          "name": "Robert Sánchez"
+        },
+        {
+          "number": "22",
+          "position": "G",
+          "name": "Mauro Vigorito"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Jean Butez"
+        },
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Lorenzo Luigi Ginelli"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Marc-Oliver Kempf"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Edoardo Goldaniga"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Álex Valle"
+        },
+        {
+          "number": "99",
+          "position": "D",
+          "name": "Trevoh Chalobah"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Alberto Dossena"
+        },
+        {
+          "number": "27",
+          "position": "D",
+          "name": "Yan Couto"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Kaiki"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Ivan Smolcic"
+        },
+        {
+          "number": "53",
+          "position": "D",
+          "name": "Willy Kambwala"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Jacobo Ramón"
+        },
+        {
+          "number": "55",
+          "position": "D",
+          "name": "Cristiano De Paoli"
+        },
+        {
+          "number": "52",
+          "position": "D",
+          "name": "Federico Grilli"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Luis Milla"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Maxence Caqueret"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Samuele Ricci"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Lucas Da Cunha"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Máximo Perrone"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Martin Baturina"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Nico Paz"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Adrian Lahdo"
+        },
+        {
+          "number": "30",
+          "position": "M",
+          "name": "Mattia Liberali"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "887",
+      "teamName": "AEK Athens",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+      "players": [
+        {
+          "number": "91",
+          "position": "G",
+          "name": "Alberto Brignoli"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Thomas Strakosha"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "Marios Balamotis"
+        },
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Georgios Sarakasidis"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Domagoj Vida"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Charalampos Lykogiannis"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Harold Moukoudi"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Stavros Pilios"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Lazaros Rota"
+        },
+        {
+          "number": "44",
+          "position": "D",
+          "name": "Filipe Relvas"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Christos Alexiou"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Martin Georgiev"
+        },
+        {
+          "number": "57",
+          "position": "D",
+          "name": "Spyros Christakopoulos"
+        },
+        {
+          "number": "23",
+          "position": "M",
+          "name": "João Mário"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Mijat Gacinovic"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Petros Mantalos"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Oleksandr Zubkov"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Kaan Kairinen"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Lovro Majer"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Dereck Kutesa"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Razvan Marin"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Kervin Arriaga"
+        },
+        {
+          "number": "80",
+          "position": "M",
+          "name": "Hakim Sahabo"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Milán Vitális"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Dimitrios Kaloskamis"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "142",
+      "teamName": "Feyenoord Rotterdam",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+      "players": [
+        {
+          "number": "39",
+          "position": "G",
+          "name": "Liam Bossin"
+        },
+        {
+          "number": "33",
+          "position": "G",
+          "name": "Florian Kastenmeier"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Tjark Ernst"
+        },
+        {
+          "number": "37",
+          "position": "G",
+          "name": "Mannou Berger"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Bart Nieuwkoop"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Jerry St. Juste"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Mats Deijl"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Gijs Smal"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Tsuyoshi Watanabe"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Javi López"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Thomas Beelen"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Jordan Bos"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Mika Mármol"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Givairo Read"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Tijme Wessels"
+        },
+        {
+          "number": "65",
+          "position": "D",
+          "name": "Dani Slory"
+        },
+        {
+          "number": "34",
+          "position": "M",
+          "name": "Charles Vanhoutte"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Sem Steijn"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Jakub Moder"
+        },
+        {
+          "number": "28",
+          "position": "M",
+          "name": "Oussama Targhaline"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Luciano Valente"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Thijs Kraaijeveld"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Gjivai Zechiël"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Tobias van den Elshout"
+        },
+        {
+          "number": "50",
+          "position": "M",
+          "name": "Theodoris Deligiannidis"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "437",
+      "teamName": "FC Porto",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+      "players": [
+        {
+          "number": "24",
+          "position": "G",
+          "name": "João Costa"
+        },
+        {
+          "number": "14",
+          "position": "G",
+          "name": "Cláudio Ramos"
+        },
+        {
+          "number": "99",
+          "position": "G",
+          "name": "Diogo Costa"
+        },
+        {
+          "number": "50",
+          "position": "G",
+          "name": "João Afonso"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Chris Smalling"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Jan Bednarek"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Nehuén Pérez"
+        },
+        {
+          "number": "74",
+          "position": "D",
+          "name": "Moura"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Zaidu Sanusi"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Jakub Kiwior"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Dominik Prpic"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Alberto Costa"
+        },
+        {
+          "number": "64",
+          "position": "D",
+          "name": "Luís Gomes"
+        },
+        {
+          "number": "52",
+          "position": "D",
+          "name": "Martim Fernandes"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Souza"
+        },
+        {
+          "number": "42",
+          "position": "M",
+          "name": "Seko Fofana"
+        },
+        {
+          "number": "58",
+          "position": "M",
+          "name": "Tiago Silva"
+        },
+        {
+          "number": "13",
+          "position": "M",
+          "name": "Pablo Rosario"
+        },
+        {
+          "number": "16",
+          "position": "M",
+          "name": "Hwang In-Beom"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Gabri Veiga"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Alan Varela"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Vasco Sousa"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Victor Froholdt"
+        },
+        {
+          "number": "92",
+          "position": "M",
+          "name": "João Teixeira"
+        },
+        {
+          "number": "89",
+          "position": "M",
+          "name": "Mateus Mide"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "382",
+      "teamName": "Manchester City",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "players": [
+        {
+          "number": "28",
+          "position": "G",
+          "name": "Gerónimo Rulli"
+        },
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Marcus Bettinelli"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Gianluigi Donnarumma"
+        },
+        {
+          "number": "94",
+          "position": "G",
+          "name": "Max-Edgar Chabot"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Rúben Dias"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Marc Guéhi"
+        },
+        {
+          "number": "21",
+          "position": "D",
+          "name": "Rayan Aït-Nouri"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Josko Gvardiol"
+        },
+        {
+          "number": "82",
+          "position": "D",
+          "name": "Rico Lewis"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Nico O'Reilly"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Vitor Reis"
+        },
+        {
+          "number": "45",
+          "position": "D",
+          "name": "Abdukodir Khusanov"
+        },
+        {
+          "number": "61",
+          "position": "D",
+          "name": "Kaden Braithwaite"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Mateo Kovacic"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Elliot Anderson"
+        },
+        {
+          "number": "47",
+          "position": "M",
+          "name": "Phil Foden"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Enzo Fernández"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Rayan Cherki"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Matheus Nunes"
+        },
+        {
+          "number": "32",
+          "position": "M",
+          "name": "Ayyoub Bouaddi"
+        },
+        {
+          "number": "75",
+          "position": "M",
+          "name": "Floyd Samba"
+        },
+        {
+          "number": "76",
+          "position": "M",
+          "name": "Dexter Oliver"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Erling Haaland"
+        },
+        {
+          "number": "7",
+          "position": "F",
+          "name": "Iliman Ndiaye"
+        },
+        {
+          "number": "42",
+          "position": "F",
+          "name": "Antoine Semenyo"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "114",
+      "teamName": "Napoli",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+      "players": [
+        {
+          "number": "14",
+          "position": "G",
+          "name": "Nikita Contini"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Alex Meret"
+        },
+        {
+          "number": "32",
+          "position": "G",
+          "name": "Vanja Milinkovic-Savic"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "David Spinelli"
+        },
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Claudio Pugliese"
+        },
+        {
+          "number": "37",
+          "position": "D",
+          "name": "Leonardo Spinazzola"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Giovanni Di Lorenzo"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Amir Rrahmani"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Mathías Olivera"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Alessandro Buongiorno"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Sam Beukema"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Benoît Badiashile"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Rafa Marín"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Costantino Favasuli"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Luca Marianucci"
+        },
+        {
+          "number": "40",
+          "position": "D",
+          "name": "Claudio Lieto"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Kevin De Bruyne"
+        },
+        {
+          "number": "68",
+          "position": "M",
+          "name": "Stanislav Lobotka"
+        },
+        {
+          "number": "99",
+          "position": "M",
+          "name": "Frank Anguissa"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Scott McTominay"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Billy Gilmour"
+        },
+        {
+          "number": "26",
+          "position": "M",
+          "name": "Antonio Vergara"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Francisco Baridó"
+        },
+        {
+          "number": "39",
+          "position": "M",
+          "name": "Nikita Melnyk"
+        },
+        {
+          "number": "38",
+          "position": "M",
+          "name": "Andrea Chiummariello"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "11420",
+      "teamName": "RB Leipzig",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Ørjan Nyland"
+        },
+        {
+          "number": "25",
+          "position": "G",
+          "name": "Leopold Zingerle"
+        },
+        {
+          "number": "26",
+          "position": "G",
+          "name": "Maarten Vandevoordt"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Willi Orbán"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Lukas Klostermann"
+        },
+        {
+          "number": "39",
+          "position": "D",
+          "name": "Benjamin Henrichs"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "David Raum"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Ridle Baku"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Maxime Estève"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Castello Lukeba"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Max Finkgrafe"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Abdoul Koné"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Christoph Baumgartner"
+        },
+        {
+          "number": "13",
+          "position": "M",
+          "name": "Nicolas Seiwald"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Rocco Reitz"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Antonio Nusa"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Neil El Aynaoui"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Ezechiel Banzuzi"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Assan Ouédraogo"
+        },
+        {
+          "number": "30",
+          "position": "M",
+          "name": "Andrija Maksimovic"
+        },
+        {
+          "number": "47",
+          "position": "M",
+          "name": "Viggo Gebel"
+        },
+        {
+          "number": "37",
+          "position": "M",
+          "name": "Benno Kaltefleiter"
+        },
+        {
+          "number": "28",
+          "position": "F",
+          "name": "Christopher Nkunku"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Johan Bakayoko"
+        },
+        {
+          "number": "40",
+          "position": "F",
+          "name": "Rômulo"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "175",
+      "teamName": "Lens",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Régis Gurtner"
+        },
+        {
+          "number": "16",
+          "position": "G",
+          "name": "Mathieu Gorgelin"
+        },
+        {
+          "number": "40",
+          "position": "G",
+          "name": "Robin Risser"
+        },
+        {
+          "number": "60",
+          "position": "G",
+          "name": "Ilan Jourdren"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Ruben Aguilar"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Jonathan Gradit"
+        },
+        {
+          "number": "14",
+          "position": "D",
+          "name": "Matthieu Udol"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Jean-Clair Todibo"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Saud Abdulhamid"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Maik Nawrocki"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Jhoanner Chavez"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Samson Baidoo"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Pierre Ganiou"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Nidal Celik"
+        },
+        {
+          "number": "32",
+          "position": "D",
+          "name": "Kyllian Antonio"
+        },
+        {
+          "number": "31",
+          "position": "D",
+          "name": "Souleymane Sagnan"
+        },
+        {
+          "number": "9",
+          "position": "M",
+          "name": "Thorgan Hazard"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Amadou Haidara"
+        },
+        {
+          "number": "27",
+          "position": "M",
+          "name": "Michaël Cuisance"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Yassine Titraoui"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Andrija Bulatovic"
+        },
+        {
+          "number": "38",
+          "position": "M",
+          "name": "Mezian Soares"
+        },
+        {
+          "number": "10",
+          "position": "F",
+          "name": "Florian Thauvin"
+        },
+        {
+          "number": "37",
+          "position": "F",
+          "name": "Moussa Diarra"
+        },
+        {
+          "number": "7",
+          "position": "F",
+          "name": "Florian Sotoca"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "86",
+      "teamName": "Real Madrid",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+      "players": [
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Javier Navarro"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Thibaut Courtois"
+        },
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Andriy Lunin"
+        },
+        {
+          "number": "26",
+          "position": "G",
+          "name": "Sergio Mestre"
+        },
+        {
+          "number": "39",
+          "position": "G",
+          "name": "Illia Voloshyn"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Antonio Rüdiger"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Denzel Dumfries"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Ferland Mendy"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Trent Alexander-Arnold"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Éder Militão"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Ibrahima Konaté"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Marc Cucurella"
+        },
+        {
+          "number": "18",
+          "position": "D",
+          "name": "Álvaro Carreras"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Mario Rivas"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Dean Huijsen"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Raúl Asencio"
+        },
+        {
+          "number": "30",
+          "position": "D",
+          "name": "Joan Martínez"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "Jesús Fortea"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Bernardo Silva"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Federico Valverde"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Brahim Díaz"
+        },
+        {
+          "number": "14",
+          "position": "M",
+          "name": "Aurélien Tchouaméni"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Eduardo Camavinga"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Jude Bellingham"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Arda Güler"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "148",
+      "teamName": "PSV Eindhoven",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Nick Olij"
+        },
+        {
+          "number": "32",
+          "position": "G",
+          "name": "Matej Kovár"
+        },
+        {
+          "number": "51",
+          "position": "G",
+          "name": "Tijn Smolenaars"
+        },
+        {
+          "number": "41",
+          "position": "G",
+          "name": "Khadim Ngom"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Armando Obispo"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Mauro Júnior"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Lutsharel Geertruida"
+        },
+        {
+          "number": "8",
+          "position": "D",
+          "name": "Sergiño Dest"
+        },
+        {
+          "number": "25",
+          "position": "D",
+          "name": "Kiliann Sildillia"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Ryan Flamingo"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Yarek Gasiorowski"
+        },
+        {
+          "number": "38",
+          "position": "D",
+          "name": "Fabian Merién"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Filip Kostic"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Jerdy Schouten"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Guus Til"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Sven Mijnans"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Paul Wanner"
+        },
+        {
+          "number": "24",
+          "position": "M",
+          "name": "Kodai Sano"
+        },
+        {
+          "number": "31",
+          "position": "M",
+          "name": "Noah Fernandez"
+        },
+        {
+          "number": "35",
+          "position": "M",
+          "name": "Ayoni Santos"
+        },
+        {
+          "number": "42",
+          "position": "M",
+          "name": "Shuryjano Cornecion"
+        },
+        {
+          "number": "5",
+          "position": "F",
+          "name": "Ivan Perisic"
+        },
+        {
+          "number": "14",
+          "position": "F",
+          "name": "Alassane Pléa"
+        },
+        {
+          "number": "29",
+          "position": "F",
+          "name": "Sam Lammers"
+        },
+        {
+          "number": "27",
+          "position": "F",
+          "name": "Dennis Man"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "521",
+      "teamName": "Slovan Bratislava",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Aleksander Popovic"
+        },
+        {
+          "number": "44",
+          "position": "G",
+          "name": "Matus Macik"
+        },
+        {
+          "number": "71",
+          "position": "G",
+          "name": "Dominik Takac"
+        },
+        {
+          "number": "32",
+          "position": "G",
+          "name": "Dávid Balog"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Kevin Wimmer"
+        },
+        {
+          "number": "17",
+          "position": "D",
+          "name": "Jurij Medvedev"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Kenan Bajric"
+        },
+        {
+          "number": "28",
+          "position": "D",
+          "name": "César Blackman"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Svetozar Markovic"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Samuel Kozlovsky"
+        },
+        {
+          "number": "57",
+          "position": "D",
+          "name": "Sandro Cruz"
+        },
+        {
+          "number": "49",
+          "position": "D",
+          "name": "Sahmkou Camara"
+        },
+        {
+          "number": "-",
+          "position": "D",
+          "name": "Matús Minka"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Róbert Tománek"
+        },
+        {
+          "number": "70",
+          "position": "M",
+          "name": "Cristian Martínez"
+        },
+        {
+          "number": "11",
+          "position": "M",
+          "name": "Tigran Barseghyan"
+        },
+        {
+          "number": "77",
+          "position": "M",
+          "name": "Danylo Ignatenko"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Alen Mustafic"
+        },
+        {
+          "number": "88",
+          "position": "M",
+          "name": "Daiki Matsuoka"
+        },
+        {
+          "number": "3",
+          "position": "M",
+          "name": "Peter Pokorny"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Artur Gajdos"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Nino Marcelli"
+        },
+        {
+          "number": "5",
+          "position": "M",
+          "name": "Rahim Ibrahim"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Leo Hofstädter"
+        },
+        {
+          "number": "19",
+          "position": "M",
+          "name": "Manasse Kianga"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "244",
+      "teamName": "Real Betis",
+      "leagueSlug": "uefa.champions",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+      "players": [
+        {
+          "number": "13",
+          "position": "G",
+          "name": "Diego Conde"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Álvaro Valles"
+        },
+        {
+          "number": "31",
+          "position": "G",
+          "name": "Manu González"
+        },
+        {
+          "number": "40",
+          "position": "G",
+          "name": "Álvaro De Pablo"
+        },
+        {
+          "number": "51",
+          "position": "G",
+          "name": "Alejandro Postigo"
+        },
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Yan Zhuravskyi"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Marc Bartra"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Héctor Bellerín"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Diego Llorente"
+        },
+        {
+          "number": "11",
+          "position": "D",
+          "name": "Fran García"
+        },
+        {
+          "number": "23",
+          "position": "D",
+          "name": "Junior Firpo"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Natan"
+        },
+        {
+          "number": "16",
+          "position": "D",
+          "name": "Valentín Gómez"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Ángel Ortiz"
+        },
+        {
+          "number": "17",
+          "position": "M",
+          "name": "Rodrigo Riquelme"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Isco"
+        },
+        {
+          "number": "25",
+          "position": "M",
+          "name": "Dani Ceballos"
+        },
+        {
+          "number": "20",
+          "position": "M",
+          "name": "Giovani Lo Celso"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Pablo Fornals"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Marc Roca"
+        },
+        {
+          "number": "15",
+          "position": "M",
+          "name": "Álvaro Fidalgo"
+        },
+        {
+          "number": "18",
+          "position": "M",
+          "name": "Nelson Deossa"
+        },
+        {
+          "number": "6",
+          "position": "M",
+          "name": "Facundo Bernal"
+        },
+        {
+          "number": "50",
+          "position": "M",
+          "name": "Iván Corralejo"
+        },
+        {
+          "number": "37",
+          "position": "M",
+          "name": "Ricardo Fúnez Gómez"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "2029",
+      "teamName": "Palmeiras",
+      "leagueSlug": "conmebol.libertadores",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png",
+      "players": [
+        {
+          "number": "14",
+          "position": "G",
+          "name": "Marcelo Lomba"
+        },
+        {
+          "number": "21",
+          "position": "G",
+          "name": "Bruno Bertinato"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Carlos Miguel"
+        },
+        {
+          "number": "72",
+          "position": "G",
+          "name": "Kauan Lima"
+        },
+        {
+          "number": "73",
+          "position": "G",
+          "name": "Luiz Fernando"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Gustavo Gómez"
+        },
+        {
+          "number": "2",
+          "position": "D",
+          "name": "Alexander Barboza"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Murilo"
+        },
+        {
+          "number": "22",
+          "position": "D",
+          "name": "Joaquín Piquerez"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Bruno Fuchs"
+        },
+        {
+          "number": "12",
+          "position": "D",
+          "name": "Khellven"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Agustín Giay"
+        },
+        {
+          "number": "6",
+          "position": "D",
+          "name": "Jefté"
+        },
+        {
+          "number": "43",
+          "position": "D",
+          "name": "Luiz Benedetti"
+        },
+        {
+          "number": "56",
+          "position": "D",
+          "name": "Arthur Gabriel"
+        },
+        {
+          "number": "54",
+          "position": "D",
+          "name": "Thiago Soares"
+        },
+        {
+          "number": "46",
+          "position": "D",
+          "name": "Derick"
+        },
+        {
+          "number": "53",
+          "position": "D",
+          "name": "Luccas Ramon"
+        },
+        {
+          "number": "52",
+          "position": "D",
+          "name": "Luis Saboia"
+        },
+        {
+          "number": "44",
+          "position": "D",
+          "name": "Kone Zie Mohamed"
+        },
+        {
+          "number": "66",
+          "position": "D",
+          "name": "André Lucas"
+        },
+        {
+          "number": "32",
+          "position": "M",
+          "name": "Emiliano Martínez"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "Felipe Anderson"
+        },
+        {
+          "number": "30",
+          "position": "M",
+          "name": "Lucas Evangelista"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Andreas Pereira"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "8",
+      "teamName": "Estudiantes de La Plata",
+      "leagueSlug": "conmebol.libertadores",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
+      "players": [
+        {
+          "number": "16",
+          "position": "G",
+          "name": "Fernando Muslera"
+        },
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Fabricio Iacovich"
+        },
+        {
+          "number": "12",
+          "position": "G",
+          "name": "Rodrigo Borzone"
+        },
+        {
+          "number": "30",
+          "position": "G",
+          "name": "Tiziano Van Der Tuin"
+        },
+        {
+          "number": "5",
+          "position": "D",
+          "name": "Marcos Rojo"
+        },
+        {
+          "number": "26",
+          "position": "D",
+          "name": "Ramiro Funes Mori"
+        },
+        {
+          "number": "14",
+          "position": "D",
+          "name": "Leandro González Pírez"
+        },
+        {
+          "number": "36",
+          "position": "M",
+          "name": "Joaquín Pereyra"
+        },
+        {
+          "number": "15",
+          "position": "D",
+          "name": "Santiago Arzamendia"
+        },
+        {
+          "number": "20",
+          "position": "D",
+          "name": "Eric Meza"
+        },
+        {
+          "number": "13",
+          "position": "D",
+          "name": "Gastón Benedetti"
+        },
+        {
+          "number": "40",
+          "position": "D",
+          "name": "Eros Mancuso"
+        },
+        {
+          "number": "4",
+          "position": "D",
+          "name": "Santiago Núñez"
+        },
+        {
+          "number": "35",
+          "position": "D",
+          "name": "Valente Pierani"
+        },
+        {
+          "number": "33",
+          "position": "D",
+          "name": "Faustino Messina"
+        },
+        {
+          "number": "37",
+          "position": "D",
+          "name": "Matías Magdaleno"
+        },
+        {
+          "number": "3",
+          "position": "D",
+          "name": "Máximo Desábato"
+        },
+        {
+          "number": "24",
+          "position": "D",
+          "name": "Tomas Palacios"
+        },
+        {
+          "number": "45",
+          "position": "D",
+          "name": "Jorge Nivar Georgieff"
+        },
+        {
+          "number": "7",
+          "position": "M",
+          "name": "José Sosa"
+        },
+        {
+          "number": "39",
+          "position": "M",
+          "name": "Jalil Elías"
+        },
+        {
+          "number": "22",
+          "position": "M",
+          "name": "Alexis Castro"
+        },
+        {
+          "number": "21",
+          "position": "M",
+          "name": "Ezequiel Piovi"
+        },
+        {
+          "number": "8",
+          "position": "M",
+          "name": "Gabriel Neves"
+        },
+        {
+          "number": "10",
+          "position": "M",
+          "name": "Tiago Palacios"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "235",
+      "teamName": "Banfield",
+      "leagueSlug": "arg.copa",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+      "players": [
+        {
+          "number": "50",
+          "position": "G",
+          "name": "Diego Rodríguez"
+        },
+        {
+          "number": "6",
+          "position": "CD-L",
+          "name": "Nicolás Meriano"
+        },
+        {
+          "number": "2",
+          "position": "CD-R",
+          "name": "Santiago Daniele"
+        },
+        {
+          "number": "27",
+          "position": "LB",
+          "name": "Luis Abraham"
+        },
+        {
+          "number": "4",
+          "position": "RB",
+          "name": "Juan Alfaro"
+        },
+        {
+          "number": "5",
+          "position": "CM",
+          "name": "Santiago Esquivel"
+        },
+        {
+          "number": "20",
+          "position": "LM",
+          "name": "Tomás Adoryan"
+        },
+        {
+          "number": "10",
+          "position": "RM",
+          "name": "Lautaro Gómez"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Adrián Balboa"
+        },
+        {
+          "number": "22",
+          "position": "LF",
+          "name": "Alexander Machado"
+        },
+        {
+          "number": "18",
+          "position": "RF",
+          "name": "Federico Medina"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "5",
+      "teamName": "Boca Juniors",
+      "leagueSlug": "arg.copa",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Álvaro Montero"
+        },
+        {
+          "number": "42",
+          "position": "CD-L",
+          "name": "Facundo Herrera"
+        },
+        {
+          "number": "2",
+          "position": "CD-R",
+          "name": "Lautaro Di Lollo"
+        },
+        {
+          "number": "27",
+          "position": "LB",
+          "name": "Malcom Braida"
+        },
+        {
+          "number": "17",
+          "position": "RB",
+          "name": "Leandro Lozano"
+        },
+        {
+          "number": "5",
+          "position": "CM",
+          "name": "Leandro Paredes"
+        },
+        {
+          "number": "18",
+          "position": "LM",
+          "name": "Milton Delgado"
+        },
+        {
+          "number": "25",
+          "position": "RM",
+          "name": "Santiago Ascacibar"
+        },
+        {
+          "number": "16",
+          "position": "F",
+          "name": "Miguel Merentiel"
+        },
+        {
+          "number": "20",
+          "position": "LF",
+          "name": "Alan Velasco"
+        },
+        {
+          "number": "22",
+          "position": "RF",
+          "name": "Sebastián Villa"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "7632",
+      "teamName": "Atlético-MG",
+      "leagueSlug": "conmebol.sudamericana",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png",
+      "players": [
+        {
+          "number": "22",
+          "position": "G",
+          "name": "Éverson"
+        },
+        {
+          "number": "4",
+          "position": "CD-L",
+          "name": "Ruan"
+        },
+        {
+          "number": "40",
+          "position": "CD-R",
+          "name": "Vitão"
+        },
+        {
+          "number": "6",
+          "position": "LB",
+          "name": "Renan Lodi"
+        },
+        {
+          "number": "2",
+          "position": "RB",
+          "name": "Natanael"
+        },
+        {
+          "number": "7",
+          "position": "AM",
+          "name": "Fred"
+        },
+        {
+          "number": "15",
+          "position": "LM",
+          "name": "Kevin Castaño"
+        },
+        {
+          "number": "39",
+          "position": "RM",
+          "name": "Mamady Cissé"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Bernard"
+        },
+        {
+          "number": "36",
+          "position": "AM-L",
+          "name": "Kauã Pascini"
+        },
+        {
+          "number": "28",
+          "position": "AM-R",
+          "name": "Tomás Cuello"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "5",
+      "teamName": "Boca Juniors",
+      "leagueSlug": "conmebol.sudamericana",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Álvaro Montero"
+        },
+        {
+          "number": "42",
+          "position": "CD-L",
+          "name": "Facundo Herrera"
+        },
+        {
+          "number": "2",
+          "position": "CD-R",
+          "name": "Lautaro Di Lollo"
+        },
+        {
+          "number": "3",
+          "position": "LB",
+          "name": "Lautaro Blanco"
+        },
+        {
+          "number": "17",
+          "position": "RB",
+          "name": "Leandro Lozano"
+        },
+        {
+          "number": "5",
+          "position": "CM",
+          "name": "Leandro Paredes"
+        },
+        {
+          "number": "18",
+          "position": "LM",
+          "name": "Milton Delgado"
+        },
+        {
+          "number": "25",
+          "position": "RM",
+          "name": "Santiago Ascacibar"
+        },
+        {
+          "number": "16",
+          "position": "F",
+          "name": "Miguel Merentiel"
+        },
+        {
+          "number": "22",
+          "position": "LF",
+          "name": "Sebastián Villa"
+        },
+        {
+          "number": "10",
+          "position": "RF",
+          "name": "Tomás Aranda"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "152",
+      "teamName": "FC Twente",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+      "players": [
+        {
+          "number": "16",
+          "position": "G",
+          "name": "Joel Drommel"
+        },
+        {
+          "number": "4",
+          "position": "CD-L",
+          "name": "Ruud Nijstad"
+        },
+        {
+          "number": "3",
+          "position": "CD-R",
+          "name": "Robin Pröpper"
+        },
+        {
+          "number": "29",
+          "position": "LB",
+          "name": "Aske Adelgaard"
+        },
+        {
+          "number": "28",
+          "position": "RB",
+          "name": "Bart van Rooij"
+        },
+        {
+          "number": "10",
+          "position": "AM",
+          "name": "Younes Taha"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Daouda Weidmann"
+        },
+        {
+          "number": "6",
+          "position": "RM",
+          "name": "Ramiz Zerrouki"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Wout Weghorst"
+        },
+        {
+          "number": "27",
+          "position": "AM-L",
+          "name": "Sondre Ørjasaeter"
+        },
+        {
+          "number": "11",
+          "position": "AM-R",
+          "name": "Daan Rots"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "156",
+      "teamName": "Willem II",
+      "leagueSlug": "ned.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
+      "players": [
+        {
+          "number": "26",
+          "position": "G",
+          "name": "Maxime Delanghe"
+        },
+        {
+          "number": "23",
+          "position": "CD-L",
+          "name": "Maxim Dekker"
+        },
+        {
+          "number": "83",
+          "position": "CD-R",
+          "name": "Mats Lemmens"
+        },
+        {
+          "number": "24",
+          "position": "LB",
+          "name": "Nathan Tjoe-A-On"
+        },
+        {
+          "number": "5",
+          "position": "RB",
+          "name": "Hidde ter Avest"
+        },
+        {
+          "number": "19",
+          "position": "AM",
+          "name": "Uriel Van Aalst"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Kasper Boogaard"
+        },
+        {
+          "number": "6",
+          "position": "RM",
+          "name": "Calvin Twigt"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Devin Haen"
+        },
+        {
+          "number": "32",
+          "position": "AM-L",
+          "name": "Vito van Crooij"
+        },
+        {
+          "number": "52",
+          "position": "AM-R",
+          "name": "Tonny Vilhena"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "111",
+      "teamName": "Juventus",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+      "players": [
+        {
+          "number": "25",
+          "position": "G",
+          "name": "Guglielmo Vicario"
+        },
+        {
+          "number": "6",
+          "position": "CD-L",
+          "name": "Lloyd Kelly"
+        },
+        {
+          "number": "3",
+          "position": "CD-R",
+          "name": "Bremer"
+        },
+        {
+          "number": "32",
+          "position": "LB",
+          "name": "Juan Cabal"
+        },
+        {
+          "number": "2",
+          "position": "RB",
+          "name": "Zeki Çelik"
+        },
+        {
+          "number": "22",
+          "position": "AM",
+          "name": "Weston McKennie"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Teun Koopmeiners"
+        },
+        {
+          "number": "12",
+          "position": "RM",
+          "name": "Douglas Luiz"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Randal Kolo Muani"
+        },
+        {
+          "number": "17",
+          "position": "AM-L",
+          "name": "Kerim Alajbegovic"
+        },
+        {
+          "number": "11",
+          "position": "AM-R",
+          "name": "Edon Zhegrova"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    },
+    {
+      "teamId": "17530",
+      "teamName": "Venezia",
+      "leagueSlug": "ita.1",
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+      "players": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Filip Stankovic"
+        },
+        {
+          "number": "2",
+          "position": "CD",
+          "name": "Matías Moreno"
+        },
+        {
+          "number": "15",
+          "position": "CD-L",
+          "name": "Juan Jesus"
+        },
+        {
+          "number": "25",
+          "position": "CD-R",
+          "name": "Redouane Halhal"
+        },
+        {
+          "number": "6",
+          "position": "CM-L",
+          "name": "Gianluca Busio"
+        },
+        {
+          "number": "71",
+          "position": "CM-R",
+          "name": "Enrique Perez"
+        },
+        {
+          "number": "19",
+          "position": "AM",
+          "name": "Simon Sohm"
+        },
+        {
+          "number": "5",
+          "position": "LM",
+          "name": "Ridgeciano Haps"
+        },
+        {
+          "number": "18",
+          "position": "RM",
+          "name": "Antoine Hainaut"
+        },
+        {
+          "number": "29",
+          "position": "CF-L",
+          "name": "Lion Lauberbach"
+        },
+        {
+          "number": "45",
+          "position": "CF-R",
+          "name": "Akor Adams"
+        }
+      ],
+      "updatedAt": "2026-11-22 15:00:44"
+    }
+  ]
+}
