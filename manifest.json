@@ -1,7 +1,7 @@
 {
   "name": "Football Intelligence Pro — Combinadas",
   "short_name": "Football Pro",
-  "description": "Apuestas combinadas en tiempo real, 10 ligas, historial auto-creciente, escudos oficiales y planteles actualizados.",
+  "description": "Apuestas combinadas en tiempo real, 10 ligas, ranking de rematadores al arco, historial auto-creciente, escudos oficiales y planteles actualizados.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -10,10 +10,22 @@
   "theme_color": "#070b14",
   "icons": [
     {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
       "src": "./icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }

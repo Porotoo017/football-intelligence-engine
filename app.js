@@ -35,6 +35,15 @@
       .replace(/'/g, '&#39;');
   }
 
+  function normName(s) {
+    return String(s || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+  }
+
   function formatArgDate(iso) {
     try {
       const d = new Date(iso);
@@ -89,6 +98,99 @@
       probOver25: pO25 / tot,
       likelyScore: bestScore,
     };
+  }
+
+  function extractEspnAthleteStats(a) {
+    const out = { appearances: 0, totalShots: 0, shotsOnTarget: 0, totalGoals: 0, goalAssists: 0 };
+    const cats = (a && a.statistics && a.statistics.splits && a.statistics.splits.categories) || [];
+    let starts = 0, subs = 0;
+    cats.forEach((c) => {
+      (c.stats || []).forEach((s) => {
+        const nm = s && s.name;
+        const val = Number((s && s.value) || 0) || 0;
+        if (nm in out) out[nm] = val;
+        if (nm === 'starts') starts = val;
+        if (nm === 'subIns') subs = val;
+      });
+    });
+    if (out.appearances <= 0 && starts + subs > 0) out.appearances = starts + subs;
+    return out;
+  }
+
+  function isGoalkeeperPos(pos) {
+    const p = String(pos || '').toUpperCase().trim();
+    return p === 'G' || p === 'GK' || p === 'ARQ' || p === 'POR' || p.startsWith('GK') || p.includes('GOALKEEP');
+  }
+
+  function posWeightBonus(pos) {
+    const p = String(pos || '').toUpperCase().trim();
+    if (/^(F|FW|ST|CF|LF|RF|LW|RW|SS|DEL|F-|ST-|CF-)/.test(p)) return 0.55;
+    if (/^(AM|CAM|LM|RM|W|MF-A)/.test(p)) return 0.22;
+    if (/^(D|DF|CD|CB|LB|RB|LWB|RWB|DEF|D-)/.test(p)) return -0.85;
+    return 0.0;
+  }
+
+  function computeTopShootersJS(squad, teamLabel, teamLam, lineupConfirmed, limit) {
+    if (!Array.isArray(squad) || squad.length === 0) return [];
+    const scale = Math.max(0.78, Math.min(1.32, (Number(teamLam) || 1.35) / 1.35));
+    const scored = [];
+
+    squad.forEach((p) => {
+      const pos = String(p.position || '').trim();
+      if (isGoalkeeperPos(pos)) return;
+      const app = Number(p.appearances || 0);
+      const totShots = Number(p.totalShots || 0);
+      const sot = Number(p.shotsOnTarget || 0);
+      const goals = Number(p.totalGoals || 0);
+      const starter = Boolean(p.starter);
+      const inMatch = Boolean(p.inMatchSquad);
+
+      const shotsPg = app >= 1 ? Number((totShots / app).toFixed(2)) : 0;
+      const sotPg = app >= 1 ? Number((sot / app).toFixed(2)) : 0;
+
+      const adjShotsPg = (totShots + 0.65) / (app + 2.5);
+      const adjSotPg = (sot + 0.22) / (app + 2.5);
+      const adjGoalsPg = (goals + 0.12) / (app + 3.0);
+
+      let availBonus = 0;
+      if (lineupConfirmed) {
+        availBonus = starter ? 2.6 : inMatch ? -1.6 : -4.5;
+      }
+      const roleFactor = starter || !lineupConfirmed ? 1.06 : 0.36;
+      const scoreWeight = starter || !lineupConfirmed ? 1.0 : 0.45;
+      const score =
+        (adjSotPg * 3.4 + adjShotsPg * 1.5 + adjGoalsPg * 1.8) * scoreWeight +
+        posWeightBonus(pos) +
+        Math.min(0.55, app * 0.04) +
+        availBonus;
+
+      const expSot = Math.max(0.08, adjSotPg * scale * roleFactor);
+      const prob1PlusSot = Math.min(0.91, Math.max(0.08, 1 - Math.exp(-expSot)));
+      const tier = totShots > 0 || starter ? 2 : app > 0 ? 1 : 0;
+
+      scored.push({
+        tier,
+        score,
+        item: {
+          name: p.name,
+          team: teamLabel,
+          position: pos || '-',
+          number: String(p.number || '-'),
+          starter,
+          appearances: Math.round(app),
+          totalShots: Math.round(totShots),
+          shotsOnTarget: Math.round(sot),
+          goals: Math.round(goals),
+          shotsPerGame: shotsPg,
+          sotPerGame: sotPg,
+          prob1PlusSot: Number(prob1PlusSot.toFixed(3)),
+          propLabel: '1+ al Arco (' + Math.round(prob1PlusSot * 100) + '%)',
+        },
+      });
+    });
+
+    scored.sort((a, b) => (b.tier - a.tier) || (b.score - a.score));
+    return scored.slice(0, limit || 3).map((x) => x.item);
   }
 
   function setStatus(msg) {
@@ -187,6 +289,7 @@
                 awayScore: String(ac.score != null ? ac.score : '0'),
                 homeSquad: [],
                 awaySquad: [],
+                topShooters: { home: [], away: [] },
                 prediction: pick1X ? 'Doble Oportunidad: ' + hName + ' o Empate (1X)' : 'Doble Oportunidad: Empate o ' + aName + ' (X2)',
                 probability: Math.round(prob * 100) + '%',
                 odds: odds,
@@ -194,7 +297,7 @@
                 corners: 'Más de 8.5 Córners',
                 cards: 'Más de 3.5 Tarjetas',
                 shots: 'Remates esp.: 8.0+',
-                topShooter: 'Ver en alineación en vivo',
+                topShooter: 'Tocá Alineación y Remates para ranking en vivo',
                 likelyScore: mk.likelyScore,
                 markets: mk,
                 analysis: 'Actualizado en vivo desde ESPN Public Soccer API.',
@@ -256,6 +359,40 @@
     }
   }
 
+  function renderShootersCardHtml(m) {
+    const ts = m.topShooters || {};
+    const hLead = (ts.home && ts.home[0]) || null;
+    const aLead = (ts.away && ts.away[0]) || null;
+
+    if (!hLead && !aLead) {
+      return '<div style="font-size:0.74rem;margin-top:8px;color:#cbd5e1;">🔥 Mejores chances de remate: <b>' + escHtml(m.topShooter || 'Ver en Alineación y Remates') + '</b></div>';
+    }
+
+    const pill = (s) => {
+      if (!s) return '';
+      const pct = Math.round((s.prob1PlusSot || 0.35) * 100);
+      const statsStr = s.appearances > 0
+        ? s.shotsPerGame + ' rem/pj · ' + s.sotPerGame + ' al arco/pj'
+        : 'Pos. ' + escHtml(s.position || '-');
+      return (
+        '<div class="shooter-pill">' +
+          '<div style="min-width:0;">' +
+            '<div class="shooter-name">' + escHtml(s.name) + (s.starter ? ' ★' : '') + '</div>' +
+            '<div class="shooter-meta">' + escHtml(s.team) + ' (' + escHtml(s.position) + ') · ' + escHtml(statsStr) + '</div>' +
+          '</div>' +
+          '<span class="shooter-prob">' + pct + '% 1+ arco</span>' +
+        '</div>'
+      );
+    };
+
+    return (
+      '<div class="shooters-box">' +
+        '<div class="shooters-hdr"><span>🎯 MEJORES CHANCES DE PATEAR AL ARCO</span><span>Top 1 por equipo</span></div>' +
+        '<div class="shooters-grid">' + pill(hLead) + pill(aLead) + '</div>' +
+      '</div>'
+    );
+  }
+
   function renderMatches() {
     const list = document.getElementById('matches-list');
     const counter = document.getElementById('summary-counter');
@@ -310,11 +447,11 @@
               '<div>🟨 Tarjetas: <b>' + escHtml(m.cards || '3.5+') + '</b></div>' +
               '<div>🎯 Remates: <b>' + escHtml(m.shots) + '</b></div>' +
             '</div>' +
-            '<div style="font-size:0.74rem;margin-top:6px;color:#cbd5e1;">🔥 Top Rematador: <b>' + escHtml(m.topShooter) + '</b></div>' +
+            renderShootersCardHtml(m) +
           '</div>' +
           '<p class="analysis-note">' + escHtml(m.analysis) + '</p>' +
           '<div class="card-actions">' +
-            '<button class="btn btn-sm" data-detail="' + escHtml(m.id) + '" type="button">👥 Alineación y Plantel</button>' +
+            '<button class="btn btn-sm" data-detail="' + escHtml(m.id) + '" type="button">🎯 Rematadores y Plantel</button>' +
             '<button class="btn btn-sm ' + (inParlay ? '' : 'btn-primary') + '" data-add-leg="' + escHtml(m.id) + '" type="button">' +
               (inParlay ? '✓ En Combinada' : '+ Combinada') +
             '</button>' +
@@ -323,11 +460,11 @@
       );
     }).join('');
 
-    list.querySelectorAll('[data-detail]').forEach((btn) => {
-      btn.onclick = () => openMatchDetail(btn.getAttribute('data-detail'));
-    });
     list.querySelectorAll('[data-add-leg]').forEach((btn) => {
       btn.onclick = () => toggleParlayLeg(btn.getAttribute('data-add-leg'));
+    });
+    list.querySelectorAll('[data-detail]').forEach((btn) => {
+      btn.onclick = () => void openMatchDetail(btn.getAttribute('data-detail'));
     });
   }
 
@@ -337,17 +474,15 @@
       state.parlayLegs.splice(idx, 1);
     } else {
       const m = state.matches.find((x) => x.id === matchId);
-      if (m) {
-        const probNum = Math.max(0.25, Math.min(0.95, (parseFloat(m.probability) || 65) / 100));
-        state.parlayLegs.push({
-          matchId: m.id,
-          matchLabel: m.home + ' vs ' + m.away,
-          league: m.league,
-          pick: m.prediction,
-          odds: parseFloat(m.odds) || 1.35,
-          prob: probNum,
-        });
-      }
+      if (!m) return;
+      state.parlayLegs.push({
+        matchId: m.id,
+        matchLabel: m.home + ' vs ' + m.away,
+        league: m.league,
+        pick: m.prediction,
+        odds: parseFloat(m.odds) || 1.35,
+        prob: Math.max(0.25, Math.min(0.95, (parseFloat(m.probability) || 65) / 100)),
+      });
     }
     renderAll();
   }
@@ -355,7 +490,6 @@
   function renderParlay() {
     const badge = document.getElementById('parlay-badge');
     if (badge) badge.textContent = String(state.parlayLegs.length);
-
     const sumBox = document.getElementById('parlay-summary');
     const listBox = document.getElementById('parlay-legs-list');
     const bankrollEl = document.getElementById('bankroll-input');
@@ -367,7 +501,6 @@
       totalOdds *= l.odds;
       jointProb *= l.prob;
     });
-    const ev = state.parlayLegs.length > 0 ? jointProb * totalOdds - 1 : 0;
     const b = Math.max(0.01, totalOdds - 1);
     const fullKelly = state.parlayLegs.length > 0 ? Math.max(0, (b * jointProb - (1 - jointProb)) / b) : 0;
     const quarterKellyPct = Math.min(0.12, fullKelly * 0.25);
@@ -417,6 +550,36 @@
     renderAll();
   }
 
+  async function fetchFullRosterWithStats(slug, teamId) {
+    if (!teamId) return [];
+    const loadSlug = async (s) => {
+      const r = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + s + '/teams/' + encodeURIComponent(teamId) + '/roster', { cache: 'no-store' });
+      if (!r.ok) return [];
+      const d = await r.json();
+      return (d.athletes || []).map((a) => {
+        const st = extractEspnAthleteStats(a);
+        return {
+          id: String(a.id || ''),
+          number: String(a.jersey || '-'),
+          position: String((a.position && a.position.abbreviation) || ''),
+          name: String(a.displayName || a.fullName || '').trim(),
+          appearances: st.appearances,
+          totalShots: st.totalShots,
+          shotsOnTarget: st.shotsOnTarget,
+          totalGoals: st.totalGoals,
+          goalAssists: st.goalAssists,
+        };
+      }).filter((x) => x.name);
+    };
+    let list = await loadSlug(slug);
+    const totShots = list.reduce((acc, p) => acc + (p.totalShots || 0), 0);
+    if (totShots === 0 && slug === 'arg.copa') {
+      const argList = await loadSlug('arg.1');
+      if (argList.reduce((acc, p) => acc + (p.totalShots || 0), 0) > 0) list = argList;
+    }
+    return list;
+  }
+
   async function openMatchDetail(matchId) {
     const m = state.matches.find((x) => x.id === matchId);
     if (!m) return;
@@ -424,49 +587,117 @@
     const title = document.getElementById('modal-title');
     const body = document.getElementById('modal-body');
     if (title) title.textContent = m.home + ' vs ' + m.away;
-    if (body) body.innerHTML = '<p style="color:var(--cyan);font-size:0.82rem;">Cargando alineaciones y planteles actualizados en vivo...</p>';
+    if (body) body.innerHTML = '<p style="color:var(--cyan);font-size:0.82rem;">Analizando alineaciones, remates por partido y estadísticas en vivo...</p>';
     if (modal) modal.classList.add('open');
 
-    let homePlayers = m.homeSquad || [];
-    let awayPlayers = m.awaySquad || [];
+    let homePlayers = Array.isArray(m.homeSquad) ? m.homeSquad.slice() : [];
+    let awayPlayers = Array.isArray(m.awaySquad) ? m.awaySquad.slice() : [];
+    let homeConf = Boolean(m.lineupConfirmed);
+    let awayConf = Boolean(m.lineupConfirmed);
+
     try {
-      const sumRes = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + m.leagueSlug + '/summary?event=' + encodeURIComponent(m.id), { cache: 'no-store' });
-      if (sumRes.ok) {
-        const sum = await sumRes.json();
-        (sum.rosters || []).forEach((r) => {
-          const pl = (r.roster || []).map((p) => ({
-            number: String(p.jersey || '-'),
-            position: String((p.position && p.position.abbreviation) || ''),
-            name: String((p.athlete && (p.athlete.displayName || p.athlete.fullName)) || ''),
-            starter: Boolean(p.starter),
-          })).filter((x) => x.name);
-          if (r.homeAway === 'home' && pl.length > 0) homePlayers = pl;
-          if (r.homeAway === 'away' && pl.length > 0) awayPlayers = pl;
+      const [sumRes, seasonHome, seasonAway] = await Promise.all([
+        fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + m.leagueSlug + '/summary?event=' + encodeURIComponent(m.id), { cache: 'no-store' }),
+        homePlayers.some((p) => (p.totalShots || 0) > 0) ? Promise.resolve(null) : fetchFullRosterWithStats(m.leagueSlug, m.homeId),
+        awayPlayers.some((p) => (p.totalShots || 0) > 0) ? Promise.resolve(null) : fetchFullRosterWithStats(m.leagueSlug, m.awayId),
+      ]);
+
+      const seasonMap = (arr) => {
+        const byId = new Map();
+        const byName = new Map();
+        (arr || []).forEach((p) => {
+          if (p.id) byId.set(p.id, p);
+          byName.set(normName(p.name), p);
         });
-      }
-      if (homePlayers.length === 0 && m.homeId) {
-        const rH = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + m.leagueSlug + '/teams/' + m.homeId + '/roster', { cache: 'no-store' });
-        if (rH.ok) {
-          const dH = await rH.json();
-          homePlayers = (dH.athletes || []).slice(0, 22).map((a) => ({ number: String(a.jersey || '-'), position: String((a.position && a.position.abbreviation) || ''), name: a.displayName || '' }));
+        return { byId, byName };
+      };
+
+      const mergeSide = (sumSideRoster, currentSide, freshSeason) => {
+        const baseList = freshSeason && freshSeason.length > 0 ? freshSeason : currentSide;
+        const { byId, byName } = seasonMap(baseList);
+        if (!Array.isArray(sumSideRoster) || sumSideRoster.length === 0) {
+          return { list: baseList, confirmed: false };
         }
-      }
-      if (awayPlayers.length === 0 && m.awayId) {
-        const rA = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + m.leagueSlug + '/teams/' + m.awayId + '/roster', { cache: 'no-store' });
-        if (rA.ok) {
-          const dA = await rA.json();
-          awayPlayers = (dA.athletes || []).slice(0, 22).map((a) => ({ number: String(a.jersey || '-'), position: String((a.position && a.position.abbreviation) || ''), name: a.displayName || '' }));
-        }
-      }
+        let starters = 0;
+        const merged = [];
+        const seen = new Set();
+        sumSideRoster.forEach((p) => {
+          const aid = String((p.athlete && p.athlete.id) || '');
+          const nm = String((p.athlete && (p.athlete.displayName || p.athlete.fullName)) || '').trim();
+          if (!nm) return;
+          const base = byId.get(aid) || byName.get(normName(nm)) || {};
+          const isStarter = Boolean(p.starter);
+          if (isStarter) starters++;
+          const rawPos = String((p.position && p.position.abbreviation) || '').trim();
+          const pos = !rawPos || rawPos === 'SUB' || rawPos === 'S' ? (base.position || rawPos) : rawPos;
+          const key = aid || normName(nm);
+          seen.add(key);
+          merged.push({
+            id: aid || base.id || '',
+            number: String(p.jersey || base.number || '-'),
+            position: pos,
+            name: nm,
+            starter: isStarter,
+            inMatchSquad: true,
+            appearances: base.appearances || 0,
+            totalShots: base.totalShots || 0,
+            shotsOnTarget: base.shotsOnTarget || 0,
+            totalGoals: base.totalGoals || 0,
+          });
+        });
+        baseList.forEach((sp) => {
+          const key = sp.id || normName(sp.name);
+          if (!seen.has(key)) merged.push(Object.assign({}, sp, { starter: false, inMatchSquad: false }));
+        });
+        return { list: merged, confirmed: starters >= 7 };
+      };
+
+      let sumData = null;
+      if (sumRes && sumRes.ok) sumData = await sumRes.json();
+      const rostersArr = (sumData && sumData.rosters) || [];
+      const hRosterObj = rostersArr.find((r) => r.homeAway === 'home');
+      const aRosterObj = rostersArr.find((r) => r.homeAway === 'away');
+
+      const mh = mergeSide(hRosterObj && hRosterObj.roster, homePlayers, seasonHome);
+      const ma = mergeSide(aRosterObj && aRosterObj.roster, awayPlayers, seasonAway);
+      if (mh.list.length > 0) { homePlayers = mh.list; homeConf = mh.confirmed || homeConf; }
+      if (ma.list.length > 0) { awayPlayers = ma.list; awayConf = ma.confirmed || awayConf; }
     } catch {
       // keep preloaded squads
     }
+
+    const lamH = (m.xgModel && m.xgModel.lambdaHome) || 1.4;
+    const lamA = (m.xgModel && m.xgModel.lambdaAway) || 1.15;
+    const topH = (m.topShooters && m.topShooters.home && m.topShooters.home.length > 0 && homePlayers.length === (m.homeSquad || []).length)
+      ? m.topShooters.home
+      : computeTopShootersJS(homePlayers, m.home, lamH, homeConf, 3);
+    const topA = (m.topShooters && m.topShooters.away && m.topShooters.away.length > 0 && awayPlayers.length === (m.awaySquad || []).length)
+      ? m.topShooters.away
+      : computeTopShootersJS(awayPlayers, m.away, lamA, awayConf, 3);
+
+    const renderShooterList = (arr) =>
+      arr.length === 0
+        ? '<p style="font-size:0.74rem;color:var(--muted);">Sin estadísticas de remates cargadas aún.</p>'
+        : arr.map((s, idx) => (
+            '<div class="shooter-pill" style="margin-bottom:5px;">' +
+              '<div>' +
+                '<div class="shooter-name">#' + (idx + 1) + ' ' + escHtml(s.name) + (s.starter ? ' ★' : '') + '</div>' +
+                '<div class="shooter-meta">' +
+                  escHtml(s.position) + ' · ' + s.shotsPerGame + ' rem/pj · ' + s.sotPerGame + ' al arco/pj · ' + s.goals + ' goles (' + s.appearances + ' PJ)' +
+                '</div>' +
+              '</div>' +
+              '<span class="shooter-prob">' + Math.round((s.prob1PlusSot || 0.35) * 100) + '%</span>' +
+            '</div>'
+          )).join('');
 
     const renderList = (arr) =>
       arr.length === 0
         ? '<p style="font-size:0.75rem;color:var(--muted);">Alineación oficial pendiente de confirmación previa al partido.</p>'
         : arr.slice(0, 18).map((p) => (
-            '<div class="player-row"><span><b>' + escHtml(p.number) + '</b> ' + escHtml(p.name) + (p.starter ? ' ★' : '') + '</span><span style="color:var(--cyan);">' + escHtml(p.position) + '</span></div>'
+            '<div class="player-row">' +
+              '<span><b>' + escHtml(p.number) + '</b> ' + escHtml(p.name) + (p.starter ? ' ★' : '') + '</span>' +
+              '<span style="color:var(--cyan);">' + escHtml(p.position) + (p.totalShots > 0 ? ' · ' + p.totalShots + ' rem' : '') + '</span>' +
+            '</div>'
           )).join('');
 
     if (body) {
@@ -476,9 +707,16 @@
           '<div class="pick-title">' + escHtml(m.prediction) + ' (Cuota ' + escHtml(m.odds) + ')</div>' +
           '<div style="font-size:0.75rem;color:var(--muted);margin-top:4px;">' + escHtml(m.analysis) + '</div>' +
         '</div>' +
+        '<div class="shooters-box" style="margin-bottom:12px;">' +
+          '<div class="shooters-hdr"><span>🎯 TOP 3 CON MEJORES CHANCES DE PATEAR AL ARCO</span><span>Prob. 1+ al Arco</span></div>' +
+          '<div class="roster-cols" style="margin-top:4px;">' +
+            '<div><div style="font-size:0.75rem;font-weight:700;color:#fff;margin-bottom:4px;">' + escHtml(m.home) + '</div>' + renderShooterList(topH) + '</div>' +
+            '<div><div style="font-size:0.75rem;font-weight:700;color:#fff;margin-bottom:4px;">' + escHtml(m.away) + '</div>' + renderShooterList(topA) + '</div>' +
+          '</div>' +
+        '</div>' +
         '<div class="roster-cols">' +
-          '<div><h4 style="font-size:0.82rem;margin-bottom:6px;">' + escHtml(m.home) + '</h4>' + renderList(homePlayers) + '</div>' +
-          '<div><h4 style="font-size:0.82rem;margin-bottom:6px;">' + escHtml(m.away) + '</h4>' + renderList(awayPlayers) + '</div>' +
+          '<div><h4 style="font-size:0.82rem;margin-bottom:6px;">' + escHtml(m.home) + ' (Plantel / XI)</h4>' + renderList(homePlayers) + '</div>' +
+          '<div><h4 style="font-size:0.82rem;margin-bottom:6px;">' + escHtml(m.away) + ' (Plantel / XI)</h4>' + renderList(awayPlayers) + '</div>' +
         '</div>';
     }
   }
@@ -516,7 +754,7 @@
           '<button class="btn btn-sm" data-refresh-team="' + escHtml(t.teamId) + '" data-refresh-slug="' + escHtml(t.leagueSlug) + '" data-refresh-name="' + escHtml(t.teamName) + '" type="button">🔄 Actualizar</button>' +
         '</div>' +
         (t.players && t.players.length
-          ? '<div style="margin-top:8px;font-size:0.75rem;color:#cbd5e1;">' + t.players.slice(0, 11).map((p) => escHtml(p.name) + ' (' + escHtml(p.position) + ')').join(' · ') + '</div>'
+          ? '<div style="margin-top:8px;font-size:0.75rem;color:#cbd5e1;">' + t.players.slice(0, 12).map((p) => escHtml(p.name) + ' (' + escHtml(p.position) + (p.totalShots ? ' · ' + p.totalShots + ' rem' : '') + ')').join(' · ') + '</div>'
           : '') +
       '</div>'
     )).join('');
@@ -529,14 +767,15 @@
         if (!tid || !slug) return;
         btn.textContent = '...';
         try {
-          const r = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/' + slug + '/teams/' + tid + '/roster', { cache: 'no-store' });
-          if (r.ok) {
-            const d = await r.json();
-            const pl = (d.athletes || []).slice(0, 24).map((a) => ({ number: String(a.jersey || '-'), position: String((a.position && a.position.abbreviation) || ''), name: a.displayName || '' }));
+          const pl = await fetchFullRosterWithStats(slug, tid);
+          if (pl.length > 0) {
+            pl.sort((a, b) => (b.shotsOnTarget - a.shotsOnTarget) || (b.totalShots - a.totalShots));
             const existing = state.rosters.find((x) => x.teamName === tname);
             if (existing) existing.players = pl;
             else state.rosters.unshift({ teamId: tid, teamName: tname, leagueSlug: slug, crestUrl: '', players: pl });
             renderRosters();
+          } else {
+            btn.textContent = 'Sin datos';
           }
         } catch {
           btn.textContent = 'Error';

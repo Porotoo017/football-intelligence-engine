@@ -1,36 +1,36 @@
 # Football Intelligence Pro — Reporte en Vivo (10 Ligas)
 
-- **Última ejecución:** 22/11/2026 12:02 ART
-- **Equipos en BD histórica (`quant_master.db`):** 655
+- **Última ejecución:** 22/11/2026 12:32 ART
+- **Equipos en BD histórica (`quant_master.db`):** 656
 - **Registros por temporada:** 1672
-- **Partidos reales acumulados:** 5 (+1 nuevos en esta ejecución)
+- **Partidos reales acumulados:** 7 (+0 nuevos en esta ejecución)
 - **Planteles actualizados en caché:** 66
 - **Partidos activos/próximos/recientes cargados:** 33
 
-| Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Cuota |
+| Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |
 |---|---|---|---|---|---|---|
-| Eredivisie (Países Bajos) | 22/11/2026 10:30 ART | Ajax Amsterdam (3) vs (0) ADO Den Haag | 73' | Doble Oportunidad: Ajax Amsterdam o Empate (1X) | 81% | 1.16 |
-| Eredivisie (Países Bajos) | 22/11/2026 10:30 ART | Sparta Rotterdam (1) vs (3) AZ Alkmaar | 73' | Doble Oportunidad: Empate o AZ Alkmaar (X2) | 70% | 1.35 |
-| Serie A (Italia) | 22/11/2026 11:00 ART | Bologna (1) vs (0) Udinese | HT | Doble Oportunidad: Bologna o Empate (1X) | 70% | 1.35 |
-| Serie A (Italia) | 22/11/2026 11:00 ART | Sassuolo (0) vs (2) Genoa | HT | Doble Oportunidad: Sassuolo o Empate (1X) | 71% | 1.33 |
-| Ligue 1 (Francia) | 22/11/2026 11:00 ART | Paris FC (0) vs (0) Angers | HT | Doble Oportunidad: Paris FC o Empate (1X) | 74% | 1.27 |
-| Bundesliga (Alemania) | 22/11/2026 11:30 ART | FC Augsburg (1) vs (0) Mainz | 32' | Doble Oportunidad: FC Augsburg o Empate (1X) | 71% | 1.32 |
-| LaLiga (España) | 22/11/2026 12:15 ART | Racing Santander (0) vs (0) Real Sociedad | Scheduled | Doble Oportunidad: Racing Santander o Empate (1X) | 68% | 1.37 |
-| Eredivisie (Países Bajos) | 22/11/2026 12:45 ART | Go Ahead Eagles (0) vs (0) Fortuna Sittard | Scheduled | Doble Oportunidad: Go Ahead Eagles o Empate (1X) | 72% | 1.31 |
-| Ligue 1 (Francia) | 22/11/2026 13:15 ART | Lorient (0) vs (0) Stade Rennais | Scheduled | Doble Oportunidad: Empate o Stade Rennais (X2) | 65% | 1.44 |
-| Bundesliga (Alemania) | 22/11/2026 13:30 ART | Werder Bremen (0) vs (0) Hamburg SV | Scheduled | Doble Oportunidad: Werder Bremen o Empate (1X) | 64% | 1.47 |
-| Serie A (Italia) | 22/11/2026 14:00 ART | AC Milan (0) vs (0) Frosinone | Scheduled | Doble Oportunidad: AC Milan o Empate (1X) | 74% | 1.28 |
-| LaLiga (España) | 22/11/2026 14:30 ART | Osasuna (0) vs (0) Málaga | Scheduled | Doble Oportunidad: Osasuna o Empate (1X) | 69% | 1.37 |
-| Liga Profesional Argentina | 22/11/2026 16:00 ART | Rosario Central (0) vs (0) Gimnasia (Mendoza) | Scheduled | Doble Oportunidad: Rosario Central o Empate (1X) | 66% | 1.43 |
-| Serie A (Italia) | 22/11/2026 16:45 ART | Atalanta (0) vs (0) Internazionale | Scheduled | Doble Oportunidad: Atalanta o Empate (1X) | 73% | 1.29 |
-| Ligue 1 (Francia) | 22/11/2026 16:45 ART | Marseille (0) vs (0) Le Mans | Scheduled | Doble Oportunidad: Marseille o Empate (1X) | 67% | 1.4 |
-| LaLiga (España) | 22/11/2026 17:00 ART | Getafe (0) vs (0) Atlético Madrid | Scheduled | Doble Oportunidad: Empate o Atlético Madrid (X2) | 69% | 1.35 |
-| Liga Profesional Argentina | 22/11/2026 19:00 ART | River Plate (0) vs (0) Lanús | Scheduled | Doble Oportunidad: River Plate o Empate (1X) | 75% | 1.26 |
-| Liga Profesional Argentina | 22/11/2026 22:00 ART | Instituto (Córdoba) (0) vs (0) Huracán | Scheduled | Doble Oportunidad: Instituto (Córdoba) o Empate (1X) | 69% | 1.36 |
-| UEFA Champions League | 24/11/2026 14:45 ART | Bodo/Glimt (0) vs (0) LASK Linz | Scheduled | Doble Oportunidad: Bodo/Glimt o Empate (1X) | 65% | 1.44 |
-| UEFA Champions League | 24/11/2026 14:45 ART | Galatasaray (0) vs (0) Aston Villa | Scheduled | Doble Oportunidad: Galatasaray o Empate (1X) | 66% | 1.43 |
-| UEFA Champions League | 24/11/2026 17:00 ART | Arsenal (0) vs (0) Borussia Dortmund | Scheduled | Doble Oportunidad: Arsenal o Empate (1X) | 64% | 1.48 |
-| UEFA Champions League | 24/11/2026 17:00 ART | Como (0) vs (0) AEK Athens | Scheduled | Doble Oportunidad: Como o Empate (1X) | 68% | 1.38 |
-| UEFA Champions League | 24/11/2026 17:00 ART | Feyenoord Rotterdam (0) vs (0) FC Porto | Scheduled | Doble Oportunidad: Feyenoord Rotterdam o Empate (1X) | 86% | 1.12 |
-| UEFA Champions League | 24/11/2026 17:00 ART | Manchester City (0) vs (0) Napoli | Scheduled | Doble Oportunidad: Manchester City o Empate (1X) | 67% | 1.41 |
-| UEFA Champions League | 24/11/2026 17:00 ART | RB Leipzig (0) vs (0) Lens | Scheduled | Doble Oportunidad: RB Leipzig o Empate (1X) | 68% | 1.38 |
+| Serie A (Italia) | 22/11/2026 11:00 ART | Bologna (1) vs (1) Udinese | 72' | Doble Oportunidad: Bologna o Empate (1X) | 70% | Federico Bernardeschi (Bologna, 2.55 rem/pj · 62% prob. 1+ arco) / Jurgen Ekkelenkamp (Udinese, 2.45 rem/pj · 45% prob. 1+ arco) |
+| Serie A (Italia) | 22/11/2026 11:00 ART | Sassuolo (0) vs (2) Genoa | 72' | Doble Oportunidad: Sassuolo o Empate (1X) | 71% | Armand Laurienté (Sassuolo, 2.82 rem/pj · 54% prob. 1+ arco) / Milutin Osmajic (Genoa, 1.7 rem/pj · 33% prob. 1+ arco) |
+| Ligue 1 (Francia) | 22/11/2026 11:00 ART | Paris FC (4) vs (0) Angers | 74' | Doble Oportunidad: Paris FC o Empate (1X) | 72% | Ilan Kebbal (Paris FC, 2.3 rem/pj · 47% prob. 1+ arco) / Amine Sbaï (Angers, 2.3 rem/pj · 29% prob. 1+ arco) |
+| Bundesliga (Alemania) | 22/11/2026 11:30 ART | FC Augsburg (2) vs (0) Mainz | HT | Doble Oportunidad: FC Augsburg o Empate (1X) | 71% | Michael Gregoritsch (Augsburg, 2.75 rem/pj · 81% prob. 1+ arco) / Phillip Tietz (Mainz, 3.44 rem/pj · 64% prob. 1+ arco) |
+| LaLiga (España) | 22/11/2026 12:15 ART | Racing Santander (2) vs (0) Real Sociedad | 17' | Doble Oportunidad: Racing Santander o Empate (1X) | 68% | Yassir Zabiri (Racing, 2.42 rem/pj · 68% prob. 1+ arco) / Orri Óskarsson (Real Sociedad, 2.3 rem/pj · 45% prob. 1+ arco) |
+| Eredivisie (Países Bajos) | 22/11/2026 12:45 ART | Go Ahead Eagles (0) vs (0) Fortuna Sittard | Scheduled | Doble Oportunidad: Go Ahead Eagles o Empate (1X) | 72% | Sören Tengstedt (Go Ahead Eagles, 2.83 rem/pj · 74% prob. 1+ arco) / Anthony Descotte (Fortuna, 1.55 rem/pj · 51% prob. 1+ arco) |
+| Ligue 1 (Francia) | 22/11/2026 13:15 ART | Lorient (0) vs (0) Stade Rennais | Scheduled | Doble Oportunidad: Empate o Stade Rennais (X2) | 65% | Jean-Victor Makengo (Lorient, 1.7 rem/pj · 30% prob. 1+ arco) / Boulaye Dia (Rennes, 1.25 rem/pj · 41% prob. 1+ arco) |
+| Bundesliga (Alemania) | 22/11/2026 13:30 ART | Werder Bremen (0) vs (0) Hamburg SV | Scheduled | Doble Oportunidad: Werder Bremen o Empate (1X) | 64% | Niclas Füllkrug (Bremen, 3.67 rem/pj · 85% prob. 1+ arco) / Fabio Vieira (Hamburg, 2.33 rem/pj · 59% prob. 1+ arco) |
+| Serie A (Italia) | 22/11/2026 14:00 ART | AC Milan (0) vs (0) Frosinone | Scheduled | Doble Oportunidad: AC Milan o Empate (1X) | 76% | Gonçalo Ramos (Milan, 2.36 rem/pj · 61% prob. 1+ arco) / Antonio Raimondo (Frosinone, 3.2 rem/pj · 52% prob. 1+ arco) |
+| LaLiga (España) | 22/11/2026 14:30 ART | Osasuna (0) vs (0) Málaga | Scheduled | Doble Oportunidad: Osasuna o Empate (1X) | 69% | Ante Budimir (Osasuna, 2.67 rem/pj · 68% prob. 1+ arco) / Adrián Niño (Málaga, 2.88 rem/pj · 65% prob. 1+ arco) |
+| Liga Profesional Argentina | 22/11/2026 16:00 ART | Rosario Central (0) vs (0) Gimnasia (Mendoza) | Scheduled | Doble Oportunidad: Rosario Central o Empate (1X) | 66% | Ángel Di María (Rosario Central, 3.43 rem/pj · 64% prob. 1+ arco) / Agustín Módica (Gimnasia (M), 2.67 rem/pj · 47% prob. 1+ arco) |
+| Serie A (Italia) | 22/11/2026 16:45 ART | Atalanta (0) vs (0) Internazionale | Scheduled | Doble Oportunidad: Atalanta o Empate (1X) | 73% | Nikola Krstovic (Atalanta, 3.0 rem/pj · 76% prob. 1+ arco) / Marcus Thuram (Inter Milan, 3.8 rem/pj · 64% prob. 1+ arco) |
+| Ligue 1 (Francia) | 22/11/2026 16:45 ART | Marseille (0) vs (0) Le Mans | Scheduled | Doble Oportunidad: Marseille o Empate (1X) | 67% | Amine Gouiri (Marseille, 2.4 rem/pj · 66% prob. 1+ arco) / Louis Mafouta (Le Mans, 2.0 rem/pj · 58% prob. 1+ arco) |
+| LaLiga (España) | 22/11/2026 17:00 ART | Getafe (0) vs (0) Atlético Madrid | Scheduled | Doble Oportunidad: Empate o Atlético Madrid (X2) | 69% | Martín Satriano (Getafe, 2.0 rem/pj · 34% prob. 1+ arco) / Jonathan David (Atlético, 2.0 rem/pj · 60% prob. 1+ arco) |
+| Liga Profesional Argentina | 22/11/2026 19:00 ART | River Plate (0) vs (0) Lanús | Scheduled | Doble Oportunidad: River Plate o Empate (1X) | 75% | Ángel Correa (River Plate, 3.4 rem/pj · 65% prob. 1+ arco) / Allan Wlk (Lanús , 1.94 rem/pj · 49% prob. 1+ arco) |
+| Liga Profesional Argentina | 22/11/2026 22:00 ART | Instituto (Córdoba) (0) vs (0) Huracán | Scheduled | Doble Oportunidad: Instituto (Córdoba) o Empate (1X) | 70% | Alex Luna (Instituto, 3.14 rem/pj · 51% prob. 1+ arco) / Jordy Caicedo (Huracán , 2.0 rem/pj · 50% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 14:45 ART | Bodo/Glimt (0) vs (0) LASK Linz | Scheduled | Doble Oportunidad: Bodo/Glimt o Empate (1X) | 67% | Andreas Helmersen (Bodo/Glimt, 1.5 rem/pj · 32% prob. 1+ arco) / Sasa Kalajdzic (LASK Linz, 2.0 rem/pj · 47% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 14:45 ART | Galatasaray (0) vs (0) Aston Villa | Scheduled | Doble Oportunidad: Galatasaray o Empate (1X) | 66% | Victor Osimhen (Galatasaray, 4.0 rem/pj · 29% prob. 1+ arco) / Nicolas Jackson (Aston Villa, 3.25 rem/pj · 65% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | Arsenal (0) vs (0) Borussia Dortmund | Scheduled | Doble Oportunidad: Arsenal o Empate (1X) | 64% | Eberechi Eze (Arsenal, 2.5 rem/pj · 57% prob. 1+ arco) / Serhou Guirassy (Dortmund, 4.0 rem/pj · 68% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | Como (0) vs (0) AEK Athens | Scheduled | Doble Oportunidad: Como o Empate (1X) | 68% | Tasos Douvikas (Como, 2.25 rem/pj · 71% prob. 1+ arco) / Aboubakary Koita (AEK Athens, 2.25 rem/pj · 16% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | Feyenoord Rotterdam (0) vs (0) FC Porto | Scheduled | Doble Oportunidad: Feyenoord Rotterdam o Empate (1X) | 86% | Anis Hadj Moussa (Feyenoord, 3.25 rem/pj · 79% prob. 1+ arco) / Gabri Veiga (FC Porto, 2.25 rem/pj · 34% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | Manchester City (0) vs (0) Napoli | Scheduled | Doble Oportunidad: Manchester City o Empate (1X) | 67% | Erling Haaland (Man City, 5.67 rem/pj · 87% prob. 1+ arco) / Scott McTominay (Napoli, 4.0 rem/pj · 52% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | RB Leipzig (0) vs (0) Lens | Scheduled | Doble Oportunidad: RB Leipzig o Empate (1X) | 68% | Antonio Nusa (RB Leipzig, 2.75 rem/pj · 59% prob. 1+ arco) / Florian Thauvin (Lens, 3.25 rem/pj · 65% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | Real Madrid (0) vs (0) PSV Eindhoven | Scheduled | Doble Oportunidad: Empate o PSV Eindhoven (X2) | 72% | Kylian Mbappé (Real Madrid, 4.75 rem/pj · 81% prob. 1+ arco) / Sergiño Dest (PSV, 2.25 rem/pj · 59% prob. 1+ arco) |
+| UEFA Champions League | 24/11/2026 17:00 ART | Slovan Bratislava (0) vs (0) Real Betis | Scheduled | Doble Oportunidad: Slovan Bratislava o Empate (1X) | 65% | Tigran Barseghyan (S Bratislava, 1.75 rem/pj · 42% prob. 1+ arco) / Abde Ezzalzouli (Betis, 5.0 rem/pj · 55% prob. 1+ arco) |

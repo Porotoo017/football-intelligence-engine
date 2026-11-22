@@ -1,12 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#06b6d4"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="55%" stop-color="#0b172a"/>
+      <stop offset="100%" stop-color="#051b1a"/>
+    </linearGradient>
+    <radialGradient id="turfGlow" cx="50%" cy="88%" r="60%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.34"/>
+      <stop offset="65%" stop-color="#06b6d4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#07101f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
       <stop offset="100%" stop-color="#10b981"/>
     </linearGradient>
+    <linearGradient id="trailGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#10b981" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="ballShade" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#e2e8f0"/>
+      <stop offset="88%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </radialGradient>
+    <clipPath id="ballClip">
+      <circle cx="304" cy="224" r="90"/>
+    </clipPath>
+    <clipPath id="netClip">
+      <polygon points="78,118 424,118 446,374 56,374"/>
+    </clipPath>
   </defs>
-  <rect width="512" height="512" rx="112" fill="#070b14"/>
-  <circle cx="256" cy="256" r="168" fill="none" stroke="url(#g)" stroke-width="26"/>
-  <polygon points="256,142 356,214 318,332 194,332 156,214" fill="none" stroke="#10b981" stroke-width="18" stroke-linejoin="round"/>
-  <circle cx="256" cy="244" r="24" fill="#06b6d4"/>
+
+  <!-- App badge base -->
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#bgGrad)"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#turfGlow)"/>
+  <rect x="14" y="14" width="484" height="484" rx="106" fill="none" stroke="url(#borderGrad)" stroke-width="6" stroke-opacity="0.55"/>
+
+  <!-- Subtle pitch line -->
+  <path d="M 48 394 Q 256 368 464 394" fill="none" stroke="#10b981" stroke-width="4" stroke-opacity="0.45" stroke-linecap="round"/>
+
+  <!-- Goal Net back & depth mesh (with bulge around ball impact at 304,224) -->
+  <g clip-path="url(#netClip)">
+    <rect x="64" y="122" width="380" height="252" fill="#0ea5e9" fill-opacity="0.06"/>
+    <!-- Vertical/perspective net cords curving slightly around impact -->
+    <g fill="none" stroke="#bae6fd" stroke-width="2.6" stroke-opacity="0.42">
+      <path d="M 96 122 L 80 374"/>
+      <path d="M 132 122 L 120 374"/>
+      <path d="M 168 122 L 160 374"/>
+      <path d="M 204 122 Q 214 235 200 374"/>
+      <path d="M 240 122 Q 262 230 242 374"/>
+      <path d="M 276 122 Q 308 224 284 374"/>
+      <path d="M 312 122 Q 350 224 326 374"/>
+      <path d="M 348 122 Q 382 228 368 374"/>
+      <path d="M 384 122 Q 402 240 408 374"/>
+      <path d="M 418 122 L 434 374"/>
+      <!-- Horizontal net cords -->
+      <path d="M 78 148 Q 270 156 426 148"/>
+      <path d="M 74 182 Q 285 196 429 182"/>
+      <path d="M 70 216 Q 305 244 433 216"/>
+      <path d="M 66 250 Q 305 276 437 250"/>
+      <path d="M 62 284 Q 290 300 441 284"/>
+      <path d="M 58 318 Q 260 324 445 318"/>
+      <path d="M 54 352 L 448 352"/>
+    </g>
+    <!-- Highlight impact tension cords around the ball -->
+    <g fill="none" stroke="#67e8f9" stroke-width="2.8" stroke-opacity="0.65">
+      <path d="M 216 148 Q 304 224 392 148"/>
+      <path d="M 210 302 Q 304 224 398 302"/>
+      <path d="M 188 224 Q 304 224 420 224"/>
+    </g>
+  </g>
+
+  <!-- Back support bars -->
+  <path d="M 80 126 L 116 154 L 396 154 L 424 126" fill="none" stroke="#38bdf8" stroke-width="5" stroke-opacity="0.45" stroke-linejoin="round"/>
+  <path d="M 116 154 L 106 368 M 396 154 L 406 368" fill="none" stroke="#38bdf8" stroke-width="4" stroke-opacity="0.35"/>
+
+  <!-- Main crisp Goal Frame (crossbar + left & right posts) -->
+  <path d="M 76 372 L 76 130 Q 76 118 88 118 L 416 118 Q 428 118 428 130 L 428 372"
+        fill="none" stroke="#06b6d4" stroke-width="19" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.35"/>
+  <path d="M 76 372 L 76 130 Q 76 118 88 118 L 416 118 Q 428 118 428 130 L 428 372"
+        fill="none" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Shot trajectory / speed trail -->
+  <path d="M 98 374 Q 178 320 250 254" fill="none" stroke="url(#trailGrad)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M 118 396 Q 202 344 268 278" fill="none" stroke="url(#trailGrad)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 88 340 Q 158 292 232 232" fill="none" stroke="url(#trailGrad)" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Outer glow halo around soccer ball -->
+  <circle cx="304" cy="224" r="98" fill="#10b981" fill-opacity="0.18"/>
+  <circle cx="304" cy="224" r="92" fill="#07101f" stroke="#22d3ee" stroke-width="3" stroke-opacity="0.65"/>
+
+  <!-- Classic Soccer Ball (shaded sphere + crisp pentagons + seams) -->
+  <circle cx="304" cy="224" r="90" fill="url(#ballShade)"/>
+  <g clip-path="url(#ballClip)">
+    <!-- Seam lines connecting center pentagon to outer panels -->
+    <g stroke="#334155" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <line x1="304" y1="190" x2="304" y2="146"/>
+      <line x1="336" y1="214" x2="378" y2="196"/>
+      <line x1="324" y1="252" x2="352" y2="292"/>
+      <line x1="284" y1="252" x2="256" y2="292"/>
+      <line x1="272" y1="214" x2="230" y2="196"/>
+      <!-- Secondary hexagon seams -->
+      <path d="M 272 154 L 304 146 L 336 154"/>
+      <path d="M 374 166 L 378 196 L 392 222"/>
+      <path d="M 378 278 L 352 292 L 326 308"/>
+      <path d="M 282 308 L 256 292 L 230 278"/>
+      <path d="M 216 222 L 230 196 L 234 166"/>
+    </g>
+
+    <!-- Center black pentagon -->
+    <polygon points="304,190 336,214 324,252 284,252 272,214" fill="#0f172a" stroke="#1e293b" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Top outer pentagon -->
+    <polygon points="304,146 334,132 346,112 262,112 274,132" fill="#0f172a"/>
+    <!-- Right upper outer pentagon -->
+    <polygon points="378,196 398,178 412,188 394,234 374,224" fill="#0f172a"/>
+    <!-- Left upper outer pentagon -->
+    <polygon points="230,196 210,178 196,188 214,234 234,224" fill="#0f172a"/>
+    <!-- Bottom-right outer pentagon -->
+    <polygon points="352,292 384,296 376,326 334,324 336,302" fill="#0f172a"/>
+    <!-- Bottom-left outer pentagon -->
+    <polygon points="256,292 224,296 232,326 274,324 272,302" fill="#0f172a"/>
+
+    <!-- Subtle inner specular rim -->
+    <circle cx="304" cy="224" r="89" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Subtle net strands catching front edge of ball at impact -->
+  <path d="M 366 158 Q 398 222 368 290" fill="none" stroke="#e0f2fe" stroke-width="2.6" stroke-opacity="0.72" stroke-linecap="round"/>
+  <path d="M 244 152 Q 318 164 388 186" fill="none" stroke="#e0f2fe" stroke-width="2.2" stroke-opacity="0.45" stroke-linecap="round"/>
 </svg>

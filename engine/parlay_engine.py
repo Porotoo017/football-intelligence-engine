@@ -1,8 +1,18 @@
+#!/usr/bin/env python3
+"""
+Football Intelligence Pro — Live 10-League Quant Engine & Self-Growing SQLite History
+Queries ESPN Public Soccer API across 10 leagues, merges empirical Poisson xG & Bayesian
+player shooting models from data/quant_master.db + ESPN player statistics, appends every
+newly finished match into match_history_log, updates team_rosters, and exports JSON + report.
+"""
+
+from __future__ import annotations
+
 import json
 import math
 import os
-import re
 import sqlite3
+import threading
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -10,52 +20,68 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
-DB_PATH = os.getenv("QUANT_DB_PATH", "data/quant_master.db")
-OUTPUT_JSON_PATH = os.getenv("OUTPUT_JSON_PATH", "data/parlay_engine_output.json")
-LEGACY_OUTPUT_PATH = "parlay_engine_output.json"
-TEAMS_HISTORY_PATH = os.getenv("TEAMS_HISTORY_PATH", "data/teams_history.json")
-REPORT_MD_PATH = "REPORT_ACTUAL.md"
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.environ.get("QUANT_DB_PATH", os.path.join(REPO_ROOT, "data", "quant_master.db"))
+OUTPUT_JSON_PATH = os.environ.get("OUTPUT_JSON_PATH", os.path.join(REPO_ROOT, "data", "parlay_engine_output.json"))
+LEGACY_OUTPUT_PATH = os.path.join(REPO_ROOT, "parlay_engine_output.json")
+TEAMS_HISTORY_PATH = os.path.join(REPO_ROOT, "data", "teams_history.json")
+REPORT_MD_PATH = os.path.join(REPO_ROOT, "REPORT_ACTUAL.md")
 
 ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer"
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36",
-    "Accept": "application/json",
-}
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36"
 
-TARGET_LEAGUES = [
-    {"slug": "arg.1", "name": "Liga Profesional Argentina", "country": "Argentina"},
-    {"slug": "arg.copa", "name": "Copa Argentina", "country": "Argentina"},
-    {"slug": "esp.1", "name": "LaLiga (España)", "country": "España"},
-    {"slug": "ita.1", "name": "Serie A (Italia)", "country": "Italia"},
-    {"slug": "ger.1", "name": "Bundesliga (Alemania)", "country": "Alemania"},
-    {"slug": "ned.1", "name": "Eredivisie (Países Bajos)", "country": "Países Bajos"},
-    {"slug": "fra.1", "name": "Ligue 1 (Francia)", "country": "Francia"},
-    {"slug": "conmebol.libertadores", "name": "Copa Libertadores", "country": "Sudamérica"},
-    {"slug": "conmebol.sudamericana", "name": "Copa Sudamericana", "country": "Sudamérica"},
-    {"slug": "uefa.champions", "name": "UEFA Champions League", "country": "Europa"},
+TARGET_LEAGUES: List[Dict[str, str]] = [
+    {"slug": "arg.1", "name": "Liga Profesional Argentina"},
+    {"slug": "arg.copa", "name": "Copa Argentina"},
+    {"slug": "esp.1", "name": "LaLiga (España)"},
+    {"slug": "ita.1", "name": "Serie A (Italia)"},
+    {"slug": "ger.1", "name": "Bundesliga (Alemania)"},
+    {"slug": "ned.1", "name": "Eredivisie (Países Bajos)"},
+    {"slug": "fra.1", "name": "Ligue 1 (Francia)"},
+    {"slug": "conmebol.libertadores", "name": "Copa Libertadores"},
+    {"slug": "conmebol.sudamericana", "name": "Copa Sudamericana"},
+    {"slug": "uefa.champions", "name": "UEFA Champions League"},
 ]
 
-GENERIC_TOKENS = {"club", "atletico", "racing", "real", "sporting", "inter", "union", "san", "santa", "villa", "deportivo", "olympique", "paris", "dinamo"}
+GENERIC_TOKENS = {
+    "fc", "cf", "ca", "cd", "ac", "sc", "rc", "ud", "sd", "fk", "sk",
+    "club", "atletico", "deportivo", "real", "sporting", "racing",
+    "independiente", "central", "united", "city", "de", "la", "el", "del",
+}
+
+GOALKEEPER_CODES = {"G", "GK", "ARQ", "POR", "GOALKEEPER", "ARQUERO", "PORTERO"}
+FORWARD_CODES = {"F", "FW", "ST", "CF", "LF", "RF", "LW", "RW", "SS", "ST-L", "ST-R", "F-L", "F-R", "F-C", "DEL"}
+ATT_MID_CODES = {"AM", "CAM", "AM-L", "AM-R", "AM-C", "LM", "RM", "W", "MF-A"}
+DEFENDER_CODES = {"D", "DF", "CD", "CD-L", "CD-R", "CD-C", "CB", "LB", "RB", "LWB", "RWB", "DEF"}
+
+_ROSTER_CACHE: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
+_ROSTER_LOCK = threading.Lock()
 
 
-def fetch_json(url: str, headers: Optional[Dict[str, str]] = None, timeout: int = 10) -> Optional[Dict[str, Any]]:
-    req = urllib.request.Request(url, headers=headers or HEADERS)
+def norm_name(s: str) -> str:
+    txt = unicodedata.normalize("NFD", (s or "").lower())
+    txt = "".join(ch for ch in txt if unicodedata.category(ch) != "Mn")
+    out = []
+    for ch in txt:
+        out.append(ch if ch.isalnum() else " ")
+    return " ".join("".join(out).split())
+
+
+def fetch_json(url: str, timeout: int = 10) -> Optional[Dict[str, Any]]:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "application/json",
+        },
+    )
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             if resp.status != 200:
                 return None
-            return json.loads(resp.read().decode("utf-8"))
+            return json.loads(resp.read().decode("utf-8", errors="replace"))
     except Exception:
         return None
-
-
-def norm_name(name: str) -> str:
-    s = unicodedata.normalize("NFD", (name or "").lower())
-    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    s = re.sub(r"\b(c\.a\.|f\.c\.|c\.f\.|club|ca|cf|fc|sc|ac|cd|ud|rcd|sd|de|la|el|los|las|del)\b", " ", s)
-    s = re.sub(r"\b[cd]\b$", "", s)
-    s = re.sub(r"[^a-z0-9\s]", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
 
 
 def init_and_migrate_db(db_path: str) -> None:
@@ -230,6 +256,183 @@ def to_arg_time(iso_utc: str) -> str:
         return iso_utc
 
 
+def extract_athlete_stats(athlete: Dict[str, Any]) -> Dict[str, float]:
+    out = {"appearances": 0.0, "totalShots": 0.0, "shotsOnTarget": 0.0, "totalGoals": 0.0, "goalAssists": 0.0}
+    cats = ((athlete.get("statistics") or {}).get("splits") or {}).get("categories") or []
+    for c in cats:
+        for s in c.get("stats") or []:
+            nm = s.get("name")
+            if nm in out:
+                try:
+                    out[nm] = float(s.get("value") or 0.0)
+                except Exception:
+                    pass
+    if out["appearances"] <= 0.0:
+        starts = 0.0
+        subs = 0.0
+        for c in cats:
+            for s in c.get("stats") or []:
+                if s.get("name") == "starts":
+                    starts = float(s.get("value") or 0.0)
+                elif s.get("name") == "subIns":
+                    subs = float(s.get("value") or 0.0)
+        if starts + subs > 0:
+            out["appearances"] = starts + subs
+    return out
+
+
+def fetch_team_roster_cached(slug: str, tid: str) -> List[Dict[str, Any]]:
+    if not tid:
+        return []
+    key = (slug, tid)
+    with _ROSTER_LOCK:
+        if key in _ROSTER_CACHE:
+            return _ROSTER_CACHE[key]
+
+    def parse_roster(target_slug: str) -> List[Dict[str, Any]]:
+        rdata = fetch_json(f"{ESPN_BASE}/{target_slug}/teams/{urllib.parse.quote(tid)}/roster", timeout=8)
+        athletes = (rdata or {}).get("athletes") or []
+        squad: List[Dict[str, Any]] = []
+        for a in athletes:
+            nm = str(a.get("displayName") or a.get("fullName") or "").strip()
+            if not nm:
+                continue
+            pos = str((a.get("position") or {}).get("abbreviation") or "").strip()
+            st = extract_athlete_stats(a)
+            squad.append(
+                {
+                    "id": str(a.get("id") or ""),
+                    "number": str(a.get("jersey") or "-"),
+                    "position": pos,
+                    "name": nm,
+                    "appearances": int(round(st["appearances"])),
+                    "totalShots": int(round(st["totalShots"])),
+                    "shotsOnTarget": int(round(st["shotsOnTarget"])),
+                    "totalGoals": int(round(st["totalGoals"])),
+                    "goalAssists": int(round(st["goalAssists"])),
+                }
+            )
+        return squad
+
+    squad = parse_roster(slug)
+    total_shots_sum = sum(p.get("totalShots", 0) for p in squad)
+
+    # Copa Argentina / continental cups occasionally omit competition-scoped shot stats; enrich from domestic league
+    if total_shots_sum == 0 and slug in ("arg.copa",):
+        fallback = parse_roster("arg.1")
+        if sum(p.get("totalShots", 0) for p in fallback) > 0:
+            squad = fallback
+
+    with _ROSTER_LOCK:
+        _ROSTER_CACHE[key] = squad
+    return squad
+
+
+def is_goalkeeper(pos: str) -> bool:
+    p = (pos or "").upper().strip()
+    if p in GOALKEEPER_CODES:
+        return True
+    return p.startswith("GK") or "GOALKEEP" in p or "ARQUERO" in p
+
+
+def position_bonus(pos: str) -> float:
+    p = (pos or "").upper().strip()
+    if p in FORWARD_CODES or p.startswith(("ST", "CF", "LW", "RW", "LF", "RF", "F-")):
+        return 0.55
+    if p in ATT_MID_CODES or p.startswith(("AM", "CAM")):
+        return 0.22
+    if p in DEFENDER_CODES or p.startswith(("CD", "CB", "LB", "RB", "D-")):
+        return -0.85
+    return 0.0
+
+
+def compute_top_shooters(
+    squad: List[Dict[str, Any]],
+    team_label: str,
+    team_lam: float,
+    lineup_confirmed: bool,
+    limit: int = 3,
+) -> List[Dict[str, Any]]:
+    if not squad:
+        return []
+
+    candidates: List[Tuple[int, float, Dict[str, Any]]] = []
+    scale = max(0.78, min(1.32, team_lam / 1.35))
+
+    for p in squad:
+        pos = str(p.get("position") or "").strip()
+        if is_goalkeeper(pos):
+            continue
+
+        app = float(p.get("appearances") or 0.0)
+        tot_shots = float(p.get("totalShots") or 0.0)
+        sot = float(p.get("shotsOnTarget") or 0.0)
+        goals = float(p.get("totalGoals") or 0.0)
+        starter = bool(p.get("starter"))
+        in_match_squad = bool(p.get("inMatchSquad"))
+
+        # Empirical season averages when player has appearances
+        shots_pg = round(tot_shots / app, 2) if app >= 1.0 else 0.0
+        sot_pg = round(sot / app, 2) if app >= 1.0 else 0.0
+
+        # Bayesian shrinkage averages prevent 1-appearance noise from skewing rankings
+        adj_shots_pg = (tot_shots + 0.65) / (app + 2.5)
+        adj_sot_pg = (sot + 0.22) / (app + 2.5)
+        adj_goals_pg = (goals + 0.12) / (app + 3.0)
+
+        p_bonus = position_bonus(pos)
+        reg_bonus = min(0.55, app * 0.04)
+
+        avail_bonus = 0.0
+        if lineup_confirmed:
+            if starter:
+                avail_bonus = 2.6
+            elif in_match_squad:
+                avail_bonus = -1.6
+            else:
+                avail_bonus = -4.5
+
+        role_factor = 1.06 if (starter or not lineup_confirmed) else 0.36
+        score = (
+            (adj_sot_pg * 3.4 + adj_shots_pg * 1.5 + adj_goals_pg * 1.8) * (1.0 if (starter or not lineup_confirmed) else 0.45)
+            + p_bonus
+            + reg_bonus
+            + avail_bonus
+        )
+        exp_sot = max(0.08, adj_sot_pg * scale * role_factor)
+        exp_shots = max(0.20, adj_shots_pg * scale * role_factor)
+        prob_1plus_sot = min(0.91, max(0.08, 1.0 - math.exp(-exp_sot)))
+        prob_2plus_shots = min(0.92, max(0.08, 1.0 - math.exp(-exp_shots) * (1.0 + exp_shots)))
+
+        tier = 2 if (tot_shots > 0 or starter) else 1 if app > 0 else 0
+        candidates.append(
+            (
+                tier,
+                score,
+                {
+                    "name": p["name"],
+                    "team": team_label,
+                    "position": pos or "-",
+                    "number": str(p.get("number") or "-"),
+                    "starter": starter,
+                    "appearances": int(app),
+                    "totalShots": int(tot_shots),
+                    "shotsOnTarget": int(sot),
+                    "goals": int(goals),
+                    "shotsPerGame": shots_pg,
+                    "sotPerGame": sot_pg,
+                    "prob1PlusSot": round(prob_1plus_sot, 3),
+                    "prob2PlusShots": round(prob_2plus_shots, 3),
+                    "shotScore": round(score, 2),
+                    "propLabel": f"1+ al Arco ({round(prob_1plus_sot * 100)}%)",
+                },
+            )
+        )
+
+    candidates.sort(key=lambda item: (item[0], item[1]), reverse=True)
+    return [c[2] for c in candidates[:limit]]
+
+
 def fetch_espn_scoreboard(league: Dict[str, str]) -> List[Dict[str, Any]]:
     url = f"{ESPN_BASE}/{league['slug']}/scoreboard"
     data = fetch_json(url)
@@ -253,44 +456,71 @@ def fetch_espn_summary_and_roster(slug: str, event_id: str, home_id: str, away_i
     sum_url = f"{ESPN_BASE}/{slug}/summary?event={urllib.parse.quote(event_id)}"
     sum_data = fetch_json(sum_url, timeout=8) or {}
 
-    home_starters: List[Dict[str, str]] = []
-    away_starters: List[Dict[str, str]] = []
-    for r in sum_data.get("rosters") or []:
-        is_home = str(r.get("homeAway", "")).lower() == "home"
-        players = []
-        for p in r.get("roster") or []:
-            if p.get("starter"):
+    # Always fetch season rosters with shooting stats (cached per run)
+    home_season = fetch_team_roster_cached(slug, home_id)
+    away_season = fetch_team_roster_cached(slug, away_id)
+
+    def build_merged_squad(side: str, season_list: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], bool]:
+        by_id = {p["id"]: dict(p) for p in season_list if p.get("id")}
+        by_name = {norm_name(p["name"]): dict(p) for p in season_list if p.get("name")}
+
+        match_roster: List[Dict[str, Any]] = []
+        starter_count = 0
+        for r in sum_data.get("rosters") or []:
+            if str(r.get("homeAway", "")).lower() != side:
+                continue
+            for p in r.get("roster") or []:
                 ath = p.get("athlete") or {}
-                name = str(ath.get("displayName") or ath.get("fullName") or "").strip()
-                if name:
-                    players.append({
-                        "number": str(p.get("jersey") or "-"),
-                        "position": str((p.get("position") or {}).get("abbreviation") or ""),
-                        "name": name,
-                    })
-        if is_home:
-            home_starters = players
-        else:
-            away_starters = players
+                aid = str(ath.get("id") or "")
+                nm = str(ath.get("displayName") or ath.get("fullName") or "").strip()
+                if not nm:
+                    continue
+                is_starter = bool(p.get("starter"))
+                if is_starter:
+                    starter_count += 1
+                base = by_id.get(aid) or by_name.get(norm_name(nm)) or {}
+                raw_pos = str((p.get("position") or {}).get("abbreviation") or "").strip()
+                pos = str(base.get("position") or raw_pos) if raw_pos.upper() in ("", "SUB", "S") else raw_pos
+                match_roster.append(
+                    {
+                        "id": aid or base.get("id") or "",
+                        "number": str(p.get("jersey") or base.get("number") or "-"),
+                        "position": pos,
+                        "name": nm,
+                        "starter": is_starter,
+                        "inMatchSquad": True,
+                        "appearances": base.get("appearances", 0),
+                        "totalShots": base.get("totalShots", 0),
+                        "shotsOnTarget": base.get("shotsOnTarget", 0),
+                        "totalGoals": base.get("totalGoals", 0),
+                        "goalAssists": base.get("goalAssists", 0),
+                    }
+                )
 
-    def fetch_squad_list(tid: str) -> List[Dict[str, str]]:
-        if not tid:
-            return []
-        rdata = fetch_json(f"{ESPN_BASE}/{slug}/teams/{urllib.parse.quote(tid)}/roster", timeout=7)
-        athletes = (rdata or {}).get("athletes") or []
-        squad = []
-        for a in athletes[:25]:
-            nm = str(a.get("displayName") or a.get("fullName") or "").strip()
-            if nm:
-                squad.append({
-                    "number": str(a.get("jersey") or "-"),
-                    "position": str((a.get("position") or {}).get("abbreviation") or ""),
-                    "name": nm,
-                })
-        return squad
+        if starter_count >= 7:
+            seen_keys = {p.get("id") or norm_name(p["name"]) for p in match_roster}
+            # Include remaining season players after matchday roster so squad search & stats stay complete
+            for sp in season_list:
+                k = sp.get("id") or norm_name(sp["name"])
+                if k not in seen_keys:
+                    match_roster.append({**sp, "starter": False, "inMatchSquad": False})
+            return match_roster[:36], True
 
-    home_squad = home_starters if len(home_starters) >= 7 else fetch_squad_list(home_id)
-    away_squad = away_starters if len(away_starters) >= 7 else fetch_squad_list(away_id)
+        # Lineups not released yet -> return season squad sorted with top shooters & regulars easy to inspect
+        ranked_season = sorted(
+            season_list,
+            key=lambda x: (
+                0 if is_goalkeeper(x.get("position", "")) else 1,
+                x.get("shotsOnTarget", 0),
+                x.get("totalShots", 0),
+                x.get("appearances", 0),
+            ),
+            reverse=True,
+        )
+        return ranked_season[:36], False
+
+    home_squad, home_confirmed = build_merged_squad("home", home_season)
+    away_squad, away_confirmed = build_merged_squad("away", away_season)
 
     home_stats = None
     away_stats = None
@@ -302,11 +532,11 @@ def fetch_espn_summary_and_roster(slug: str, event_id: str, home_id: str, away_i
 
     first_odds = ((sum_data.get("odds") or [None])[0]) or {}
     return {
-        "home_starters": home_starters,
-        "away_starters": away_starters,
         "home_squad": home_squad,
         "away_squad": away_squad,
-        "lineup_confirmed": len(home_starters) >= 7 and len(away_starters) >= 7,
+        "home_confirmed": home_confirmed,
+        "away_confirmed": away_confirmed,
+        "lineup_confirmed": home_confirmed and away_confirmed,
         "home_corners": extract_boxscore_stat(home_stats, ["corner"]),
         "away_corners": extract_boxscore_stat(away_stats, ["corner"]),
         "home_sot": extract_boxscore_stat(home_stats, ["shots on target", "shotson"]),
@@ -336,7 +566,7 @@ def main() -> None:
 
     prio = {"live": 0, "scheduled": 1, "finished": 2}
     items.sort(key=lambda x: (prio[x["status"]], x["event"].get("date", "")))
-    enrich_targets = items[:40]
+    enrich_targets = items[:45]
 
     details_by_eid: Dict[str, Dict[str, Any]] = {}
     with ThreadPoolExecutor(max_workers=6) as pool:
@@ -371,6 +601,8 @@ def main() -> None:
             at = ac.get("team") or {}
             h_name = str(ht.get("displayName") or ht.get("name") or "Local")
             a_name = str(at.get("displayName") or at.get("name") or "Visitante")
+            h_short = str(ht.get("shortDisplayName") or ht.get("abbreviation") or h_name[:12])
+            a_short = str(at.get("shortDisplayName") or at.get("abbreviation") or a_name[:12])
             h_id = str(ht.get("id") or "")
             a_id = str(at.get("id") or "")
             h_crest = str(ht.get("logo") or "")
@@ -469,16 +701,24 @@ def main() -> None:
                 else f"Más de 1.5 Goles ({round(markets['probOver15']*100)}%)"
             )
 
-            def pick_shooters(squad: List[Dict[str, str]], team_lbl: str) -> List[str]:
-                if not squad:
-                    return []
-                fw = [p["name"] for p in squad if p.get("position", "").upper() in ("F", "FW", "ST", "CF", "LW", "RW", "DEL")]
-                mf = [p["name"] for p in squad if p.get("position", "").upper() in ("M", "MF", "AM", "CM", "LM", "RM", "MED")]
-                chosen = (fw[:2] + mf[:1]) or [p["name"] for p in squad[:2]]
-                return [f"{name} ({team_lbl})" for name in chosen[:2]]
+            home_top_shooters = compute_top_shooters(
+                det.get("home_squad") or [], h_short, lam_home, bool(det.get("home_confirmed")), limit=3
+            )
+            away_top_shooters = compute_top_shooters(
+                det.get("away_squad") or [], a_short, lam_away, bool(det.get("away_confirmed")), limit=3
+            )
 
-            shooters = pick_shooters(det.get("home_squad") or [], h_name)[:1] + pick_shooters(det.get("away_squad") or [], a_name)[:1]
-            top_shooter_text = " / ".join(shooters) if shooters else "Titulares confirmados al publicar planilla"
+            def fmt_shooter_lead(s: Dict[str, Any]) -> str:
+                if s.get("totalShots", 0) > 0 and s.get("appearances", 0) > 0:
+                    return f"{s['name']} ({s['team']}, {s['shotsPerGame']} rem/pj · {round(s['prob1PlusSot']*100)}% prob. 1+ arco)"
+                return f"{s['name']} ({s['team']}, {s['position']} · {round(s['prob1PlusSot']*100)}% prob. 1+ arco)"
+
+            lead_parts = []
+            if home_top_shooters:
+                lead_parts.append(fmt_shooter_lead(home_top_shooters[0]))
+            if away_top_shooters:
+                lead_parts.append(fmt_shooter_lead(away_top_shooters[0]))
+            top_shooter_text = " / ".join(lead_parts) if lead_parts else "Ver rematadores en Alineación y Plantel"
 
             matches_out.append(
                 {
@@ -503,6 +743,10 @@ def main() -> None:
                     "lineupConfirmed": bool(det.get("lineup_confirmed")),
                     "homeSquad": det.get("home_squad") or [],
                     "awaySquad": det.get("away_squad") or [],
+                    "topShooters": {
+                        "home": home_top_shooters,
+                        "away": away_top_shooters,
+                    },
                     "xgModel": {
                         "homeXg": h_xg,
                         "awayXg": a_xg,
@@ -527,6 +771,7 @@ def main() -> None:
             )
 
         conn.commit()
+        conn.execute("PRAGMA wal_checkpoint(TRUNCATE);")
         total_cache_teams = conn.execute("SELECT COUNT(*) FROM cache_xg").fetchone()[0]
         total_hist_rows = conn.execute("SELECT COUNT(*) FROM historial_equipos").fetchone()[0]
         total_logged_matches = conn.execute("SELECT COUNT(*) FROM match_history_log").fetchone()[0]
@@ -567,7 +812,7 @@ def main() -> None:
                 pass
 
     payload = {
-        "engineVersion": "3.0.0-LIVE-10LEAGUES",
+        "engineVersion": "3.2.0-SHOOTERS-BAYES",
         "lastUpdated": datetime.now(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M ART"),
         "dbStats": {
             "teamsInXgCache": total_cache_teams,
@@ -608,19 +853,27 @@ def main() -> None:
         f"- **Planteles actualizados en caché:** {total_rosters}",
         f"- **Partidos activos/próximos/recientes cargados:** {len(matches_out)}",
         "",
-        "| Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Cuota |",
+        "| Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |",
         "|---|---|---|---|---|---|---|",
     ]
     for m in matches_out[:25]:
         lines.append(
-            f"| {m['league']} | {m['date']} | {m['home']} ({m['homeScore']}) vs ({m['awayScore']}) {m['away']} | {m['statusText']} | {m['prediction']} | {m['probability']} | {m['odds']} |"
+            f"| {m['league']} | {m['date']} | {m['home']} ({m['homeScore']}) vs ({m['awayScore']}) {m['away']} | {m['statusText']} | {m['prediction']} | {m['probability']} | {m['topShooter']} |"
         )
     with open(REPORT_MD_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
 
     print(
-        f"[OK] {len(matches_out)} matches exported across {len(TARGET_LEAGUES)} leagues. "
-        f"DB: teams={total_cache_teams}, hist={total_hist_rows}, liveLogged={total_logged_matches} (+{new_history_rows}), rosters={total_rosters}"
+        json.dumps(
+            {
+                "ok": True,
+                "matches": len(matches_out),
+                "newHistoryRows": new_history_rows,
+                "totalLoggedMatches": total_logged_matches,
+                "totalRosters": total_rosters,
+            },
+            ensure_ascii=False,
+        )
     )
 
 

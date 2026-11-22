@@ -1,5 +1,12 @@
-const CACHE_NAME = 'football-intel-v3';
-const SHELL_ASSETS = ['./index.html', './app.js?v=3.0.1', './manifest.json', './icons/icon.svg'];
+const CACHE_NAME = 'football-intel-v3.2';
+const SHELL_ASSETS = [
+  './index.html',
+  './app.js?v=3.2.0',
+  './manifest.json',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/icon.svg',
+];
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
