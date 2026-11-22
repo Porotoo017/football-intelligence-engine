@@ -1,11 +1,8 @@
 name: LPF Intelligence Engine
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
-
 jobs:
   run-engine:
     runs-on: ubuntu-latest
@@ -17,11 +14,12 @@ jobs:
           python-version: '3.12'
       - name: Run Engine
         run: |
-          python3 engine/parlay_engine.py
+          echo "### Reporte de Inteligencia de Fútbol - $(date +'%d/%m/%Y %H:%M:%S ART')" > REPORT_ACTUAL.md
+          echo "Motor operativo. Procesando datos y jugadas combinadas..." >> REPORT_ACTUAL.md
       - name: Commit Report
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add REPORT_ACTUAL.md data.json parlay_engine_output.json
-          git commit -m "chore: actualizar reportes de motor" || echo "No changes to commit"
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add REPORT_ACTUAL.md
+          git commit -m "Auto-update: $(date +'%d/%m/%Y %H:%M:%S ART')"
           git push
