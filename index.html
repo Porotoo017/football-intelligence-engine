@@ -2,27 +2,33 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Intelligence Pro</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0f172a">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto; background: #020617; color: white; margin: 0; padding: 15px; }
-        .header { text-align: center; padding: 20px 0; color: #38bdf8; }
-        .dashboard { display: grid; gap: 15px; }
-        .card { background: #0f172a; padding: 20px; border-radius: 12px; border: 1px solid #1e293b; }
-        .data-point { color: #94a3b8; }
+        :root { --bg: #020617; --card: #0f172a; --accent: #38bdf8; --text: #f8fafc; }
+        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        .grid { display: grid; gap: 20px; }
+        .card { background: var(--card); padding: 20px; border-radius: 16px; border: 1px solid #1e293b; }
+        h1 { color: var(--accent); text-align: center; }
+        .leg { border-left: 4px solid var(--accent); padding-left: 15px; margin: 10px 0; }
+        .score { font-size: 1.5em; font-weight: bold; color: var(--accent); }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Football Intelligence Pro</h1></div>
-    <div id="app" class="dashboard">
-        <!-- Dashboard dinámico -->
-    </div>
+    <h1>Football Intelligence Pro</h1>
+    <div id="dashboard" class="grid"></div>
     <script>
-        fetch('REPORT_ACTUAL.md').then(res => res.text()).then(md => {
-            document.getElementById('app').innerHTML = md.split('---')[1];
-        });
+        fetch('parlay_engine_output.json')
+            .then(res => res.json())
+            .then(data => {
+                const ticket = data.parlay_ticket;
+                let html = `<div class='card'><h2>Combinada Premium: x${ticket.combined_multiplier_estimate}</h2>`;
+                ticket.legs.forEach(leg => {
+                    html += `<div class='leg'><p><strong>${leg.market}</strong><br>${leg.selection}<br><small>${leg.statistical_backing}</small></p></div>`;
+                });
+                html += `</div>`;
+                document.getElementById('dashboard').innerHTML = html;
+            });
     </script>
 </body>
 </html>
