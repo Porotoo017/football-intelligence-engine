@@ -1,43 +1,35 @@
-{
-  "updatedAt": "2026-11-22T20:31:00Z",
-  "matches": [
-    {
-      "date": "2026-11-22T19:00 ART",
-      "home": {
-        "name": "River Plate",
-        "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
-        "score": 2
-      },
-      "away": {
-        "name": "Lanús",
-        "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-        "score": 1
-      },
-      "status": "71'",
-      "prediction": {
-        "winner": "River Plate",
-        "parlay": "Más de 2.5 goles, más de 8.5 corners total",
-        "topShooter": "Ángel Correa (3.4 shots/game, 1.33 SOT)"
-      }
-    },
-    {
-      "date": "2026-11-22T22:00 ART",
-      "home": {
-        "name": "Instituto",
-        "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-        "score": 0
-      },
-      "away": {
-        "name": "Huracán",
-        "crest": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
-        "score": 0
-      },
-      "status": "Scheduled",
-      "prediction": {
-        "winner": "Instituto",
-        "parlay": "Instituto gana o empate, menos de 2.5 goles",
-        "topShooter": "Alex Luna (Instituto) - 1.0 SOT/game"
-      }
-    }
-  ]
-}
+[
+  {
+    "home": "San Lorenzo",
+    "away": "Independiente",
+    "homeCrest": "https://r2.thesportsdb.com/images/media/team/badge/37wke41775741605.png",
+    "awayCrest": "https://r2.thesportsdb.com/images/media/team/badge/eki4nd1580842605.png",
+    "date": "2026-11-23",
+    "time": "19:00 ART",
+    "odds": {"homeWin": 2.10, "draw": 3.20, "awayWin": 3.50},
+    "prediction": "Empate técnico. San Lorenzo fuerte en el Bidegain.",
+    "topShooter": "Iker Muniain (SL)"
+  },
+  {
+    "home": "Boca Juniors",
+    "away": "Racing Club",
+    "homeCrest": "https://r2.thesportsdb.com/images/media/team/badge/bm7krb1775741582.png",
+    "awayCrest": "https://r2.thesportsdb.com/images/media/team/badge/vi4mu41695734959.png",
+    "date": "2026-11-23",
+    "time": "21:30 ART",
+    "odds": {"homeWin": 1.95, "draw": 3.40, "awayWin": 3.80},
+    "prediction": "Boca con alta posesión, Racing peligroso de contra.",
+    "topShooter": "Edinson Cavani (BOC)"
+  },
+  {
+    "home": "River Plate",
+    "away": "Vélez Sarsfield",
+    "homeCrest": "https://r2.thesportsdb.com/images/media/team/badge/03dmi31645539717.png",
+    "awayCrest": "https://r2.thesportsdb.com/images/media/team/badge/jo98m71517769587.png",
+    "date": "2026-11-24",
+    "time": "20:00 ART",
+    "odds": {"homeWin": 1.75, "draw": 3.60, "awayWin": 4.50},
+    "prediction": "Dominio de River en el Monumental.",
+    "topShooter": "Ángel Correa (RIV)"
+  }
+]
