@@ -1,5 +1,56 @@
-[
-    {"match": "River Plate vs Boca Juniors", "market": "Over 2.5 Goles", "probability": "78", "odds": "1.95", "analysis": "Estadística histórica de enfrentamientos + alta presión ofensiva."},
-    {"match": "Real Madrid vs Barcelona", "market": "Remates al arco", "probability": "85", "odds": "1.75", "analysis": "Promedio de remates superior a 5.5 en los últimos 5 partidos."},
-    {"match": "Manchester City vs Liverpool", "market": "Más de 9.5 Corners", "probability": "82", "odds": "1.80", "analysis": "Alta tasa de corners generados por banda en ambos equipos."}
-]
+{
+  "matches": [
+    {
+      "id": "match-01",
+      "home": "River Plate",
+      "away": "Boca Juniors",
+      "homeCrest": "https://r2.thesportsdb.com/images/media/team/badge/03dmi31645539717.png",
+      "awayCrest": "https://r2.thesportsdb.com/images/media/team/badge/bm7krb1775741582.png",
+      "date": "2026-11-22 21:00",
+      "league": "Superclásico Argentina",
+      "prediction": "River Plate o Empate (Doble Oportunidad)",
+      "probability": "84%",
+      "odds": "1.42",
+      "goals": "Más de 2.5 Goles",
+      "corners": "Más de 9.5 Córners",
+      "shots": "Más de 14.5 Remates al Arco",
+      "topShooter": "Miguel Merentiel / Sebastián Driussi",
+      "analysis": "Basado en el historial de enfrentamientos y la presión ofensiva sostenida en el Monumental."
+    },
+    {
+      "id": "match-02",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "homeCrest": "https://r2.thesportsdb.com/images/media/team/badge/vwvwrw1473502969.png",
+      "awayCrest": "https://r2.thesportsdb.com/images/media/team/badge/wq9sir1639406443.png",
+      "date": "2026-11-23 17:00",
+      "league": "La Liga - España",
+      "prediction": "Real Madrid Ganador (Empate No Válido)",
+      "probability": "81%",
+      "odds": "1.78",
+      "goals": "Ambos Equipos Anotan (Sí)",
+      "corners": "Más de 8.5 Córners",
+      "shots": "Más de 16.5 Remates al Arco",
+      "topShooter": "Kylian Mbappé / Lamine Yamal",
+      "analysis": "Promedio de remates superior a 5.8 por partido y dominio territorial en transiciones rápidas."
+    },
+    {
+      "id": "match-03",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "homeCrest": "https://r2.thesportsdb.com/images/media/team/badge/vwpvry1467462651.png",
+      "awayCrest": "https://r2.thesportsdb.com/images/media/team/badge/kfaher1737969724.png",
+      "date": "2026-11-23 19:30",
+      "league": "Premier League - Inglaterra",
+      "prediction": "Manchester City o Empate + Over 1.5",
+      "probability": "86%",
+      "odds": "1.55",
+      "goals": "Más de 3.0 Goles Asiáticos",
+      "corners": "Más de 10.5 Córners",
+      "shots": "Más de 18.0 Remates Totales",
+      "topShooter": "Erling Haaland / Alexander Isak",
+      "analysis": "Alto índice de posesión en campo rival y generación masiva de saques de esquina por banda."
+    }
+  ],
+  "lastUpdated": "2026-11-22 14:39 AR"
+}
