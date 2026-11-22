@@ -1,6 +1,6 @@
 # Football Intelligence Pro — Reporte en Vivo (10 Ligas)
 
-- **Última ejecución:** 22/11/2026 12:32 ART
+- **Última ejecución:** 22/11/2026 12:35 ART
 - **Equipos en BD histórica (`quant_master.db`):** 656
 - **Registros por temporada:** 1672
 - **Partidos reales acumulados:** 7 (+0 nuevos en esta ejecución)
@@ -9,11 +9,11 @@
 
 | Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |
 |---|---|---|---|---|---|---|
-| Serie A (Italia) | 22/11/2026 11:00 ART | Bologna (1) vs (1) Udinese | 72' | Doble Oportunidad: Bologna o Empate (1X) | 70% | Federico Bernardeschi (Bologna, 2.55 rem/pj · 62% prob. 1+ arco) / Jurgen Ekkelenkamp (Udinese, 2.45 rem/pj · 45% prob. 1+ arco) |
-| Serie A (Italia) | 22/11/2026 11:00 ART | Sassuolo (0) vs (2) Genoa | 72' | Doble Oportunidad: Sassuolo o Empate (1X) | 71% | Armand Laurienté (Sassuolo, 2.82 rem/pj · 54% prob. 1+ arco) / Milutin Osmajic (Genoa, 1.7 rem/pj · 33% prob. 1+ arco) |
-| Ligue 1 (Francia) | 22/11/2026 11:00 ART | Paris FC (4) vs (0) Angers | 74' | Doble Oportunidad: Paris FC o Empate (1X) | 72% | Ilan Kebbal (Paris FC, 2.3 rem/pj · 47% prob. 1+ arco) / Amine Sbaï (Angers, 2.3 rem/pj · 29% prob. 1+ arco) |
+| Serie A (Italia) | 22/11/2026 11:00 ART | Bologna (1) vs (1) Udinese | 75' | Doble Oportunidad: Bologna o Empate (1X) | 70% | Federico Bernardeschi (Bologna, 2.55 rem/pj · 62% prob. 1+ arco) / Jurgen Ekkelenkamp (Udinese, 2.45 rem/pj · 45% prob. 1+ arco) |
+| Serie A (Italia) | 22/11/2026 11:00 ART | Sassuolo (0) vs (2) Genoa | 75' | Doble Oportunidad: Sassuolo o Empate (1X) | 71% | Armand Laurienté (Sassuolo, 2.82 rem/pj · 54% prob. 1+ arco) / Milutin Osmajic (Genoa, 1.7 rem/pj · 33% prob. 1+ arco) |
+| Ligue 1 (Francia) | 22/11/2026 11:00 ART | Paris FC (4) vs (0) Angers | 77' | Doble Oportunidad: Paris FC o Empate (1X) | 72% | Ilan Kebbal (Paris FC, 2.3 rem/pj · 47% prob. 1+ arco) / Amine Sbaï (Angers, 2.3 rem/pj · 29% prob. 1+ arco) |
 | Bundesliga (Alemania) | 22/11/2026 11:30 ART | FC Augsburg (2) vs (0) Mainz | HT | Doble Oportunidad: FC Augsburg o Empate (1X) | 71% | Michael Gregoritsch (Augsburg, 2.75 rem/pj · 81% prob. 1+ arco) / Phillip Tietz (Mainz, 3.44 rem/pj · 64% prob. 1+ arco) |
-| LaLiga (España) | 22/11/2026 12:15 ART | Racing Santander (2) vs (0) Real Sociedad | 17' | Doble Oportunidad: Racing Santander o Empate (1X) | 68% | Yassir Zabiri (Racing, 2.42 rem/pj · 68% prob. 1+ arco) / Orri Óskarsson (Real Sociedad, 2.3 rem/pj · 45% prob. 1+ arco) |
+| LaLiga (España) | 22/11/2026 12:15 ART | Racing Santander (2) vs (0) Real Sociedad | 20' | Doble Oportunidad: Racing Santander o Empate (1X) | 68% | Yassir Zabiri (Racing, 2.42 rem/pj · 68% prob. 1+ arco) / Orri Óskarsson (Real Sociedad, 2.3 rem/pj · 45% prob. 1+ arco) |
 | Eredivisie (Países Bajos) | 22/11/2026 12:45 ART | Go Ahead Eagles (0) vs (0) Fortuna Sittard | Scheduled | Doble Oportunidad: Go Ahead Eagles o Empate (1X) | 72% | Sören Tengstedt (Go Ahead Eagles, 2.83 rem/pj · 74% prob. 1+ arco) / Anthony Descotte (Fortuna, 1.55 rem/pj · 51% prob. 1+ arco) |
 | Ligue 1 (Francia) | 22/11/2026 13:15 ART | Lorient (0) vs (0) Stade Rennais | Scheduled | Doble Oportunidad: Empate o Stade Rennais (X2) | 65% | Jean-Victor Makengo (Lorient, 1.7 rem/pj · 30% prob. 1+ arco) / Boulaye Dia (Rennes, 1.25 rem/pj · 41% prob. 1+ arco) |
 | Bundesliga (Alemania) | 22/11/2026 13:30 ART | Werder Bremen (0) vs (0) Hamburg SV | Scheduled | Doble Oportunidad: Werder Bremen o Empate (1X) | 64% | Niclas Füllkrug (Bremen, 3.67 rem/pj · 85% prob. 1+ arco) / Fabio Vieira (Hamburg, 2.33 rem/pj · 59% prob. 1+ arco) |
