@@ -1,13 +1,22 @@
 {
-  "lastUpdated": "22/11/2026 12:00 ART",
+  "lastUpdated": "22/11/2026 12:02 ART",
   "dbStats": {
     "teamsInXgCache": 655,
     "seasonHistoryRows": 1672,
-    "liveMatchesLogged": 4,
-    "newMatchesIngestedThisRun": 4,
+    "liveMatchesLogged": 5,
+    "newMatchesIngestedThisRun": 1,
     "teamRostersCached": 66
   },
   "recentLoggedMatches": [
+    {
+      "event_id": "401882804",
+      "league": "LaLiga (España)",
+      "date": "22/11/2026 10:00 ART",
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "score": "3 - 2",
+      "corners": "10.0 / -"
+    },
     {
       "event_id": "401875008",
       "league": "Serie A (Italia)",
@@ -108,7 +117,7 @@
           "name": "Lamine Yamal"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "102",
@@ -172,7 +181,7 @@
           "name": "Alberto Moleiro"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "139",
@@ -236,7 +245,7 @@
           "name": "Rayane Bounida"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2726",
@@ -300,7 +309,7 @@
           "name": "Evan Rottier"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "151",
@@ -364,7 +373,7 @@
           "name": "Isaac Babadi"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "140",
@@ -428,7 +437,7 @@
           "name": "Ayoub Oufkir"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "107",
@@ -492,7 +501,7 @@
           "name": "Riccardo Orsolini"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "118",
@@ -556,7 +565,7 @@
           "name": "Nicolò Zaniolo"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "3997",
@@ -620,7 +629,7 @@
           "name": "Domenico Berardi"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "3263",
@@ -684,7 +693,7 @@
           "name": "Junior Messias"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "6851",
@@ -748,7 +757,7 @@
           "name": "Ilan Kebbal"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "7868",
@@ -812,7 +821,7 @@
           "name": "Anthony Bermont"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "3841",
@@ -876,7 +885,7 @@
           "name": "Anton Kade"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2950",
@@ -940,7 +949,7 @@
           "name": "Sheraldo Becker"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "87",
@@ -1004,7 +1013,7 @@
           "name": "Yassir Zabiri"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "89",
@@ -1068,7 +1077,7 @@
           "name": "Mikel Oyarzabal"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "3706",
@@ -1132,7 +1141,7 @@
           "name": "Stefan Ingi Sigurdarson"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "143",
@@ -1196,7 +1205,7 @@
           "name": "Anthony Descotte"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "273",
@@ -1330,7 +1339,7 @@
           "name": "Ibrahima Baldé"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "169",
@@ -1464,7 +1473,7 @@
           "name": "Henrick Do Marcolino"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "137",
@@ -1598,7 +1607,7 @@
           "name": "Cedric Itten"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "127",
@@ -1732,7 +1741,7 @@
           "name": "Yussuf Poulsen"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "103",
@@ -1866,7 +1875,7 @@
           "name": "Alphadjo Cissè"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "4057",
@@ -2000,7 +2009,7 @@
           "name": "Antonio Raimondo"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "97",
@@ -2134,7 +2143,7 @@
           "name": "Raúl García"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "99",
@@ -2268,7 +2277,7 @@
           "name": "Joaquín Muñoz"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "17",
@@ -2402,7 +2411,7 @@
           "name": "Franco Ibarra"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "11972",
@@ -2536,7 +2545,7 @@
           "name": "Brian Andrada"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "105",
@@ -2670,7 +2679,7 @@
           "name": "Lazar Samardzic"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "110",
@@ -2804,7 +2813,7 @@
           "name": "Marcus Thuram"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "176",
@@ -2938,7 +2947,7 @@
           "name": "Amine Gouiri"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2697",
@@ -3072,7 +3081,7 @@
           "name": "Dame Guèye"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2922",
@@ -3206,7 +3215,7 @@
           "name": "Christantus Uche"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "1068",
@@ -3340,7 +3349,7 @@
           "name": "Ademola Lookman"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "16",
@@ -3474,7 +3483,7 @@
           "name": "Thiago Acosta"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "12",
@@ -3608,7 +3617,7 @@
           "name": "Matías Sepúlveda"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2975",
@@ -3742,7 +3751,7 @@
           "name": "Joaquín Medina"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "10",
@@ -3876,7 +3885,7 @@
           "name": "Bruno Barticciotto"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2980",
@@ -4010,7 +4019,7 @@
           "name": "Teo Ingilæ"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "4411",
@@ -4144,7 +4153,7 @@
           "name": "Florian Flecker"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "432",
@@ -4278,7 +4287,7 @@
           "name": "Leroy Sané"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "362",
@@ -4412,7 +4421,7 @@
           "name": "Nicolas Jackson"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "359",
@@ -4546,7 +4555,7 @@
           "name": "Viktor Gyökeres"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "124",
@@ -4680,7 +4689,7 @@
           "name": "Justin Lerma"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2572",
@@ -4814,7 +4823,7 @@
           "name": "Mattia Liberali"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "887",
@@ -4948,7 +4957,7 @@
           "name": "Dimitrios Kaloskamis"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "142",
@@ -5082,7 +5091,7 @@
           "name": "Theodoris Deligiannidis"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "437",
@@ -5216,7 +5225,7 @@
           "name": "Mateus Mide"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "382",
@@ -5350,7 +5359,7 @@
           "name": "Antoine Semenyo"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "114",
@@ -5484,7 +5493,7 @@
           "name": "Andrea Chiummariello"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "11420",
@@ -5618,7 +5627,7 @@
           "name": "Rômulo"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "175",
@@ -5752,7 +5761,7 @@
           "name": "Florian Sotoca"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "86",
@@ -5886,7 +5895,7 @@
           "name": "Arda Güler"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "148",
@@ -6020,7 +6029,7 @@
           "name": "Dennis Man"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "521",
@@ -6154,7 +6163,7 @@
           "name": "Manasse Kianga"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "244",
@@ -6288,7 +6297,7 @@
           "name": "Ricardo Fúnez Gómez"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "2029",
@@ -6422,7 +6431,7 @@
           "name": "Andreas Pereira"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "8",
@@ -6556,7 +6565,7 @@
           "name": "Tiago Palacios"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "235",
@@ -6620,7 +6629,7 @@
           "name": "Federico Medina"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "5",
@@ -6684,7 +6693,7 @@
           "name": "Sebastián Villa"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "7632",
@@ -6748,7 +6757,7 @@
           "name": "Tomás Cuello"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "5",
@@ -6812,7 +6821,7 @@
           "name": "Tomás Aranda"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "152",
@@ -6876,7 +6885,7 @@
           "name": "Daan Rots"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "156",
@@ -6940,7 +6949,7 @@
           "name": "Tonny Vilhena"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "111",
@@ -7004,7 +7013,7 @@
           "name": "Edon Zhegrova"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     },
     {
       "teamId": "17530",
@@ -7068,7 +7077,7 @@
           "name": "Akor Adams"
         }
       ],
-      "updatedAt": "2026-11-22 15:00:44"
+      "updatedAt": "2026-11-22 15:02:14"
     }
   ]
 }

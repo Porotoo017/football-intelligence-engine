@@ -1,11 +1,11 @@
 {
   "engineVersion": "3.0.0-LIVE-10LEAGUES",
-  "lastUpdated": "22/11/2026 12:00 ART",
+  "lastUpdated": "22/11/2026 12:02 ART",
   "dbStats": {
     "teamsInXgCache": 655,
     "seasonHistoryRows": 1672,
-    "liveMatchesLogged": 4,
-    "newMatchesIngestedThisRun": 4,
+    "liveMatchesLogged": 5,
+    "newMatchesIngestedThisRun": 1,
     "teamRostersCached": 66
   },
   "leagues": [
@@ -62,182 +62,13 @@
   ],
   "matches": [
     {
-      "id": "401882804",
-      "leagueSlug": "esp.1",
-      "league": "LaLiga (España)",
-      "dateUtc": "2026-11-22T13:00Z",
-      "date": "22/11/2026 10:00 ART",
-      "status": "live",
-      "statusText": "90'+5'",
-      "venue": "Spotify Camp Nou",
-      "home": "Barcelona",
-      "away": "Villarreal",
-      "homeId": "83",
-      "awayId": "102",
-      "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
-      "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
-      "homeScore": "3",
-      "awayScore": "2",
-      "homeForm": "WWWLL",
-      "awayForm": "WLLWW",
-      "lineupConfirmed": true,
-      "homeSquad": [
-        {
-          "number": "1",
-          "position": "G",
-          "name": "Joan García"
-        },
-        {
-          "number": "18",
-          "position": "CD-L",
-          "name": "Gerard Martín"
-        },
-        {
-          "number": "21",
-          "position": "CD-R",
-          "name": "Frenkie de Jong"
-        },
-        {
-          "number": "2",
-          "position": "LB",
-          "name": "João Cancelo"
-        },
-        {
-          "number": "24",
-          "position": "RB",
-          "name": "Eric García"
-        },
-        {
-          "number": "22",
-          "position": "CM",
-          "name": "Marc Bernal"
-        },
-        {
-          "number": "8",
-          "position": "LM",
-          "name": "Pedri"
-        },
-        {
-          "number": "7",
-          "position": "RM",
-          "name": "Fermín López"
-        },
-        {
-          "number": "11",
-          "position": "F",
-          "name": "Raphinha"
-        },
-        {
-          "number": "14",
-          "position": "LF",
-          "name": "Karim Adeyemi"
-        },
-        {
-          "number": "10",
-          "position": "RF",
-          "name": "Lamine Yamal"
-        }
-      ],
-      "awaySquad": [
-        {
-          "number": "25",
-          "position": "G",
-          "name": "Péter Gulácsi"
-        },
-        {
-          "number": "12",
-          "position": "CD-L",
-          "name": "Renato Veiga"
-        },
-        {
-          "number": "6",
-          "position": "CD-R",
-          "name": "Pau Navarro"
-        },
-        {
-          "number": "20",
-          "position": "LB",
-          "name": "Carlos Romero"
-        },
-        {
-          "number": "3",
-          "position": "RB",
-          "name": "Alex Freeman"
-        },
-        {
-          "number": "18",
-          "position": "CM-L",
-          "name": "Pape Gueye"
-        },
-        {
-          "number": "14",
-          "position": "CM-R",
-          "name": "Santi Comesaña"
-        },
-        {
-          "number": "21",
-          "position": "LM",
-          "name": "Tani Oluwaseyi"
-        },
-        {
-          "number": "17",
-          "position": "RM",
-          "name": "Tajon Buchanan"
-        },
-        {
-          "number": "9",
-          "position": "F",
-          "name": "Georges Mikautadze"
-        },
-        {
-          "number": "10",
-          "position": "RCF",
-          "name": "Alberto Moleiro"
-        }
-      ],
-      "xgModel": {
-        "homeXg": 0.8,
-        "awayXg": 0.8,
-        "lambdaHome": 0.86,
-        "lambdaAway": 0.75,
-        "sources": [
-          "quant_master.db (barcelona)",
-          "quant_master.db (villarreal)"
-        ]
-      },
-      "prediction": "Doble Oportunidad: Barcelona o Empate (1X)",
-      "probability": "71%",
-      "odds": "1.33",
-      "goals": "Más de 1.5 Goles (48%)",
-      "corners": "Más de 7.5 Córners (esp. 9.1)",
-      "cards": "Menos de 5.5 Tarjetas (esp. 4.2)",
-      "shots": "Remates al arco esp.: 5.0",
-      "topShooter": "Raphinha (Barcelona) / Georges Mikautadze (Villarreal)",
-      "likelyScore": "0-0",
-      "markets": {
-        "probHome": 0.3558,
-        "probDraw": 0.3512,
-        "probAway": 0.293,
-        "prob1X": 0.707,
-        "probX2": 0.6442,
-        "prob12": 0.6488,
-        "probOver15": 0.4783,
-        "probOver25": 0.2192,
-        "probBtts": 0.3043,
-        "likelyScore": "0-0"
-      },
-      "marketOdds": "BAR -575",
-      "overUnderLine": 4.5,
-      "analysis": "Modelo Poisson + historial (quant_master.db (barcelona) / quant_master.db (villarreal)). Marcador probable 0-0."
-    },
-    {
       "id": "401875547",
       "leagueSlug": "ned.1",
       "league": "Eredivisie (Países Bajos)",
       "dateUtc": "2026-11-22T13:30Z",
       "date": "22/11/2026 10:30 ART",
       "status": "live",
-      "statusText": "72'",
+      "statusText": "73'",
       "venue": "Johan Cruijff Arena",
       "home": "Ajax Amsterdam",
       "away": "ADO Den Haag",
@@ -406,7 +237,7 @@
       "dateUtc": "2026-11-22T13:30Z",
       "date": "22/11/2026 10:30 ART",
       "status": "live",
-      "statusText": "71'",
+      "statusText": "73'",
       "venue": "Sparta-Stadion Het Kasteel",
       "home": "Sparta Rotterdam",
       "away": "AZ Alkmaar",
@@ -1082,7 +913,7 @@
       "dateUtc": "2026-11-22T14:30Z",
       "date": "22/11/2026 11:30 ART",
       "status": "live",
-      "statusText": "31'",
+      "statusText": "32'",
       "venue": "WWK Arena",
       "home": "FC Augsburg",
       "away": "Mainz",
@@ -1887,7 +1718,7 @@
         "probBtts": 0.4963,
         "likelyScore": "1-1"
       },
-      "marketOdds": "REN +130",
+      "marketOdds": "REN +125",
       "overUnderLine": 2.5,
       "analysis": "Modelo Poisson + historial (quant_master.db (fc lorient) / quant_master.db (stade rennais fc)). Marcador probable 1-1."
     },
@@ -7897,39 +7728,39 @@
         }
       ],
       "xgModel": {
-        "homeXg": 0.8,
-        "awayXg": 0.85,
-        "lambdaHome": 0.86,
-        "lambdaAway": 0.8,
+        "homeXg": 0.68,
+        "awayXg": 1.02,
+        "lambdaHome": 0.73,
+        "lambdaAway": 1.01,
         "sources": [
           "quant_master.db (banfield)",
           "quant_master.db (boca juniors)"
         ]
       },
-      "prediction": "Doble Oportunidad: Banfield o Empate (1X)",
-      "probability": "69%",
-      "odds": "1.36",
-      "goals": "Más de 1.5 Goles (49%)",
-      "corners": "Más de 7.5 Córners (esp. 9.1)",
-      "cards": "Menos de 5.5 Tarjetas (esp. 4.2)",
-      "shots": "Remates al arco esp.: 5.1",
+      "prediction": "Doble Oportunidad: Empate o Boca Juniors (X2)",
+      "probability": "74%",
+      "odds": "1.27",
+      "goals": "Más de 1.5 Goles (52%)",
+      "corners": "Más de 7.5 Córners (esp. 9.2)",
+      "cards": "Menos de 5.5 Tarjetas (esp. 4.3)",
+      "shots": "Remates al arco esp.: 5.4",
       "topShooter": "Adrián Balboa (Banfield) / Miguel Merentiel (Boca Juniors)",
-      "likelyScore": "0-0",
+      "likelyScore": "0-1",
       "markets": {
-        "probHome": 0.3443,
-        "probDraw": 0.3453,
-        "probAway": 0.3104,
-        "prob1X": 0.6896,
-        "probX2": 0.6557,
-        "prob12": 0.6547,
-        "probOver15": 0.4942,
-        "probOver25": 0.2322,
-        "probBtts": 0.3176,
-        "likelyScore": "0-0"
+        "probHome": 0.2574,
+        "probDraw": 0.3309,
+        "probAway": 0.4118,
+        "prob1X": 0.5882,
+        "probX2": 0.7426,
+        "prob12": 0.6691,
+        "probOver15": 0.519,
+        "probOver25": 0.2533,
+        "probBtts": 0.3294,
+        "likelyScore": "0-1"
       },
       "marketOdds": "CABJ -250",
       "overUnderLine": 2.5,
-      "analysis": "Modelo Poisson + historial (quant_master.db (banfield) / quant_master.db (boca juniors)). Marcador probable 0-0."
+      "analysis": "Modelo Poisson + historial (quant_master.db (banfield) / quant_master.db (boca juniors)). Marcador probable 0-1."
     },
     {
       "id": "401913961",
@@ -8066,39 +7897,39 @@
         }
       ],
       "xgModel": {
-        "homeXg": 1.35,
-        "awayXg": 0.85,
-        "lambdaHome": 1.21,
-        "lambdaAway": 0.96,
+        "homeXg": 1.15,
+        "awayXg": 1.02,
+        "lambdaHome": 1.03,
+        "lambdaAway": 1.09,
         "sources": [
-          "baseline_league_prior",
+          "quant_master.db (atlético-mg)",
           "quant_master.db (boca juniors)"
         ]
       },
-      "prediction": "Doble Oportunidad: Atlético-MG o Empate (1X)",
-      "probability": "71%",
-      "odds": "1.33",
-      "goals": "Más de 1.5 Goles (64%)",
-      "corners": "Más de 8.5 Córners (esp. 9.7)",
-      "cards": "Más de 3.5 Tarjetas (esp. 4.5)",
-      "shots": "Remates al arco esp.: 6.7",
+      "prediction": "Doble Oportunidad: Empate o Boca Juniors (X2)",
+      "probability": "66%",
+      "odds": "1.42",
+      "goals": "Más de 1.5 Goles (63%)",
+      "corners": "Más de 8.5 Córners (esp. 9.6)",
+      "cards": "Más de 3.5 Tarjetas (esp. 4.4)",
+      "shots": "Remates al arco esp.: 6.6",
       "topShooter": "Bernard (Atlético-MG) / Miguel Merentiel (Boca Juniors)",
-      "likelyScore": "1-0",
+      "likelyScore": "1-1",
       "markets": {
-        "probHome": 0.4176,
-        "probDraw": 0.2908,
-        "probAway": 0.2916,
-        "prob1X": 0.7084,
-        "probX2": 0.5824,
-        "prob12": 0.7092,
-        "probOver15": 0.6379,
-        "probOver25": 0.369,
-        "probBtts": 0.433,
-        "likelyScore": "1-0"
+        "probHome": 0.3358,
+        "probDraw": 0.2978,
+        "probAway": 0.3664,
+        "prob1X": 0.6336,
+        "probX2": 0.6642,
+        "prob12": 0.7022,
+        "probOver15": 0.6254,
+        "probOver25": 0.3556,
+        "probBtts": 0.4268,
+        "likelyScore": "1-1"
       },
       "marketOdds": "CABJ +100",
       "overUnderLine": 1.5,
-      "analysis": "Modelo Poisson + historial (baseline_league_prior / quant_master.db (boca juniors)). Marcador probable 1-0."
+      "analysis": "Modelo Poisson + historial (quant_master.db (atlético-mg) / quant_master.db (boca juniors)). Marcador probable 1-1."
     },
     {
       "id": "401875545",
@@ -8235,34 +8066,34 @@
         }
       ],
       "xgModel": {
-        "homeXg": 1.59,
+        "homeXg": 1.65,
         "awayXg": 1.01,
-        "lambdaHome": 1.6,
-        "lambdaAway": 0.9,
+        "lambdaHome": 1.69,
+        "lambdaAway": 0.91,
         "sources": [
           "quant_master.db (fc twente)",
           "quant_master.db (willem ii)"
         ]
       },
       "prediction": "Doble Oportunidad: FC Twente o Empate (1X)",
-      "probability": "79%",
-      "odds": "1.19",
-      "goals": "Más de 1.5 Goles (71%)",
-      "corners": "Más de 8.5 Córners (esp. 10.1)",
-      "cards": "Más de 3.5 Tarjetas (esp. 4.9)",
-      "shots": "Remates al arco esp.: 7.8",
+      "probability": "80%",
+      "odds": "1.18",
+      "goals": "Más de 1.5 Goles (73%)",
+      "corners": "Más de 8.5 Córners (esp. 10.2)",
+      "cards": "Más de 3.5 Tarjetas (esp. 5.0)",
+      "shots": "Remates al arco esp.: 8.1",
       "topShooter": "Wout Weghorst (FC Twente) / Devin Haen (Willem II)",
       "likelyScore": "1-0",
       "markets": {
-        "probHome": 0.5376,
-        "probDraw": 0.2506,
-        "probAway": 0.2118,
-        "prob1X": 0.7882,
-        "probX2": 0.4624,
-        "prob12": 0.7494,
-        "probOver15": 0.7123,
-        "probOver25": 0.4554,
-        "probBtts": 0.4734,
+        "probHome": 0.557,
+        "probDraw": 0.2411,
+        "probAway": 0.2019,
+        "prob1X": 0.7981,
+        "probX2": 0.443,
+        "prob12": 0.7589,
+        "probOver15": 0.7321,
+        "probOver25": 0.4806,
+        "probBtts": 0.487,
         "likelyScore": "1-0"
       },
       "marketOdds": "TWE -1400",
@@ -8404,39 +8235,208 @@
         }
       ],
       "xgModel": {
-        "homeXg": 1.38,
-        "awayXg": 1.16,
-        "lambdaHome": 1.4,
-        "lambdaAway": 0.98,
+        "homeXg": 1.77,
+        "awayXg": 0.99,
+        "lambdaHome": 1.84,
+        "lambdaAway": 0.84,
         "sources": [
           "quant_master.db (juventus)",
           "quant_master.db (venezia)"
         ]
       },
       "prediction": "Doble Oportunidad: Juventus o Empate (1X)",
-      "probability": "74%",
-      "odds": "1.28",
-      "goals": "Más de 1.5 Goles (69%)",
-      "corners": "Más de 8.5 Córners (esp. 9.9)",
-      "cards": "Más de 3.5 Tarjetas (esp. 4.7)",
-      "shots": "Remates al arco esp.: 7.4",
+      "probability": "83%",
+      "odds": "1.13",
+      "goals": "Más de 1.5 Goles (75%)",
+      "corners": "Más de 8.5 Córners (esp. 10.3)",
+      "cards": "Más de 3.5 Tarjetas (esp. 5.2)",
+      "shots": "Remates al arco esp.: 8.3",
       "topShooter": "Randal Kolo Muani (Juventus) / Simon Sohm (Venezia)",
       "likelyScore": "1-0",
       "markets": {
-        "probHome": 0.466,
-        "probDraw": 0.2705,
-        "probAway": 0.2635,
-        "prob1X": 0.7365,
-        "probX2": 0.534,
-        "prob12": 0.7295,
-        "probOver15": 0.687,
-        "probOver25": 0.4247,
-        "probBtts": 0.4705,
+        "probHome": 0.6091,
+        "probDraw": 0.2239,
+        "probAway": 0.1671,
+        "prob1X": 0.8329,
+        "probX2": 0.3909,
+        "prob12": 0.7761,
+        "probOver15": 0.7469,
+        "probOver25": 0.5,
+        "probBtts": 0.4778,
         "likelyScore": "1-0"
       },
       "marketOdds": "JUV -250",
       "overUnderLine": 2.5,
       "analysis": "Modelo Poisson + historial (quant_master.db (juventus) / quant_master.db (venezia)). Marcador probable 1-0."
+    },
+    {
+      "id": "401882804",
+      "leagueSlug": "esp.1",
+      "league": "LaLiga (España)",
+      "dateUtc": "2026-11-22T13:00Z",
+      "date": "22/11/2026 10:00 ART",
+      "status": "finished",
+      "statusText": "FT",
+      "venue": "Spotify Camp Nou",
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "homeId": "83",
+      "awayId": "102",
+      "homeCrest": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+      "awayCrest": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+      "homeScore": "3",
+      "awayScore": "2",
+      "homeForm": "WWWWL",
+      "awayForm": "LWLLW",
+      "lineupConfirmed": true,
+      "homeSquad": [
+        {
+          "number": "1",
+          "position": "G",
+          "name": "Joan García"
+        },
+        {
+          "number": "18",
+          "position": "CD-L",
+          "name": "Gerard Martín"
+        },
+        {
+          "number": "21",
+          "position": "CD-R",
+          "name": "Frenkie de Jong"
+        },
+        {
+          "number": "2",
+          "position": "LB",
+          "name": "João Cancelo"
+        },
+        {
+          "number": "24",
+          "position": "RB",
+          "name": "Eric García"
+        },
+        {
+          "number": "22",
+          "position": "CM",
+          "name": "Marc Bernal"
+        },
+        {
+          "number": "8",
+          "position": "LM",
+          "name": "Pedri"
+        },
+        {
+          "number": "7",
+          "position": "RM",
+          "name": "Fermín López"
+        },
+        {
+          "number": "11",
+          "position": "F",
+          "name": "Raphinha"
+        },
+        {
+          "number": "14",
+          "position": "LF",
+          "name": "Karim Adeyemi"
+        },
+        {
+          "number": "10",
+          "position": "RF",
+          "name": "Lamine Yamal"
+        }
+      ],
+      "awaySquad": [
+        {
+          "number": "25",
+          "position": "G",
+          "name": "Péter Gulácsi"
+        },
+        {
+          "number": "12",
+          "position": "CD-L",
+          "name": "Renato Veiga"
+        },
+        {
+          "number": "6",
+          "position": "CD-R",
+          "name": "Pau Navarro"
+        },
+        {
+          "number": "20",
+          "position": "LB",
+          "name": "Carlos Romero"
+        },
+        {
+          "number": "3",
+          "position": "RB",
+          "name": "Alex Freeman"
+        },
+        {
+          "number": "18",
+          "position": "CM-L",
+          "name": "Pape Gueye"
+        },
+        {
+          "number": "14",
+          "position": "CM-R",
+          "name": "Santi Comesaña"
+        },
+        {
+          "number": "21",
+          "position": "LM",
+          "name": "Tani Oluwaseyi"
+        },
+        {
+          "number": "17",
+          "position": "RM",
+          "name": "Tajon Buchanan"
+        },
+        {
+          "number": "9",
+          "position": "F",
+          "name": "Georges Mikautadze"
+        },
+        {
+          "number": "10",
+          "position": "RCF",
+          "name": "Alberto Moleiro"
+        }
+      ],
+      "xgModel": {
+        "homeXg": 0.8,
+        "awayXg": 0.8,
+        "lambdaHome": 0.86,
+        "lambdaAway": 0.75,
+        "sources": [
+          "quant_master.db (barcelona)",
+          "quant_master.db (villarreal)"
+        ]
+      },
+      "prediction": "Doble Oportunidad: Barcelona o Empate (1X)",
+      "probability": "71%",
+      "odds": "1.33",
+      "goals": "Más de 1.5 Goles (48%)",
+      "corners": "Más de 7.5 Córners (esp. 9.1)",
+      "cards": "Menos de 5.5 Tarjetas (esp. 4.2)",
+      "shots": "Remates al arco esp.: 5.0",
+      "topShooter": "Raphinha (Barcelona) / Georges Mikautadze (Villarreal)",
+      "likelyScore": "0-0",
+      "markets": {
+        "probHome": 0.3558,
+        "probDraw": 0.3512,
+        "probAway": 0.293,
+        "prob1X": 0.707,
+        "probX2": 0.6442,
+        "prob12": 0.6488,
+        "probOver15": 0.4783,
+        "probOver25": 0.2192,
+        "probBtts": 0.3043,
+        "likelyScore": "0-0"
+      },
+      "marketOdds": "BAR -575",
+      "overUnderLine": 4.5,
+      "analysis": "Modelo Poisson + historial (quant_master.db (barcelona) / quant_master.db (villarreal)). Marcador probable 0-0."
     }
   ]
 }
