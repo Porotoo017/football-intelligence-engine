@@ -15,9 +15,9 @@
 </head>
 <body>
     <h1>Inteligencia en Tiempo Real</h1>
-    <div id="app">Cargando datos en vivo...</div>
+    <div id="app">Cargando datos...</div>
     <script>
-        fetch('parlay_engine_output.json?t=' + Date.now())
+        fetch('parlay_engine_output.json')
         .then(r => r.json())
         .then(data => {
             document.getElementById('app').innerHTML = data.map(m => `
