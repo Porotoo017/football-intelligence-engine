@@ -1,9 +1,15 @@
 {
-  "name": "Football Intelligence Engine",
-  "short_name": "FIE",
-  "start_url": "./index.html",
+  "name": "Football Intelligence Pro",
+  "short_name": "FootPro",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#09090b",
-  "theme_color": "#09090b",
-  "icons": [{ "src": "icon.png", "sizes": "192x192", "type": "image/png" }]
+  "background_color": "#0a0e14",
+  "theme_color": "#00d4ff",
+  "icons": [
+    {
+      "src": "https://r2.thesportsdb.com/images/media/team/badge/bm7krb1775741582.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
 }
