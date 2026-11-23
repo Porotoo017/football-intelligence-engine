@@ -73,6 +73,8 @@ TARGET_LEAGUES: List[Dict[str, str]] = [
     {"slug": "ned.1", "name": "Eredivisie (Países Bajos)", "group": "euro_dom"},
     {"slug": "fra.1", "name": "Ligue 1 (Francia)", "group": "euro_dom"},
     {"slug": "eng.1", "name": "Premier League (Inglaterra)", "group": "euro_dom"},
+    # Major League Soccer (EE.UU. & Canadá)
+    {"slug": "usa.1", "name": "MLS (EE.UU.)", "group": "mls"},
 ]
 
 
@@ -87,6 +89,7 @@ CLUB_DIRECTORY_LEAGUES: List[Dict[str, str]] = [
     {"slug": "ned.1", "name": "Eredivisie (Países Bajos)"},
     {"slug": "bra.1", "name": "Brasileirão Série A"},
     {"slug": "bra.2", "name": "Brasileirão Série B"},
+    {"slug": "usa.1", "name": "MLS (EE.UU.)"},
     {"slug": "conmebol.libertadores", "name": "Copa Libertadores"},
     {"slug": "conmebol.sudamericana", "name": "Copa Sudamericana"},
     {"slug": "uefa.champions", "name": "UEFA Champions League"},
@@ -95,7 +98,7 @@ CLUB_DIRECTORY_LEAGUES: List[Dict[str, str]] = [
 ]
 DOMESTIC_PRIORITY = {
     "arg.1": 1, "arg.2": 2, "esp.1": 3, "eng.1": 4, "ita.1": 5,
-    "ger.1": 6, "fra.1": 7, "ned.1": 8, "bra.1": 9, "bra.2": 10,
+    "ger.1": 6, "fra.1": 7, "ned.1": 8, "bra.1": 9, "bra.2": 10, "usa.1": 11,
     "conmebol.libertadores": 11, "conmebol.sudamericana": 12,
     "uefa.champions": 13, "uefa.europa": 14, "uefa.europa.conf": 15,
 }
@@ -506,16 +509,58 @@ def compute_top_shooters(
     return [c[2] for c in candidates[:limit]]
 
 
+def _extract_score_str(comp_entry: Dict[str, Any]) -> str:
+    sc = comp_entry.get("score")
+    if isinstance(sc, dict):
+        return str(sc.get("displayValue") if sc.get("displayValue") is not None else int(float(sc.get("value") or 0)))
+    if sc is None or sc == "":
+        return "0"
+    return str(sc)
+
+
+def _extract_team_crest(team_obj: Dict[str, Any]) -> str:
+    if team_obj.get("logo"):
+        return str(team_obj["logo"])
+    logos = team_obj.get("logos") or []
+    if logos and isinstance(logos, list) and logos[0].get("href"):
+        return str(logos[0]["href"])
+    tid = str(team_obj.get("id") or "")
+    return f"https://a.espncdn.com/i/teamlogos/soccer/500/{tid}.png" if tid else ""
+
+
 def fetch_espn_scoreboard(league: Dict[str, str], now_utc: datetime) -> List[Dict[str, Any]]:
-    url = f"{ESPN_BASE}/{league['slug']}/scoreboard"
-    data = fetch_json(url, timeout=7)
-    if not data:
-        return []
+    slug = league["slug"]
+    url = f"{ESPN_BASE}/{slug}/scoreboard"
+    data = fetch_json(url, timeout=8)
+    raw_events = list((data or {}).get("events") or [])
+
+    # MLS playoffs span multiple weeks where default scoreboard shows only 1 matchday: augment via team schedules
+    if slug == "usa.1":
+        t_data = fetch_json(f"{ESPN_BASE}/usa.1/teams?limit=100", timeout=8) or {}
+        t_ids = []
+        for sp in t_data.get("sports") or []:
+            for lg_obj in sp.get("leagues") or []:
+                for item in lg_obj.get("teams") or []:
+                    tid = str((item.get("team") or {}).get("id") or "")
+                    if tid:
+                        t_ids.append(tid)
+        if t_ids:
+            with ThreadPoolExecutor(max_workers=10) as pool:
+                scheds = list(pool.map(lambda tid: fetch_json(f"{ESPN_BASE}/usa.1/teams/{tid}/schedule", timeout=8), t_ids))
+            for sd in scheds:
+                if isinstance(sd, dict):
+                    raw_events.extend(sd.get("events") or [])
+
     out: List[Dict[str, Any]] = []
-    cutoff_past = now_utc - timedelta(days=10)
+    seen_ev: set = set()
+    past_days = 24 if slug == "usa.1" else 10
+    cutoff_past = now_utc - timedelta(days=past_days)
     cutoff_future = now_utc + timedelta(days=28)
 
-    for ev in data.get("events") or []:
+    for ev in raw_events:
+        eid = str(ev.get("id") or "")
+        if not eid or eid in seen_ev:
+            continue
         comp = (ev.get("competitions") or [{}])[0]
         competitors = comp.get("competitors") or []
         home_c = next((c for c in competitors if c.get("homeAway") == "home"), competitors[0] if len(competitors) > 0 else None)
@@ -523,7 +568,7 @@ def fetch_espn_scoreboard(league: Dict[str, str], now_utc: datetime) -> List[Dic
         if not home_c or not away_c:
             continue
 
-        st_type = (ev.get("status") or {}).get("type") or {}
+        st_type = ((ev.get("status") or comp.get("status") or {}).get("type") or {})
         state = str(st_type.get("state") or "pre").lower()
         completed = bool(st_type.get("completed"))
         if state == "post" or completed:
@@ -534,12 +579,12 @@ def fetch_espn_scoreboard(league: Dict[str, str], now_utc: datetime) -> List[Dic
             status = "scheduled"
 
         ev_dt = parse_utc_dt(str(ev.get("date") or ""))
-        # Exclude stale off-season finals (>10 days old) from tournaments not currently in season
         if status == "finished" and ev_dt is not None and ev_dt < cutoff_past:
             continue
         if status == "scheduled" and ev_dt is not None and ev_dt > cutoff_future:
             continue
 
+        seen_ev.add(eid)
         out.append({"league": league, "event": ev, "comp": comp, "home_c": home_c, "away_c": away_c, "status": status})
     return out
 
@@ -706,9 +751,9 @@ def sync_all_club_directories(conn: sqlite3.Connection, now_utc: datetime) -> in
         tid = entry["team_id"]
         slug = entry["league_slug"]
         # Skip cup duplicate if already present in a higher-priority domestic league
-        if DOMESTIC_PRIORITY.get(slug, 99) > 10 and tid in seen_domestic_ids:
+        if DOMESTIC_PRIORITY.get(slug, 99) > 11 and tid in seen_domestic_ids:
             continue
-        if DOMESTIC_PRIORITY.get(slug, 99) <= 10:
+        if DOMESTIC_PRIORITY.get(slug, 99) <= 11:
             seen_domestic_ids.add(tid)
 
         ex = existing.get((tid, slug))
@@ -791,7 +836,14 @@ def main() -> None:
 
     prio = {"live": 0, "scheduled": 1, "finished": 2}
     items.sort(key=lambda x: (prio[x["status"]], x["event"].get("date", "")))
-    enrich_targets = items[:85]
+    mls_items = [x for x in items if x["league"]["slug"] == "usa.1"]
+    seen_et = set()
+    enrich_targets = []
+    for x in (items[:85] + mls_items[:20]):
+        eid = str(x["event"].get("id") or "")
+        if eid and eid not in seen_et:
+            seen_et.add(eid)
+            enrich_targets.append(x)
 
     details_by_eid: Dict[str, Dict[str, Any]] = {}
     with ThreadPoolExecutor(max_workers=10) as pool:
@@ -830,10 +882,10 @@ def main() -> None:
             a_short = str(at.get("shortDisplayName") or at.get("abbreviation") or a_name[:12])
             h_id = str(ht.get("id") or "")
             a_id = str(at.get("id") or "")
-            h_crest = str(ht.get("logo") or "")
-            a_crest = str(at.get("logo") or "")
-            h_score_str = str(hc.get("score") or "0")
-            a_score_str = str(ac.get("score") or "0")
+            h_crest = _extract_team_crest(ht)
+            a_crest = _extract_team_crest(at)
+            h_score_str = _extract_score_str(hc)
+            a_score_str = _extract_score_str(ac)
             det = details_by_eid.get(eid, {})
 
             if it["status"] == "finished":
@@ -955,7 +1007,7 @@ def main() -> None:
                     "dateUtc": str(ev.get("date") or ""),
                     "date": to_arg_time(str(ev.get("date") or "")),
                     "status": it["status"],
-                    "statusText": str((ev.get("status") or {}).get("type", {}).get("shortDetail") or it["status"]),
+                    "statusText": str((ev.get("status") or comp.get("status") or {}).get("type", {}).get("shortDetail") or it["status"]),
                     "venue": str((comp.get("venue") or {}).get("fullName") or ""),
                     "home": h_name,
                     "away": a_name,
@@ -1059,7 +1111,7 @@ def main() -> None:
     }
 
     payload = {
-        "engineVersion": "3.4.0-ALL-CLUBS-STADIUMS",
+        "engineVersion": "3.5.0-MLS-FULL",
         "lastUpdated": datetime.now(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M ART"),
         "statusCounts": status_counts,
         "dbStats": {

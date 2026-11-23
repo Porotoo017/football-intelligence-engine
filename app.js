@@ -408,6 +408,7 @@
     const uefaCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:uefa')).length;
     const argCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:arg')).length;
     const braCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:bra')).length;
+    const mlsCount = state.matches.filter((m) => matchesLeagueFilter(m, 'group:mls')).length;
 
     const leagueChips = [
       { key: 'all', label: 'Todas (' + state.matches.length + ')' },
@@ -415,11 +416,12 @@
       { key: 'group:uefa', label: '🏆 Toda UEFA (' + uefaCount + ')' },
       { key: 'group:arg', label: '🇦🇷 Arg + Nac. B (' + argCount + ')' },
       { key: 'group:bra', label: '🇧🇷 Brasil A/B (' + braCount + ')' },
+      { key: 'group:mls', label: '🇺🇸 MLS (' + mlsCount + ')' },
     ];
 
     TARGET_LEAGUES.forEach((lg) => {
       const n = countsBySlug.get(lg.slug) || 0;
-      if (n > 0 || lg.slug === state.selectedLeague || lg.slug === 'arg.2' || lg.slug === 'bra.1' || lg.slug === 'uefa.europa') {
+      if (n > 0 || lg.slug === state.selectedLeague || lg.slug === 'arg.2' || lg.slug === 'bra.1' || lg.slug === 'usa.1' || lg.slug === 'uefa.europa') {
         leagueChips.push({ key: lg.slug, label: lg.name + ' (' + n + ')' });
       }
     });
@@ -885,7 +887,7 @@
     const box = document.getElementById('rosters-list');
     const qEl = document.getElementById('roster-search');
     if (qEl && qEl.placeholder && !qEl.placeholder.includes('estadio')) {
-      qEl.placeholder = 'Buscar club, estadio o jugador actual (ej: San Lorenzo, Independiente)...';
+      qEl.placeholder = 'Buscar club, estadio o jugador (ej: Inter Miami, San Lorenzo, Independiente)...';
     }
     const q = ((qEl && qEl.value) || '').toLowerCase().trim();
     if (!box) return;
@@ -926,6 +928,7 @@
       { key: 'ned.1', label: '🇳🇱 Eredivisie' },
       { key: 'bra.1', label: '🇧🇷 Brasil A' },
       { key: 'bra.2', label: '🇧🇷 Brasil B' },
+      { key: 'usa.1', label: '🇺🇸 MLS' },
       { key: 'cups', label: '🏆 Copas' },
       { key: 'nat', label: '🌍 Selecciones' },
     ];

@@ -1,7 +1,7 @@
-const CACHE_NAME = 'football-intel-v3.4';
+const CACHE_NAME = 'football-intel-v3.5';
 const SHELL_ASSETS = [
   './index.html',
-  './app.js?v=3.4.0',
+  './app.js?v=3.5.0',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
