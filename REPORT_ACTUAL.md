@@ -1,22 +1,14 @@
 # Football Intelligence Pro — Reporte en Vivo (UEFA, Selecciones, Primera Nacional, Brasil y Ligas)
 
-- **Última ejecución:** 22/11/2026 18:39 ART
-- **En vivo ahora:** 5 | **Próximos:** 50 | **Recién finalizados:** 63
-- **Equipos en BD histórica (`quant_master.db`):** 750
-- **Partidos reales acumulados:** 63 (+3 nuevos en esta ejecución)
-- **Planteles actualizados en caché:** 208
+- **Última ejecución:** 22/11/2026 23:27 ART
+- **En vivo ahora:** 1 | **Próximos:** 46 | **Recién finalizados:** 70
+- **Equipos en BD histórica (`quant_master.db`):** 763
+- **Partidos reales acumulados:** 71 (+8 nuevos en esta ejecución)
+- **Planteles actualizados en caché:** 226
 
 | Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |
 |---|---|---|---|---|---|---|
-| Serie A (Italia) | 22/11/2026 16:45 ART | Atalanta (4) vs (4) Internazionale | 90'+5' | Doble Oportunidad: Atalanta o Empate (1X) | 73% | Nikola Krstovic (Atalanta, 3.0 rem/pj · 76% prob. 1+ arco) / Marcus Thuram (Inter Milan, 3.8 rem/pj · 64% prob. 1+ arco) |
-| Ligue 1 (Francia) | 22/11/2026 16:45 ART | Marseille (2) vs (2) Le Mans | 90'+4' | Doble Oportunidad: Marseille o Empate (1X) | 67% | Amine Gouiri (Marseille, 2.4 rem/pj · 66% prob. 1+ arco) / Louis Mafouta (Le Mans, 2.0 rem/pj · 58% prob. 1+ arco) |
-| LaLiga (España) | 22/11/2026 17:00 ART | Getafe (0) vs (2) Atlético Madrid | 79' | Doble Oportunidad: Empate o Atlético Madrid (X2) | 69% | Ramón Terrats (Getafe, 2.0 rem/pj · 36% prob. 1+ arco) / Julián Álvarez (Atlético, 2.5 rem/pj · 52% prob. 1+ arco) |
-| Brasileirão Série B | 22/11/2026 18:30 ART | Atlético Goianiense (0) vs (0) Vila Nova | 7' | Doble Oportunidad: Atlético Goianiense o Empate (1X) | 67% | Gustavo Coutinho (Atlético-GO, 2.76 rem/pj · 68% prob. 1+ arco) / Janderson (Vila Nova, 2.16 rem/pj · 55% prob. 1+ arco) |
-| Brasileirão Série A | 22/11/2026 18:30 ART | Fluminense (0) vs (0) Mirassol | 7' | Doble Oportunidad: Fluminense o Empate (1X) | 67% | Hulk (Fluminense, 3.12 rem/pj · 70% prob. 1+ arco) / Bruno Santos (Mirassol, 1.65 rem/pj · 40% prob. 1+ arco) |
-| Liga Profesional Argentina | 22/11/2026 19:00 ART | River Plate (0) vs (0) Lanús | Scheduled | Doble Oportunidad: River Plate o Empate (1X) | 75% | Ángel Correa (River Plate, 3.4 rem/pj · 65% prob. 1+ arco) / Allan Wlk (Lanús , 1.94 rem/pj · 49% prob. 1+ arco) |
-| Brasileirão Série A | 22/11/2026 19:30 ART | Red Bull Bragantino (0) vs (0) Vasco da Gama | Scheduled | Doble Oportunidad: Red Bull Bragantino o Empate (1X) | 67% | Wallace Yan (Bragantino, 3.1 rem/pj · 80% prob. 1+ arco) / Andrés Gómez (Vasco, 3.06 rem/pj · 56% prob. 1+ arco) |
-| Primera Nacional (Argentina) | 22/11/2026 21:00 ART | Gimnasia y Tiro (Salta) (0) vs (0) Tristán Suárez | Scheduled | Doble Oportunidad: Gimnasia y Tiro (Salta) o Empate (1X) | 67% | Lautaro Gordillo (G y T (Salta), F · 8% prob. 1+ arco) / Maximiliano Álvarez (T. Suárez, F · 8% prob. 1+ arco) |
-| Liga Profesional Argentina | 22/11/2026 22:00 ART | Instituto (Córdoba) (0) vs (0) Huracán | Scheduled | Doble Oportunidad: Instituto (Córdoba) o Empate (1X) | 70% | Alex Luna (Instituto, 3.14 rem/pj · 51% prob. 1+ arco) / Jordy Caicedo (Huracán , 2.0 rem/pj · 50% prob. 1+ arco) |
+| Liga Profesional Argentina | 22/11/2026 22:00 ART | Instituto (Córdoba) (2) vs (1) Huracán | 67' | Doble Oportunidad: Instituto (Córdoba) o Empate (1X) | 70% | Alex Luna (Instituto, 3.14 rem/pj · 51% prob. 1+ arco) / Jordy Caicedo (Huracán , 2.0 rem/pj · 50% prob. 1+ arco) |
 | UEFA Champions League | 24/11/2026 14:45 ART | Bodo/Glimt (0) vs (0) LASK Linz | Scheduled | Doble Oportunidad: Bodo/Glimt o Empate (1X) | 67% | Andreas Helmersen (Bodo/Glimt, 1.5 rem/pj · 32% prob. 1+ arco) / Sasa Kalajdzic (LASK Linz, 2.0 rem/pj · 47% prob. 1+ arco) |
 | UEFA Champions League | 24/11/2026 14:45 ART | Galatasaray (0) vs (0) Aston Villa | Scheduled | Doble Oportunidad: Galatasaray o Empate (1X) | 66% | Victor Osimhen (Galatasaray, 4.0 rem/pj · 29% prob. 1+ arco) / Nicolas Jackson (Aston Villa, 3.25 rem/pj · 65% prob. 1+ arco) |
 | UEFA Champions League | 24/11/2026 17:00 ART | Arsenal (0) vs (0) Borussia Dortmund | Scheduled | Doble Oportunidad: Empate o Borussia Dortmund (X2) | 67% | Eberechi Eze (Arsenal, 2.5 rem/pj · 54% prob. 1+ arco) / Serhou Guirassy (Dortmund, 4.0 rem/pj · 70% prob. 1+ arco) |
@@ -43,3 +35,11 @@
 | UEFA Conference League | 26/11/2026 14:45 ART | Jablonec (0) vs (0) FC Lugano | Scheduled | Doble Oportunidad: Jablonec o Empate (1X) | 67% | Antonin Rusek (Jablonec, 1.33 rem/pj · 36% prob. 1+ arco) / Albian Ajeti (FC Lugano, 2.33 rem/pj · 60% prob. 1+ arco) |
 | UEFA Conference League | 26/11/2026 14:45 ART | Kauno Zalgiris (0) vs (0) Riga FC | Scheduled | Doble Oportunidad: Kauno Zalgiris o Empate (1X) | 67% | Renan Oliveira (Kauno Zalgiris, 1.0 rem/pj · 26% prob. 1+ arco) / Reginaldo Ramires (Riga FC, 2.0 rem/pj · 43% prob. 1+ arco) |
 | UEFA Conference League | 26/11/2026 14:45 ART | Pafos (0) vs (0) FC Midtjylland | Scheduled | Doble Oportunidad: Pafos o Empate (1X) | 71% | Gabriel Teixeira (Pafos, 3.0 rem/pj · 54% prob. 1+ arco) / Mileta Rajovic (Midtjylland, 2.0 rem/pj · 34% prob. 1+ arco) |
+| UEFA Conference League | 26/11/2026 14:45 ART | SK Brann (0) vs (0) AGF | Scheduled | Doble Oportunidad: SK Brann o Empate (1X) | 65% | Noah Holm (SK Brann, 4.0 rem/pj · 55% prob. 1+ arco) / Stefen Tchamche (AGF, 2.0 rem/pj · 20% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | Crystal Palace (0) vs (0) Real Sociedad | Scheduled | Doble Oportunidad: Crystal Palace o Empate (1X) | 64% | Jean-Philippe Mateta (C Palace, 2.5 rem/pj · 62% prob. 1+ arco) / Orri Óskarsson (Real Sociedad, 1.75 rem/pj · 56% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | Ferencvaros (0) vs (0) NK Celje | Scheduled | Doble Oportunidad: Ferencvaros o Empate (1X) | 65% | Lenny Joseph (Ferencvaros, 4.0 rem/pj · 69% prob. 1+ arco) / Benjamin Verbic (NK Celje, 1.25 rem/pj · 48% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | Juventus (0) vs (0) Omonia Nicosia | Scheduled | Doble Oportunidad: Juventus o Empate (1X) | 77% | Nick Woltemade (Juventus, 3.5 rem/pj · 65% prob. 1+ arco) / Jaden Montnor (Omonia, 1.75 rem/pj · 48% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | Lyon (0) vs (0) Lillestrom | Scheduled | Doble Oportunidad: Lyon o Empate (1X) | 69% | Loïs Openda (Lyon, 4.0 rem/pj · 65% prob. 1+ arco) / Thomas Lehne Olsen (Lillestrom, 2.75 rem/pj · 37% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | NEC Nijmegen (0) vs (0) Stade Rennais | Scheduled | Doble Oportunidad: NEC Nijmegen o Empate (1X) | 70% | Bryan Linssen (NEC, 3.0 rem/pj · 62% prob. 1+ arco) / Esteban Lepaul (Rennes, 5.5 rem/pj · 45% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | OFI Crete (0) vs (0) Anderlecht | Scheduled | Doble Oportunidad: OFI Crete o Empate (1X) | 72% | Taxiarchis Fountas (OFI Crete, 1.5 rem/pj · 28% prob. 1+ arco) / Mihajlo Cvetkovic (Anderlecht, 2.5 rem/pj · 48% prob. 1+ arco) |
+| UEFA Europa League | 26/11/2026 17:00 ART | Sparta Prague (0) vs (0) AZ Alkmaar | Scheduled | Doble Oportunidad: Empate o AZ Alkmaar (X2) | 69% | Josimar Alcócer (Sparta, 2.75 rem/pj · 40% prob. 1+ arco) / Mexx Meerdink (AZ Alkmaar, 1.75 rem/pj · 64% prob. 1+ arco) |
