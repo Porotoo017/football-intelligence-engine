@@ -48,6 +48,8 @@
     activeTab: 'matches',
     selectedLeague: 'all',
     selectedStatus: 'all',
+    selectedRosterLeague: 'all',
+    rosterShowAll: false,
     matches: [],
     rosters: [],
     historyLog: [],
@@ -831,43 +833,197 @@
     }
   }
 
+  function openClubModal(teamObj) {
+    const modal = document.getElementById('match-modal');
+    const title = document.getElementById('modal-title');
+    const body = document.getElementById('modal-body');
+    if (!modal || !title || !body || !teamObj) return;
+    title.textContent = teamObj.teamName + ' — Plantel Oficial';
+    const stadiumStr = teamObj.stadium
+      ? escHtml(teamObj.stadium) + (teamObj.stadiumCity ? ' (' + escHtml(teamObj.stadiumCity) + ')' : '')
+      : 'Estadio por confirmar';
+    const pls = Array.isArray(teamObj.players) ? teamObj.players : [];
+    const listHtml = pls.length
+      ? pls.map((p) => (
+          '<div class="player-row">' +
+            '<span><b>#' + escHtml(p.number || '-') + ' ' + escHtml(p.name) + '</b> <span style="color:var(--muted);">(' + escHtml(p.position || '-') + ')</span></span>' +
+            '<span style="color:var(--cyan);font-size:0.72rem;">' +
+              (p.appearances ? p.appearances + ' PJ · ' : '') +
+              (p.totalShots ? p.totalShots + ' rem · ' + (p.shotsOnTarget || 0) + ' arco · ' : '') +
+              (p.totalGoals || 0) + ' goles' +
+            '</span>' +
+          '</div>'
+        )).join('')
+      : '<p style="font-size:0.8rem;color:var(--muted);">Sin jugadores cargados todavía. Tocá 🔄 para sincronizar desde ESPN.</p>';
+    body.innerHTML =
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">' +
+        '<img src="' + escHtml(teamObj.crestUrl) + '" alt="' + escHtml(teamObj.teamName) + '" style="width:48px;height:48px;object-fit:contain;" referrerpolicy="no-referrer" />' +
+        '<div>' +
+          '<div style="font-size:0.78rem;color:var(--cyan);font-weight:700;">' + escHtml(teamObj.leagueName || teamObj.leagueSlug || '') + '</div>' +
+          '<div style="font-size:0.84rem;color:#e2e8f0;">🏟️ ' + stadiumStr + '</div>' +
+          '<div style="font-size:0.74rem;color:var(--muted);">' + pls.length + ' jugadores en plantel</div>' +
+        '</div>' +
+      '</div>' +
+      listHtml;
+    modal.classList.add('open');
+  }
+
+  function ensureRosterFilterDom(box) {
+    if (!document.getElementById('roster-league-chips')) {
+      const chipsDiv = document.createElement('div');
+      chipsDiv.id = 'roster-league-chips';
+      chipsDiv.className = 'chips-scroll';
+      const stripDiv = document.createElement('div');
+      stripDiv.id = 'roster-count-bar';
+      stripDiv.className = 'status-strip';
+      box.parentNode.insertBefore(chipsDiv, box);
+      box.parentNode.insertBefore(stripDiv, box);
+    }
+  }
+
   function renderRosters() {
     const box = document.getElementById('rosters-list');
     const qEl = document.getElementById('roster-search');
+    if (qEl && qEl.placeholder && !qEl.placeholder.includes('estadio')) {
+      qEl.placeholder = 'Buscar club, estadio o jugador actual (ej: San Lorenzo, Independiente)...';
+    }
     const q = ((qEl && qEl.value) || '').toLowerCase().trim();
     if (!box) return;
+    ensureRosterFilterDom(box);
 
     const merged = new Map();
-    state.rosters.forEach((r) => merged.set(r.teamName, r));
+    state.rosters.forEach((r) => {
+      const key = String(r.teamId || normName(r.teamName));
+      merged.set(key, r);
+    });
     state.matches.forEach((m) => {
-      if (m.home && !merged.has(m.home)) {
-        merged.set(m.home, { teamId: m.homeId, teamName: m.home, leagueSlug: m.leagueSlug, crestUrl: m.homeCrest, players: m.homeSquad || [] });
+      const hKey = String(m.homeId || normName(m.home));
+      if (m.home && !merged.has(hKey)) {
+        merged.set(hKey, {
+          teamId: m.homeId, teamName: m.home, leagueSlug: m.leagueSlug, leagueName: m.league,
+          crestUrl: m.homeCrest, stadium: m.venue || '', stadiumCity: '', players: m.homeSquad || [],
+        });
       }
-      if (m.away && !merged.has(m.away)) {
-        merged.set(m.away, { teamId: m.awayId, teamName: m.away, leagueSlug: m.leagueSlug, crestUrl: m.awayCrest, players: m.awaySquad || [] });
+      const aKey = String(m.awayId || normName(m.away));
+      if (m.away && !merged.has(aKey)) {
+        merged.set(aKey, {
+          teamId: m.awayId, teamName: m.away, leagueSlug: m.leagueSlug, leagueName: m.league,
+          crestUrl: m.awayCrest, stadium: '', stadiumCity: '', players: m.awaySquad || [],
+        });
       }
     });
 
-    const arr = Array.from(merged.values()).filter((t) => {
-      if (!q) return true;
-      if (t.teamName.toLowerCase().includes(q)) return true;
-      return (t.players || []).some((p) => (p.name || '').toLowerCase().includes(q));
-    }).slice(0, 48);
+    const allClubs = Array.from(merged.values());
+    const ROSTER_CHIPS = [
+      { key: 'all', label: 'Todos (' + allClubs.length + ')' },
+      { key: 'arg.1', label: '🇦🇷 Liga Prof.' },
+      { key: 'arg.2', label: '🇦🇷 Nac. B' },
+      { key: 'esp.1', label: '🇪🇸 LaLiga' },
+      { key: 'eng.1', label: '🏴 Premier' },
+      { key: 'ita.1', label: '🇮🇹 Serie A' },
+      { key: 'ger.1', label: '🇩🇪 Bundesliga' },
+      { key: 'fra.1', label: '🇫🇷 Ligue 1' },
+      { key: 'ned.1', label: '🇳🇱 Eredivisie' },
+      { key: 'bra.1', label: '🇧🇷 Brasil A' },
+      { key: 'bra.2', label: '🇧🇷 Brasil B' },
+      { key: 'cups', label: '🏆 Copas' },
+      { key: 'nat', label: '🌍 Selecciones' },
+    ];
+    const chipsBox = document.getElementById('roster-league-chips');
+    if (chipsBox) {
+      chipsBox.innerHTML = ROSTER_CHIPS.map((c) => {
+        const cnt = c.key === 'all'
+          ? allClubs.length
+          : c.key === 'cups'
+            ? allClubs.filter((t) => /^(uefa\.(champions|europa|wchampions|super_cup)|conmebol\.(libertadores|sudamericana|recopa))/.test(t.leagueSlug || '')).length
+            : c.key === 'nat'
+              ? allClubs.filter((t) => /^(fifa|concacaf|caf)\.|uefa\.(nations|euro)|conmebol\.america/.test(t.leagueSlug || '')).length
+            : allClubs.filter((t) => t.leagueSlug === c.key).length;
+        const lbl = c.key === 'all' ? c.label : c.label + ' (' + cnt + ')';
+        const cls = state.selectedRosterLeague === c.key ? 'chip active' : 'chip';
+        return '<button class="' + cls + '" data-rleague="' + escHtml(c.key) + '">' + escHtml(lbl) + '</button>';
+      }).join('');
+      chipsBox.querySelectorAll('button').forEach((b) => {
+        b.onclick = () => {
+          state.selectedRosterLeague = b.getAttribute('data-rleague');
+          state.rosterShowAll = false;
+          renderRosters();
+        };
+      });
+    }
 
-    box.innerHTML = arr.map((t) => (
-      '<div class="card">' +
-        '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">' +
-          '<div style="display:flex;align-items:center;gap:10px;">' +
-            '<img src="' + escHtml(t.crestUrl) + '" alt="' + escHtml(t.teamName) + '" style="width:32px;height:32px;object-fit:contain;" referrerpolicy="no-referrer" />' +
-            '<div><b>' + escHtml(t.teamName) + '</b><div style="font-size:0.72rem;color:var(--muted);">' + (t.players ? t.players.length : 0) + ' jugadores cargados</div></div>' +
+    const filtered = allClubs.filter((t) => {
+      if (state.selectedRosterLeague === 'cups') {
+        if (!/^(uefa\.(champions|europa|wchampions|super_cup)|conmebol\.(libertadores|sudamericana|recopa))/.test(t.leagueSlug || '')) return false;
+      } else if (state.selectedRosterLeague === 'nat') {
+        if (!/^(fifa|concacaf|caf)\.|uefa\.(nations|euro)|conmebol\.america/.test(t.leagueSlug || '')) return false;
+      } else if (state.selectedRosterLeague !== 'all' && t.leagueSlug !== state.selectedRosterLeague) {
+        return false;
+      }
+      if (!q) return true;
+      if ((t.teamName || '').toLowerCase().includes(q)) return true;
+      if ((t.stadium || '').toLowerCase().includes(q)) return true;
+      if ((t.leagueName || '').toLowerCase().includes(q)) return true;
+      return (t.players || []).some((p) => (p.name || '').toLowerCase().includes(q));
+    });
+
+    const showLimit = (q || state.selectedRosterLeague !== 'all' || state.rosterShowAll) ? filtered.length : 90;
+    const arr = filtered.slice(0, showLimit);
+
+    const countBar = document.getElementById('roster-count-bar');
+    if (countBar) {
+      countBar.innerHTML =
+        '<span>Mostrando <b>' + arr.length + '</b> de <b>' + filtered.length + '</b> clubes oficiales</span>' +
+        '<span>Escudos · Estadios · Planteles</span>';
+    }
+
+    const cardsHtml = arr.map((t, idx) => {
+      const stadiumTxt = t.stadium
+        ? escHtml(t.stadium) + (t.stadiumCity ? ' · ' + escHtml(t.stadiumCity) : '')
+        : 'Estadio por confirmar';
+      return (
+        '<div class="card">' +
+          '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">' +
+            '<div style="display:flex;align-items:center;gap:10px;min-width:0;">' +
+              '<img src="' + escHtml(t.crestUrl) + '" alt="' + escHtml(t.teamName) + '" loading="lazy" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;" referrerpolicy="no-referrer" />' +
+              '<div style="min-width:0;">' +
+                '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;"><b>' + escHtml(t.teamName) + '</b><span style="font-size:0.66rem;color:var(--cyan);">' + escHtml(t.leagueName || t.leagueSlug || '') + '</span></div>' +
+                '<div style="font-size:0.72rem;color:#cbd5e1;">🏟️ ' + stadiumTxt + '</div>' +
+                '<div style="font-size:0.7rem;color:var(--muted);">' + (t.players ? t.players.length : 0) + ' jugadores cargados</div>' +
+              '</div>' +
+            '</div>' +
+            '<div style="display:flex;gap:5px;flex-shrink:0;">' +
+              '<button class="btn btn-sm" data-open-club="' + idx + '" type="button">👥 Plantel</button>' +
+              '<button class="btn btn-sm" data-refresh-team="' + escHtml(t.teamId) + '" data-refresh-slug="' + escHtml(t.leagueSlug) + '" data-refresh-name="' + escHtml(t.teamName) + '" type="button">🔄</button>' +
+            '</div>' +
           '</div>' +
-          '<button class="btn btn-sm" data-refresh-team="' + escHtml(t.teamId) + '" data-refresh-slug="' + escHtml(t.leagueSlug) + '" data-refresh-name="' + escHtml(t.teamName) + '" type="button">🔄 Actualizar</button>' +
-        '</div>' +
-        (t.players && t.players.length
-          ? '<div style="margin-top:8px;font-size:0.75rem;color:#cbd5e1;">' + t.players.slice(0, 12).map((p) => escHtml(p.name) + ' (' + escHtml(p.position) + (p.totalShots ? ' · ' + p.totalShots + ' rem' : '') + ')').join(' · ') + '</div>'
-          : '') +
-      '</div>'
-    )).join('');
+          (t.players && t.players.length
+            ? '<div style="margin-top:8px;font-size:0.74rem;color:#cbd5e1;">' + t.players.slice(0, 10).map((p) => escHtml(p.name) + ' (' + escHtml(p.position) + (p.totalShots ? ' · ' + p.totalShots + ' rem' : '') + ')').join(' · ') + '</div>'
+            : '') +
+        '</div>'
+      );
+    }).join('');
+
+    const moreBtnHtml = filtered.length > arr.length
+      ? '<div class="card" style="text-align:center;"><button id="show-all-clubs-btn" class="btn btn-primary" type="button">Ver todos los ' + filtered.length + ' clubes</button></div>'
+      : '';
+
+    box.innerHTML = cardsHtml + moreBtnHtml;
+
+    const showAllBtn = document.getElementById('show-all-clubs-btn');
+    if (showAllBtn) {
+      showAllBtn.onclick = () => {
+        state.rosterShowAll = true;
+        renderRosters();
+      };
+    }
+
+    box.querySelectorAll('[data-open-club]').forEach((btn) => {
+      btn.onclick = () => {
+        const i = parseInt(btn.getAttribute('data-open-club'), 10);
+        if (!isNaN(i) && arr[i]) openClubModal(arr[i]);
+      };
+    });
 
     box.querySelectorAll('[data-refresh-team]').forEach((btn) => {
       btn.onclick = async () => {
@@ -880,9 +1036,9 @@
           const pl = await fetchFullRosterWithStats(slug, tid);
           if (pl.length > 0) {
             pl.sort((a, b) => (b.shotsOnTarget - a.shotsOnTarget) || (b.totalShots - a.totalShots));
-            const existing = state.rosters.find((x) => x.teamName === tname);
+            const existing = state.rosters.find((x) => String(x.teamId) === String(tid) || x.teamName === tname);
             if (existing) existing.players = pl;
-            else state.rosters.unshift({ teamId: tid, teamName: tname, leagueSlug: slug, crestUrl: '', players: pl });
+            else state.rosters.unshift({ teamId: tid, teamName: tname, leagueSlug: slug, crestUrl: '', stadium: '', stadiumCity: '', players: pl });
             renderRosters();
           } else {
             btn.textContent = 'Sin datos';

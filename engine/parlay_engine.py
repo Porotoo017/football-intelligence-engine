@@ -17,6 +17,7 @@ import threading
 import unicodedata
 import urllib.parse
 import urllib.request
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple
@@ -73,6 +74,31 @@ TARGET_LEAGUES: List[Dict[str, str]] = [
     {"slug": "fra.1", "name": "Ligue 1 (Francia)", "group": "euro_dom"},
     {"slug": "eng.1", "name": "Premier League (Inglaterra)", "group": "euro_dom"},
 ]
+
+
+CLUB_DIRECTORY_LEAGUES: List[Dict[str, str]] = [
+    {"slug": "arg.1", "name": "Liga Profesional Argentina"},
+    {"slug": "arg.2", "name": "Primera Nacional (Argentina)"},
+    {"slug": "esp.1", "name": "LaLiga (España)"},
+    {"slug": "eng.1", "name": "Premier League (Inglaterra)"},
+    {"slug": "ita.1", "name": "Serie A (Italia)"},
+    {"slug": "ger.1", "name": "Bundesliga (Alemania)"},
+    {"slug": "fra.1", "name": "Ligue 1 (Francia)"},
+    {"slug": "ned.1", "name": "Eredivisie (Países Bajos)"},
+    {"slug": "bra.1", "name": "Brasileirão Série A"},
+    {"slug": "bra.2", "name": "Brasileirão Série B"},
+    {"slug": "conmebol.libertadores", "name": "Copa Libertadores"},
+    {"slug": "conmebol.sudamericana", "name": "Copa Sudamericana"},
+    {"slug": "uefa.champions", "name": "UEFA Champions League"},
+    {"slug": "uefa.europa", "name": "UEFA Europa League"},
+    {"slug": "uefa.europa.conf", "name": "UEFA Conference League"},
+]
+DOMESTIC_PRIORITY = {
+    "arg.1": 1, "arg.2": 2, "esp.1": 3, "eng.1": 4, "ita.1": 5,
+    "ger.1": 6, "fra.1": 7, "ned.1": 8, "bra.1": 9, "bra.2": 10,
+    "conmebol.libertadores": 11, "conmebol.sudamericana": 12,
+    "uefa.champions": 13, "uefa.europa": 14, "uefa.europa.conf": 15,
+}
 
 GENERIC_TOKENS = {
     "fc", "cf", "ca", "cd", "ac", "sc", "rc", "ud", "sd", "fk", "sk",
@@ -175,13 +201,24 @@ def init_and_migrate_db(db_path: str) -> None:
                 team_id TEXT NOT NULL,
                 team_name TEXT NOT NULL,
                 league_slug TEXT NOT NULL,
+                league_name TEXT DEFAULT '',
                 crest_url TEXT,
+                stadium TEXT DEFAULT '',
+                stadium_city TEXT DEFAULT '',
                 roster_json TEXT NOT NULL,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY (team_id, league_slug)
             )
             """
         )
+        cols = {r[1] for r in conn.execute("PRAGMA table_info(team_rosters)")}
+        for col, ddl in [
+            ("league_name", "TEXT DEFAULT ''"),
+            ("stadium", "TEXT DEFAULT ''"),
+            ("stadium_city", "TEXT DEFAULT ''"),
+        ]:
+            if col not in cols:
+                conn.execute(f"ALTER TABLE team_rosters ADD COLUMN {col} {ddl}")
         conn.commit()
 
 
@@ -600,6 +637,141 @@ def fetch_espn_summary_and_roster(slug: str, event_id: str, home_id: str, away_i
     }
 
 
+
+def fetch_team_home_stadium(slug: str, tid: str) -> Tuple[str, str]:
+    if not tid:
+        return "", ""
+    sched = fetch_json(f"{ESPN_BASE}/{slug}/teams/{urllib.parse.quote(tid)}/schedule", timeout=8)
+    venue_counts: Counter = Counter()
+    for ev in (sched or {}).get("events") or []:
+        comp = (ev.get("competitions") or [{}])[0]
+        comps = comp.get("competitors") or []
+        hc = next((c for c in comps if c.get("homeAway") == "home"), {})
+        if str((hc.get("team") or {}).get("id") or "") == str(tid):
+            v = comp.get("venue") or {}
+            vname = str(v.get("fullName") or "").strip()
+            vcity = str((v.get("address") or {}).get("city") or "").strip()
+            if vname:
+                venue_counts[(vname, vcity)] += 1
+    if venue_counts:
+        return venue_counts.most_common(1)[0][0]
+    core = fetch_json(f"https://sports.core.api.espn.com/v2/sports/soccer/leagues/{slug}/teams/{urllib.parse.quote(tid)}?lang=en&region=us", timeout=8)
+    v = (core or {}).get("venue") or {}
+    if "$ref" in v and not v.get("fullName"):
+        v = fetch_json(v["$ref"], timeout=7) or {}
+    return str(v.get("fullName") or "").strip(), str((v.get("address") or {}).get("city") or "").strip()
+
+
+def fetch_league_teams_directory(league: Dict[str, str]) -> List[Dict[str, str]]:
+    slug = league["slug"]
+    data = fetch_json(f"{ESPN_BASE}/{slug}/teams?limit=200", timeout=10)
+    teams_raw = ((((data or {}).get("sports") or [{}])[0].get("leagues") or [{}])[0].get("teams") or [])
+    out: List[Dict[str, str]] = []
+    for tw in teams_raw:
+        t = tw.get("team") or {}
+        tid = str(t.get("id") or "").strip()
+        name = str(t.get("displayName") or t.get("name") or "").strip()
+        if not tid or not name:
+            continue
+        logos = t.get("logos") or []
+        crest = str((logos[0] or {}).get("href") or "") if logos else f"https://a.espncdn.com/i/teamlogos/soccer/500/{tid}.png"
+        out.append({
+            "team_id": tid,
+            "team_name": name,
+            "league_slug": slug,
+            "league_name": league["name"],
+            "crest_url": crest,
+        })
+    return out
+
+
+def sync_all_club_directories(conn: sqlite3.Connection, now_utc: datetime) -> int:
+    existing: Dict[Tuple[str, str], Tuple[str, str, str, str]] = {}
+    for row in conn.execute("SELECT team_id, league_slug, stadium, roster_json, updated_at, league_name FROM team_rosters"):
+        existing[(str(row[0]), str(row[1]))] = (str(row[2] or ""), str(row[3] or "[]"), str(row[4] or ""), str(row[5] or ""))
+
+    all_entries: List[Dict[str, str]] = []
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futs = [pool.submit(fetch_league_teams_directory, lg) for lg in CLUB_DIRECTORY_LEAGUES]
+        for f in as_completed(futs):
+            try:
+                all_entries.extend(f.result())
+            except Exception:
+                pass
+
+    force = os.environ.get("FORCE_CLUB_SYNC") == "1"
+    seen_domestic_ids = set()
+    to_sync: List[Dict[str, str]] = []
+    for entry in sorted(all_entries, key=lambda e: DOMESTIC_PRIORITY.get(e["league_slug"], 99)):
+        tid = entry["team_id"]
+        slug = entry["league_slug"]
+        # Skip cup duplicate if already present in a higher-priority domestic league
+        if DOMESTIC_PRIORITY.get(slug, 99) > 10 and tid in seen_domestic_ids:
+            continue
+        if DOMESTIC_PRIORITY.get(slug, 99) <= 10:
+            seen_domestic_ids.add(tid)
+
+        ex = existing.get((tid, slug))
+        needs = force or (ex is None)
+        if ex is not None:
+            stadium, rjson, upd_str, lname = ex
+            if not stadium or len(rjson) < 10:
+                needs = True
+            elif not lname:
+                conn.execute("UPDATE team_rosters SET league_name = ? WHERE team_id = ? AND league_slug = ?", (entry["league_name"], tid, slug))
+            else:
+                try:
+                    upd_dt = datetime.strptime(upd_str[:19], "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+                    if (now_utc - upd_dt) > timedelta(hours=36):
+                        needs = True
+                except Exception:
+                    needs = True
+        if needs:
+            to_sync.append(entry)
+
+    def fetch_club_bundle(entry: Dict[str, str]) -> Tuple[Dict[str, str], List[Dict[str, Any]], str, str]:
+        tid = entry["team_id"]
+        slug = entry["league_slug"]
+        squad = fetch_team_roster_cached(slug, tid)
+        stadium, city = fetch_team_home_stadium(slug, tid)
+        return entry, squad[:45], stadium, city
+
+    synced = 0
+    if to_sync:
+        with ThreadPoolExecutor(max_workers=14) as pool:
+            for entry, squad, stadium, city in pool.map(fetch_club_bundle, to_sync):
+                # Keep existing roster if temporary timeout returned empty
+                ex = existing.get((entry["team_id"], entry["league_slug"]))
+                final_squad_json = json.dumps(squad, ensure_ascii=False) if squad else (ex[1] if ex else "[]")
+                final_stadium = stadium or (ex[0] if ex else "")
+                conn.execute(
+                    """
+                    INSERT INTO team_rosters (team_id, team_name, league_slug, league_name, crest_url, stadium, stadium_city, roster_json, updated_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+                    ON CONFLICT(team_id, league_slug) DO UPDATE SET
+                        team_name = excluded.team_name,
+                        league_name = excluded.league_name,
+                        crest_url = CASE WHEN excluded.crest_url != '' THEN excluded.crest_url ELSE team_rosters.crest_url END,
+                        stadium = CASE WHEN excluded.stadium != '' THEN excluded.stadium ELSE team_rosters.stadium END,
+                        stadium_city = CASE WHEN excluded.stadium_city != '' THEN excluded.stadium_city ELSE team_rosters.stadium_city END,
+                        roster_json = CASE WHEN length(excluded.roster_json) > 5 THEN excluded.roster_json ELSE team_rosters.roster_json END,
+                        updated_at = CURRENT_TIMESTAMP
+                    """,
+                    (
+                        entry["team_id"],
+                        entry["team_name"],
+                        entry["league_slug"],
+                        entry["league_name"],
+                        entry["crest_url"],
+                        final_stadium,
+                        city,
+                        final_squad_json,
+                    ),
+                )
+                synced += 1
+    conn.commit()
+    return synced
+
 def main() -> None:
     init_and_migrate_db(DB_PATH)
     now_utc = datetime.now(timezone.utc)
@@ -719,15 +891,16 @@ def main() -> None:
                 if tid and tsquad:
                     conn.execute(
                         """
-                        INSERT INTO team_rosters (team_id, team_name, league_slug, crest_url, roster_json, updated_at)
-                        VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+                        INSERT INTO team_rosters (team_id, team_name, league_slug, league_name, crest_url, roster_json, updated_at)
+                        VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
                         ON CONFLICT(team_id, league_slug) DO UPDATE SET
                             team_name = excluded.team_name,
-                            crest_url = excluded.crest_url,
+                            league_name = COALESCE(NULLIF(excluded.league_name, ''), team_rosters.league_name),
+                            crest_url = CASE WHEN excluded.crest_url != '' THEN excluded.crest_url ELSE team_rosters.crest_url END,
                             roster_json = excluded.roster_json,
                             updated_at = CURRENT_TIMESTAMP
                         """,
-                        (tid, tname, lg["slug"], tcrest, json.dumps(tsquad, ensure_ascii=False)),
+                        (tid, tname, lg["slug"], lg["name"], tcrest, json.dumps(tsquad, ensure_ascii=False)),
                     )
 
             h_xg, h_xga, h_src = lookup_team_xg(h_name, xg_index)
@@ -825,6 +998,7 @@ def main() -> None:
             )
 
         conn.commit()
+        clubs_synced = sync_all_club_directories(conn, now_utc)
         conn.execute("PRAGMA wal_checkpoint(TRUNCATE);")
         total_cache_teams = conn.execute("SELECT COUNT(*) FROM cache_xg").fetchone()[0]
         total_hist_rows = conn.execute("SELECT COUNT(*) FROM historial_equipos").fetchone()[0]
@@ -847,23 +1021,36 @@ def main() -> None:
             )
         ]
 
+        league_name_map = {lg["slug"]: lg["name"] for lg in TARGET_LEAGUES}
+        seen_team_ids = set()
+        raw_roster_rows = list(conn.execute(
+            "SELECT team_id, team_name, league_slug, league_name, crest_url, stadium, stadium_city, roster_json, updated_at FROM team_rosters"
+        ))
+        raw_roster_rows.sort(key=lambda r: (DOMESTIC_PRIORITY.get(str(r[2]), 50), str(r[1]).lower()))
         roster_export = []
-        for r in conn.execute(
-            "SELECT team_id, team_name, league_slug, crest_url, roster_json, updated_at FROM team_rosters ORDER BY updated_at DESC LIMIT 120"
-        ):
+        for r in raw_roster_rows:
+            tid_s = str(r[0])
+            slug_s = str(r[2])
+            if tid_s in seen_team_ids:
+                continue
+            seen_team_ids.add(tid_s)
             try:
-                roster_export.append(
-                    {
-                        "teamId": r[0],
-                        "teamName": r[1],
-                        "leagueSlug": r[2],
-                        "crestUrl": r[3],
-                        "players": json.loads(r[4]),
-                        "updatedAt": r[5],
-                    }
-                )
+                players_list = json.loads(r[7] or "[]")
             except Exception:
-                pass
+                players_list = []
+            roster_export.append(
+                {
+                    "teamId": tid_s,
+                    "teamName": r[1],
+                    "leagueSlug": slug_s,
+                    "leagueName": r[3] or league_name_map.get(slug_s, slug_s),
+                    "crestUrl": r[4] or f"https://a.espncdn.com/i/teamlogos/soccer/500/{tid_s}.png",
+                    "stadium": r[5] or "",
+                    "stadiumCity": r[6] or "",
+                    "players": players_list,
+                    "updatedAt": r[8],
+                }
+            )
 
     status_counts = {
         "live": sum(1 for m in matches_out if m["status"] == "live"),
@@ -872,7 +1059,7 @@ def main() -> None:
     }
 
     payload = {
-        "engineVersion": "3.3.0-ALL-UEFA-NAT-ARG2-BRA",
+        "engineVersion": "3.4.0-ALL-CLUBS-STADIUMS",
         "lastUpdated": datetime.now(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M ART"),
         "statusCounts": status_counts,
         "dbStats": {
@@ -931,7 +1118,8 @@ def main() -> None:
                 "statusCounts": status_counts,
                 "newHistoryRows": new_history_rows,
                 "totalLoggedMatches": total_logged_matches,
-                "totalRosters": total_rosters,
+                "totalRosters": len(roster_export),
+                "clubsSynced": clubs_synced,
             },
             ensure_ascii=False,
         )
