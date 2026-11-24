@@ -1,13 +1,76 @@
 {
-  "lastUpdated": "23/11/2026 11:20 ART",
+  "lastUpdated": "23/11/2026 23:50 ART",
   "dbStats": {
-    "teamsInXgCache": 782,
+    "teamsInXgCache": 791,
     "seasonHistoryRows": 1672,
-    "liveMatchesLogged": 109,
-    "newMatchesIngestedThisRun": 0,
+    "liveMatchesLogged": 116,
+    "newMatchesIngestedThisRun": 7,
     "teamRostersCached": 513
   },
   "recentLoggedMatches": [
+    {
+      "event_id": "401841320",
+      "league": "Brasileirão Série A",
+      "date": "23/11/2026 21:00 ART",
+      "home": "Santos",
+      "away": "Grêmio",
+      "score": "0 - 2",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401841326",
+      "league": "Brasileirão Série A",
+      "date": "23/11/2026 20:00 ART",
+      "home": "Botafogo",
+      "away": "São Paulo",
+      "score": "1 - 1",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401841323",
+      "league": "Brasileirão Série A",
+      "date": "23/11/2026 19:30 ART",
+      "home": "Internacional",
+      "away": "Vitória",
+      "score": "2 - 5",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401933756",
+      "league": "Liga Profesional Argentina",
+      "date": "23/11/2026 17:00 ART",
+      "home": "Gimnasia La Plata",
+      "away": "Newell's Old Boys",
+      "score": "4 - 2",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401882802",
+      "league": "LaLiga (España)",
+      "date": "23/11/2026 17:00 ART",
+      "home": "Levante",
+      "away": "Elche",
+      "score": "1 - 1",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401879237",
+      "league": "Premier League (Inglaterra)",
+      "date": "23/11/2026 17:00 ART",
+      "home": "Brentford",
+      "away": "Everton",
+      "score": "4 - 0",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401875009",
+      "league": "Serie A (Italia)",
+      "date": "23/11/2026 16:45 ART",
+      "home": "Monza",
+      "away": "Fiorentina",
+      "score": "3 - 0",
+      "corners": "- / -"
+    },
     {
       "event_id": "401933729",
       "league": "MLS (EE.UU.)",
@@ -484,69 +547,6 @@
       "away": "Norway",
       "score": "2 - 3",
       "corners": "1.0 / 7.0"
-    },
-    {
-      "event_id": "401861191",
-      "league": "UEFA Nations League",
-      "date": "17/11/2026 16:45 ART",
-      "home": "Hungary",
-      "away": "Northern Ireland",
-      "score": "1 - 1",
-      "corners": "5.0 / 4.0"
-    },
-    {
-      "event_id": "401861193",
-      "league": "UEFA Nations League",
-      "date": "17/11/2026 16:45 ART",
-      "home": "Israel",
-      "away": "Austria",
-      "score": "1 - 1",
-      "corners": "5.0 / 8.0"
-    },
-    {
-      "event_id": "401861195",
-      "league": "UEFA Nations League",
-      "date": "17/11/2026 16:45 ART",
-      "home": "Poland",
-      "away": "Sweden",
-      "score": "1 - 1",
-      "corners": "2.0 / 8.0"
-    },
-    {
-      "event_id": "401861192",
-      "league": "UEFA Nations League",
-      "date": "17/11/2026 16:45 ART",
-      "home": "Republic of Ireland",
-      "away": "Kosovo",
-      "score": "3 - 0",
-      "corners": "9.0 / 4.0"
-    },
-    {
-      "event_id": "401861190",
-      "league": "UEFA Nations League",
-      "date": "17/11/2026 16:45 ART",
-      "home": "Ukraine",
-      "away": "Georgia",
-      "score": "1 - 0",
-      "corners": "5.0 / 11.0"
-    },
-    {
-      "event_id": "401861189",
-      "league": "UEFA Nations League",
-      "date": "17/11/2026 16:45 ART",
-      "home": "Wales",
-      "away": "Portugal",
-      "score": "2 - 3",
-      "corners": "- / -"
-    },
-    {
-      "event_id": "401929704",
-      "league": "Concacaf Nations League",
-      "date": "17/11/2026 16:00 ART",
-      "home": "Belize",
-      "away": "Sint Maarten",
-      "score": "1 - 2",
-      "corners": "2.0 / 5.0"
     }
   ],
   "rosters": [
@@ -87867,7 +87867,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "4815",
@@ -88594,7 +88594,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2686",
@@ -90860,7 +90860,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "21300",
@@ -91275,7 +91275,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "182",
@@ -91677,7 +91677,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "184",
@@ -92118,7 +92118,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "183",
@@ -92546,7 +92546,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "8186",
@@ -93646,7 +93646,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "5489",
@@ -95413,7 +95413,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "185",
@@ -95867,7 +95867,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "7385",
@@ -96717,7 +96717,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "4134",
@@ -99067,7 +99067,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "8416",
@@ -99894,7 +99894,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "18966",
@@ -100322,7 +100322,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2670",
@@ -101970,7 +101970,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2684",
@@ -103098,7 +103098,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "189",
@@ -103578,7 +103578,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "17606",
@@ -104058,7 +104058,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "6072",
@@ -104870,7 +104870,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2683",
@@ -105645,7 +105645,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "9723",
@@ -106034,7 +106034,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "4771",
@@ -106373,7 +106373,7 @@
         {
           "id": "401637",
           "number": "77",
-          "position": "D",
+          "position": "M",
           "name": "Ruben Messalles",
           "appearances": 0,
           "totalShots": 0,
@@ -106514,7 +106514,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "190",
@@ -106942,7 +106942,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "22529",
@@ -107331,7 +107331,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "191",
@@ -107772,7 +107772,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "9726",
@@ -108200,7 +108200,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2673",
@@ -109069,7 +109069,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "21812",
@@ -109523,7 +109523,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "7318",
@@ -110003,7 +110003,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "10094",
@@ -111732,7 +111732,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "18995",
@@ -125218,7 +125218,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2980",
@@ -125626,7 +125626,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "570",
@@ -126398,7 +126398,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "436",
@@ -127104,7 +127104,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "4411",
@@ -127446,7 +127446,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "21922",
@@ -129023,7 +129023,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2250",
@@ -130247,7 +130247,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "20024",
@@ -130622,7 +130622,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "1929",
@@ -130986,7 +130986,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "1895",
@@ -131328,7 +131328,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "256",
@@ -131703,7 +131703,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "597",
@@ -132111,7 +132111,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "622",
@@ -132508,7 +132508,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "13083",
@@ -132905,7 +132905,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "11505",
@@ -133313,7 +133313,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2990",
@@ -133666,7 +133666,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "490",
@@ -133768,7 +133768,7 @@
         {
           "id": "241486",
           "number": "4",
-          "position": "D",
+          "position": "M",
           "name": "Christian Makoun",
           "appearances": 4,
           "totalShots": 1,
@@ -133997,7 +133997,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "987",
@@ -134339,7 +134339,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "3362",
@@ -134560,6 +134560,17 @@
           "goalAssists": 0
         },
         {
+          "id": "387224",
+          "number": "12",
+          "position": "F",
+          "name": "Luka Kolar",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
           "id": "195624",
           "number": "3",
           "position": "D",
@@ -134668,20 +134679,9 @@
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
-        },
-        {
-          "id": "387224",
-          "number": "12",
-          "position": "G",
-          "name": "Luka Kolar",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "1010",
@@ -135089,7 +135089,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "435",
@@ -135497,7 +135497,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "617",
@@ -135883,7 +135883,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2790",
@@ -136095,7 +136095,7 @@
         {
           "id": "99685",
           "number": "33",
-          "position": "M",
+          "position": "F",
           "name": "Aboubacar Camara",
           "appearances": 1,
           "totalShots": 0,
@@ -136269,7 +136269,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "3746",
@@ -136666,7 +136666,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "433",
@@ -137052,7 +137052,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "21615",
@@ -137460,7 +137460,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "5807",
@@ -137802,7 +137802,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "11706",
@@ -138122,7 +138122,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "7853",
@@ -138497,7 +138497,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "20710",
@@ -138828,7 +138828,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2994",
@@ -139170,7 +139170,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "10834",
@@ -139490,7 +139490,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "8089",
@@ -139799,7 +139799,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "21943",
@@ -140119,7 +140119,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "909",
@@ -140461,7 +140461,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "7672",
@@ -140825,7 +140825,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "572",
@@ -141178,7 +141178,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "3101",
@@ -141531,7 +141531,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "3024",
@@ -141895,7 +141895,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "489",
@@ -142182,6 +142182,17 @@
           "goalAssists": 0
         },
         {
+          "id": "364293",
+          "number": "-",
+          "position": "F",
+          "name": "Dominik Babic",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
           "id": "3098721",
           "number": "-",
           "position": "F",
@@ -142237,7 +142248,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "262",
@@ -142623,7 +142634,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "20025",
@@ -143009,7 +143020,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "20703",
@@ -143230,6 +143241,17 @@
           "goalAssists": 0
         },
         {
+          "id": "395133",
+          "number": "-",
+          "position": "D",
+          "name": "Gerard Urbina",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
           "id": "219166",
           "number": "14",
           "position": "M",
@@ -143340,7 +143362,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "7922",
@@ -143715,7 +143737,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "3611",
@@ -144090,7 +144112,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2528",
@@ -144399,7 +144421,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "20028",
@@ -144741,7 +144763,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "8169",
@@ -145116,7 +145138,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "17856",
@@ -145403,7 +145425,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "20301",
@@ -145756,7 +145778,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "22281",
@@ -146153,7 +146175,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "443",
@@ -146539,7 +146561,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2290",
@@ -146881,7 +146903,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:16"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "19246",
@@ -147289,7 +147311,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "936",
@@ -147598,7 +147620,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "620",
@@ -147951,7 +147973,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "997",
@@ -148359,7 +148381,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 14:20:15"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "202",
@@ -150174,7 +150196,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2637",
@@ -152624,7 +152646,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2646",
@@ -153765,7 +153787,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "208",
@@ -154371,7 +154393,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "214",
@@ -160581,7 +160603,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2917",
@@ -161970,7 +161992,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "4388",
@@ -162246,7 +162268,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "2405",
@@ -162500,7 +162522,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "203",
@@ -164450,7 +164472,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "210",
@@ -164917,7 +164939,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "21640",
@@ -168080,7 +168102,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "18243",
@@ -171028,7 +171050,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "457",
@@ -173456,7 +173478,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     },
     {
       "teamId": "578",
@@ -174104,7 +174126,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-23 10:17:49"
+      "updatedAt": "2026-11-24 02:50:57"
     }
   ]
 }
