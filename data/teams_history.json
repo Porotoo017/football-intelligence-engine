@@ -1,13 +1,31 @@
 {
-  "lastUpdated": "25/11/2026 08:06 ART",
+  "lastUpdated": "25/11/2026 18:31 ART",
   "dbStats": {
-    "teamsInXgCache": 799,
+    "teamsInXgCache": 801,
     "seasonHistoryRows": 1672,
-    "liveMatchesLogged": 128,
-    "newMatchesIngestedThisRun": 1,
+    "liveMatchesLogged": 130,
+    "newMatchesIngestedThisRun": 2,
     "teamRostersCached": 524
   },
   "recentLoggedMatches": [
+    {
+      "event_id": "401915378",
+      "league": "UEFA Champions League",
+      "date": "25/11/2026 14:45 ART",
+      "home": "Sabah FK",
+      "away": "Barcelona",
+      "score": "1 - 4",
+      "corners": "- / -"
+    },
+    {
+      "event_id": "401915293",
+      "league": "UEFA Champions League",
+      "date": "25/11/2026 14:45 ART",
+      "home": "Slavia Prague",
+      "away": "Villarreal",
+      "score": "0 - 1",
+      "corners": "- / -"
+    },
     {
       "event_id": "401933738",
       "league": "MLS (EE.UU.)",
@@ -528,24 +546,6 @@
       "home": "Barcelona",
       "away": "Servette",
       "score": "6 - 0",
-      "corners": "- / -"
-    },
-    {
-      "event_id": "401916974",
-      "league": "UEFA Champions Femenina",
-      "date": "19/11/2026 17:00 ART",
-      "home": "Benfica",
-      "away": "Roma",
-      "score": "2 - 3",
-      "corners": "- / -"
-    },
-    {
-      "event_id": "401916978",
-      "league": "UEFA Champions Femenina",
-      "date": "19/11/2026 14:45 ART",
-      "home": "Austria Vienna",
-      "away": "Bayern Munich",
-      "score": "0 - 4",
       "corners": "- / -"
     }
   ],
@@ -3327,7 +3327,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "11989",
@@ -7495,7 +7495,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2975",
@@ -15731,7 +15731,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "9747",
@@ -17738,7 +17738,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "10149",
@@ -18433,7 +18433,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "10151",
@@ -19801,7 +19801,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "17352",
@@ -21257,7 +21257,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "6756",
@@ -27399,7 +27399,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "96",
@@ -30995,7 +30995,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "99",
@@ -32065,7 +32065,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "101",
@@ -36808,7 +36808,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "388",
@@ -40890,7 +40890,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "366",
@@ -43140,7 +43140,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2925",
@@ -49107,7 +49107,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "598",
@@ -50872,7 +50872,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "125",
@@ -55296,7 +55296,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "172",
@@ -56642,7 +56642,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3236",
@@ -59753,7 +59753,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "160",
@@ -63107,7 +63107,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "152",
@@ -67575,7 +67575,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3458",
@@ -68490,7 +68490,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "9967",
@@ -70276,7 +70276,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3456",
@@ -78422,7 +78422,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "9966",
@@ -86447,7 +86447,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "6097",
@@ -87757,7 +87757,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "4815",
@@ -88484,7 +88484,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2686",
@@ -90750,7 +90750,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "21300",
@@ -91165,7 +91165,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "182",
@@ -91567,7 +91567,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "184",
@@ -92008,7 +92008,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "183",
@@ -92436,7 +92436,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "8186",
@@ -93536,7 +93536,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "5489",
@@ -95303,7 +95303,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "185",
@@ -95757,7 +95757,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "7385",
@@ -96607,7 +96607,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "4134",
@@ -98957,7 +98957,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "8416",
@@ -99784,7 +99784,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "18966",
@@ -100212,7 +100212,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2670",
@@ -101860,7 +101860,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2684",
@@ -102988,7 +102988,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "189",
@@ -103468,7 +103468,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "17606",
@@ -103948,7 +103948,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "6072",
@@ -104760,7 +104760,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2683",
@@ -105535,7 +105535,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "9723",
@@ -105924,7 +105924,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "4771",
@@ -106404,7 +106404,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "190",
@@ -106832,7 +106832,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "22529",
@@ -107221,7 +107221,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "191",
@@ -107662,7 +107662,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "9726",
@@ -108090,7 +108090,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2673",
@@ -108959,7 +108959,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "21812",
@@ -109413,7 +109413,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "7318",
@@ -109893,7 +109893,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "10094",
@@ -111622,7 +111622,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "18995",
@@ -125528,122 +125528,14 @@
       "stadiumCity": "Brugge",
       "players": [
         {
-          "id": "335201",
-          "number": "7",
-          "position": "F",
-          "name": "Nicolo Tresoldi",
+          "id": "93197",
+          "number": "1",
+          "position": "G",
+          "name": "Yann Sommer",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 14,
-          "shotsOnTarget": 8,
-          "totalGoals": 5,
-          "goalAssists": 0
-        },
-        {
-          "id": "78836",
-          "number": "9",
-          "position": "F",
-          "name": "Carlos Forbs",
-          "appearances": 4,
-          "totalShots": 9,
-          "shotsOnTarget": 5,
-          "totalGoals": 2,
-          "goalAssists": 2
-        },
-        {
-          "id": "255261",
-          "number": "10",
-          "position": "M",
-          "name": "Hugo Vetlesen",
-          "appearances": 4,
-          "totalShots": 4,
-          "shotsOnTarget": 2,
-          "totalGoals": 1,
-          "goalAssists": 1
-        },
-        {
-          "id": "363068",
-          "number": "65",
-          "position": "D",
-          "name": "Joaquin Seys",
-          "appearances": 4,
-          "totalShots": 3,
-          "shotsOnTarget": 2,
-          "totalGoals": 1,
-          "goalAssists": 2
-        },
-        {
-          "id": "360422",
-          "number": "17",
-          "position": "F",
-          "name": "Romeo Vermant",
-          "appearances": 4,
-          "totalShots": 3,
-          "shotsOnTarget": 2,
-          "totalGoals": 1,
-          "goalAssists": 0
-        },
-        {
-          "id": "403592",
-          "number": "11",
-          "position": "F",
-          "name": "Jan Virgili",
-          "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "193849",
-          "number": "20",
-          "position": "M",
-          "name": "Hans Vanaken",
-          "appearances": 4,
-          "totalShots": 4,
-          "shotsOnTarget": 1,
-          "totalGoals": 1,
-          "goalAssists": 0
-        },
-        {
-          "id": "362875",
-          "number": "67",
-          "position": "F",
-          "name": "Mamadou Diakhon",
-          "appearances": 4,
-          "totalShots": 3,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "310325",
-          "number": "8",
-          "position": "M",
-          "name": "Freddie Potts",
-          "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "351373",
-          "number": "64",
-          "position": "D",
-          "name": "Kyriani Sabbe",
-          "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "324419",
-          "number": "80",
-          "position": "M",
-          "name": "Felix Lemarechal",
-          "appearances": 4,
-          "totalShots": 2,
+          "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
@@ -125651,8 +125543,10 @@
         {
           "id": "191222",
           "number": "44",
-          "position": "D",
+          "position": "CD-L",
           "name": "Brandon Mechele",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 1,
           "shotsOnTarget": 0,
@@ -125662,8 +125556,10 @@
         {
           "id": "351301",
           "number": "58",
-          "position": "D",
+          "position": "CD-R",
           "name": "Jorne Spileers",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 3,
           "totalShots": 1,
           "shotsOnTarget": 0,
@@ -125671,14 +125567,133 @@
           "goalAssists": 0
         },
         {
-          "id": "310023",
-          "number": "41",
-          "position": "D",
-          "name": "Hugo Siquet",
+          "id": "363068",
+          "number": "65",
+          "position": "LB",
+          "name": "Joaquin Seys",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 0,
+          "totalShots": 3,
+          "shotsOnTarget": 2,
+          "totalGoals": 1,
+          "goalAssists": 2
+        },
+        {
+          "id": "351373",
+          "number": "64",
+          "position": "RB",
+          "name": "Kyriani Sabbe",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
           "shotsOnTarget": 0,
           "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "255261",
+          "number": "10",
+          "position": "AM",
+          "name": "Hugo Vetlesen",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 4,
+          "shotsOnTarget": 2,
+          "totalGoals": 1,
+          "goalAssists": 1
+        },
+        {
+          "id": "193849",
+          "number": "20",
+          "position": "LM",
+          "name": "Hans Vanaken",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 4,
+          "shotsOnTarget": 1,
+          "totalGoals": 1,
+          "goalAssists": 0
+        },
+        {
+          "id": "310325",
+          "number": "8",
+          "position": "RM",
+          "name": "Freddie Potts",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "335201",
+          "number": "7",
+          "position": "F",
+          "name": "Nicolo Tresoldi",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 14,
+          "shotsOnTarget": 8,
+          "totalGoals": 5,
+          "goalAssists": 0
+        },
+        {
+          "id": "324419",
+          "number": "80",
+          "position": "AM-L",
+          "name": "Felix Lemarechal",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "78836",
+          "number": "9",
+          "position": "AM-R",
+          "name": "Carlos Forbs",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 9,
+          "shotsOnTarget": 5,
+          "totalGoals": 2,
+          "goalAssists": 2
+        },
+        {
+          "id": "403592",
+          "number": "11",
+          "position": "F",
+          "name": "Jan Virgili",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 5,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 1
+        },
+        {
+          "id": "360422",
+          "number": "17",
+          "position": "F",
+          "name": "Romeo Vermant",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 3,
+          "shotsOnTarget": 2,
+          "totalGoals": 1,
           "goalAssists": 0
         },
         {
@@ -125686,51 +125701,9 @@
           "number": "3",
           "position": "D",
           "name": "Lee Han-Beom",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "380662",
-          "number": "16",
-          "position": "M",
-          "name": "Cheveyo Tsawa",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "328745",
-          "number": "39",
-          "position": "F",
-          "name": "Milan Robberechts",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "143970",
-          "number": "90",
-          "position": "D",
-          "name": "Andre Garcia",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "329465",
-          "number": "54",
-          "position": "D",
-          "name": "Samba Coulibaly",
-          "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
@@ -125741,39 +125714,8 @@
           "number": "32",
           "position": "D",
           "name": "Matteo Dams",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "336589",
-          "number": "4",
-          "position": "D",
-          "name": "Joel Ordóñez",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "372316",
-          "number": "82",
-          "position": "D",
-          "name": "Samuel Gomez Van Hoogen",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "3102200",
-          "number": "93",
-          "position": "D",
-          "name": "Wout Verlinden",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -125785,6 +125727,8 @@
           "number": "62",
           "position": "M",
           "name": "Lynnt Audoor",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -125792,32 +125736,12 @@
           "goalAssists": 0
         },
         {
-          "id": "417829",
-          "number": "85",
-          "position": "M",
-          "name": "Tian Nai Koren",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "422970",
-          "number": "86",
-          "position": "M",
-          "name": "Gianluca Okon-Engstler",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "365317",
-          "number": "72",
-          "position": "F",
-          "name": "Jessi Silva",
+          "id": "202101",
+          "number": "29",
+          "position": "G",
+          "name": "Nordin Jackers",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -125829,6 +125753,8 @@
           "number": "77",
           "position": "F",
           "name": "Andrej Vasovic",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -125836,10 +125762,25 @@
           "goalAssists": 0
         },
         {
-          "id": "399864",
-          "number": "27",
+          "id": "328745",
+          "number": "39",
           "position": "F",
-          "name": "Wisdom Mike",
+          "name": "Milan Robberechts",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "371691",
+          "number": "81",
+          "position": "G",
+          "name": "Argus Driessche",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -125847,10 +125788,25 @@
           "goalAssists": 0
         },
         {
-          "id": "93197",
-          "number": "1",
-          "position": "G",
-          "name": "Yann Sommer",
+          "id": "362875",
+          "number": "67",
+          "position": "F",
+          "name": "Mamadou Diakhon",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 3,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "310023",
+          "number": "41",
+          "position": "D",
+          "name": "Hugo Siquet",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -125858,11 +125814,13 @@
           "goalAssists": 0
         },
         {
-          "id": "202101",
-          "number": "29",
-          "position": "G",
-          "name": "Nordin Jackers",
-          "appearances": 0,
+          "id": "380662",
+          "number": "16",
+          "position": "M",
+          "name": "Cheveyo Tsawa",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
@@ -125877,21 +125835,129 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
-          "id": "371691",
-          "number": "81",
-          "position": "G",
-          "name": "Argus Driessche",
+          "id": "143970",
+          "number": "90",
+          "position": "D",
+          "name": "Andre Garcia",
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "329465",
+          "number": "54",
+          "position": "D",
+          "name": "Samba Coulibaly",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "336589",
+          "number": "4",
+          "position": "D",
+          "name": "Joel Ordóñez",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "372316",
+          "number": "82",
+          "position": "D",
+          "name": "Samuel Gomez Van Hoogen",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "3102200",
+          "number": "93",
+          "position": "D",
+          "name": "Wout Verlinden",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "417829",
+          "number": "85",
+          "position": "M",
+          "name": "Tian Nai Koren",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "422970",
+          "number": "86",
+          "position": "M",
+          "name": "Gianluca Okon-Engstler",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "365317",
+          "number": "72",
+          "position": "F",
+          "name": "Jessi Silva",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "399864",
+          "number": "27",
+          "position": "F",
+          "name": "Wisdom Mike",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "437",
@@ -126300,32 +126366,51 @@
       "stadiumCity": "Istanbul",
       "players": [
         {
-          "id": "240209",
-          "number": "19",
-          "position": "F",
-          "name": "Vedat Muriqi",
+          "id": "176948",
+          "number": "31",
+          "position": "G",
+          "name": "Ederson",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 5,
-          "totalGoals": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
           "goalAssists": 0
         },
         {
-          "id": "276221",
-          "number": "11",
-          "position": "F",
-          "name": "Mason Greenwood",
+          "id": "357205",
+          "number": "21",
+          "position": "CD-L",
+          "name": "Kojo Peprah Oppong",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "175195",
+          "number": "37",
+          "position": "CD-R",
+          "name": "Milan Skriniar",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 11,
-          "shotsOnTarget": 4,
-          "totalGoals": 2,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
           "goalAssists": 1
         },
         {
           "id": "320982",
           "number": "3",
-          "position": "D",
+          "position": "LB",
           "name": "Archie Brown",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 4,
           "shotsOnTarget": 3,
@@ -126333,10 +126418,77 @@
           "goalAssists": 1
         },
         {
+          "id": "222670",
+          "number": "27",
+          "position": "RB",
+          "name": "Nélson Semedo",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 2,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 1
+        },
+        {
+          "id": "276221",
+          "number": "11",
+          "position": "AM",
+          "name": "Mason Greenwood",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 11,
+          "shotsOnTarget": 4,
+          "totalGoals": 2,
+          "goalAssists": 1
+        },
+        {
+          "id": "173556",
+          "number": "91",
+          "position": "LM",
+          "name": "N'Golo Kanté",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 1,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "305629",
+          "number": "5",
+          "position": "RM",
+          "name": "Ismail Yüksek",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "240209",
+          "number": "19",
+          "position": "F",
+          "name": "Vedat Muriqi",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 5,
+          "shotsOnTarget": 5,
+          "totalGoals": 1,
+          "goalAssists": 0
+        },
+        {
           "id": "306789",
           "number": "7",
-          "position": "F",
+          "position": "AM-L",
           "name": "Kerem Aktürkoglu",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 3,
           "totalShots": 5,
           "shotsOnTarget": 2,
@@ -126346,8 +126498,10 @@
         {
           "id": "322813",
           "number": "70",
-          "position": "F",
+          "position": "AM-R",
           "name": "Oguz Aydin",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 9,
           "shotsOnTarget": 1,
@@ -126355,167 +126509,15 @@
           "goalAssists": 0
         },
         {
-          "id": "139437",
-          "number": "9",
-          "position": "F",
-          "name": "Romelu Lukaku",
-          "appearances": 4,
-          "totalShots": 3,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
           "id": "311984",
           "number": "28",
           "position": "M",
           "name": "Bartug Elmaz",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 2,
           "totalShots": 3,
           "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "329486",
-          "number": "45",
-          "position": "F",
-          "name": "Nene Dorgeles",
-          "appearances": 2,
-          "totalShots": 3,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "175195",
-          "number": "37",
-          "position": "D",
-          "name": "Milan Skriniar",
-          "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "248676",
-          "number": "6",
-          "position": "M",
-          "name": "Matteo Guendouzi",
-          "appearances": 3,
-          "totalShots": 4,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "211923",
-          "number": "17",
-          "position": "M",
-          "name": "Irfan Can Kahveci",
-          "appearances": 3,
-          "totalShots": 3,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "305629",
-          "number": "5",
-          "position": "M",
-          "name": "Ismail Yüksek",
-          "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "222670",
-          "number": "27",
-          "position": "D",
-          "name": "Nélson Semedo",
-          "appearances": 3,
-          "totalShots": 2,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "159248",
-          "number": "15",
-          "position": "D",
-          "name": "Nathan Aké",
-          "appearances": 3,
-          "totalShots": 1,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "173556",
-          "number": "91",
-          "position": "M",
-          "name": "N'Golo Kanté",
-          "appearances": 3,
-          "totalShots": 1,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "266002",
-          "number": "18",
-          "position": "D",
-          "name": "Mert Müldür",
-          "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "357205",
-          "number": "21",
-          "position": "D",
-          "name": "Kojo Peprah Oppong",
-          "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "290511",
-          "number": "22",
-          "position": "D",
-          "name": "Munir Mercan",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "304866",
-          "number": "24",
-          "position": "D",
-          "name": "Jayden Oosterwolde",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "340186",
-          "number": "14",
-          "position": "D",
-          "name": "Yigit Demir",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
@@ -126524,61 +126526,8 @@
           "number": "77",
           "position": "D",
           "name": "Ognjen Mimovic",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "195821",
-          "number": "10",
-          "position": "M",
-          "name": "Marco Asensio",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "261302",
-          "number": "8",
-          "position": "M",
-          "name": "Mert Yandas",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "416476",
-          "number": "54",
-          "position": "F",
-          "name": "Alaettin Ekici",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "176948",
-          "number": "31",
-          "position": "G",
-          "name": "Ederson",
-          "appearances": 4,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "124880",
-          "number": "34",
-          "position": "G",
-          "name": "Mert Günok",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -126590,8 +126539,114 @@
           "number": "13",
           "position": "G",
           "name": "Tarik Cetin",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "266002",
+          "number": "18",
+          "position": "D",
+          "name": "Mert Müldür",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "340186",
+          "number": "14",
+          "position": "D",
+          "name": "Yigit Demir",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "290511",
+          "number": "22",
+          "position": "D",
+          "name": "Munir Mercan",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "124880",
+          "number": "34",
+          "position": "G",
+          "name": "Mert Günok",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "139437",
+          "number": "9",
+          "position": "F",
+          "name": "Romelu Lukaku",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 3,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "329486",
+          "number": "45",
+          "position": "F",
+          "name": "Nene Dorgeles",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 3,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "248676",
+          "number": "6",
+          "position": "M",
+          "name": "Matteo Guendouzi",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 4,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "211923",
+          "number": "17",
+          "position": "M",
+          "name": "Irfan Can Kahveci",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 3,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
@@ -126605,10 +126660,77 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "159248",
+          "number": "15",
+          "position": "D",
+          "name": "Nathan Aké",
+          "appearances": 3,
+          "totalShots": 1,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "304866",
+          "number": "24",
+          "position": "D",
+          "name": "Jayden Oosterwolde",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "195821",
+          "number": "10",
+          "position": "M",
+          "name": "Marco Asensio",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "261302",
+          "number": "8",
+          "position": "M",
+          "name": "Mert Yandas",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "416476",
+          "number": "54",
+          "position": "F",
+          "name": "Alaettin Ekici",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "432",
@@ -127712,78 +127834,66 @@
       "stadiumCity": "London",
       "players": [
         {
-          "id": "359420",
-          "number": "30",
-          "position": "M",
-          "name": "Alisson Santana",
+          "id": "276081",
+          "number": "31",
+          "position": "G",
+          "name": "Dmytro Riznyk",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 8,
-          "shotsOnTarget": 2,
-          "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "382379",
-          "number": "77",
-          "position": "M",
-          "name": "Gleiker Mendoza",
-          "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 2,
-          "totalGoals": 2,
-          "goalAssists": 0
-        },
-        {
-          "id": "361629",
-          "number": "11",
-          "position": "M",
-          "name": "Newertton",
-          "appearances": 4,
-          "totalShots": 4,
-          "shotsOnTarget": 2,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "253821",
-          "number": "10",
-          "position": "M",
-          "name": "Pedrinho",
-          "appearances": 2,
-          "totalShots": 2,
-          "shotsOnTarget": 2,
-          "totalGoals": 1,
-          "goalAssists": 0
-        },
-        {
-          "id": "361432",
-          "number": "9",
-          "position": "F",
-          "name": "Kauã Elias",
-          "appearances": 4,
-          "totalShots": 8,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "313078",
-          "number": "13",
-          "position": "D",
-          "name": "Pedrinho",
-          "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
         {
           "id": "226181",
           "number": "22",
-          "position": "D",
+          "position": "CD-L",
           "name": "Mykola Matviyenko",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 3,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "276070",
+          "number": "5",
+          "position": "CD-R",
+          "name": "Valeriy Bondar",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 1,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "235680",
+          "number": "29",
+          "position": "DM",
+          "name": "Yehor Nazaryna",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 1,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "313078",
+          "number": "13",
+          "position": "LB",
+          "name": "Pedrinho",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 5,
           "shotsOnTarget": 1,
           "totalGoals": 0,
           "goalAssists": 0
@@ -127791,8 +127901,10 @@
         {
           "id": "307928",
           "number": "17",
-          "position": "D",
+          "position": "RB",
           "name": "Vinícius Tobias",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 2,
           "shotsOnTarget": 1,
@@ -127800,43 +127912,12 @@
           "goalAssists": 0
         },
         {
-          "id": "276070",
-          "number": "5",
-          "position": "D",
-          "name": "Valeriy Bondar",
-          "appearances": 4,
-          "totalShots": 1,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "382970",
-          "number": "14",
-          "position": "M",
-          "name": "Isaque",
-          "appearances": 4,
-          "totalShots": 1,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 2
-        },
-        {
-          "id": "338311",
-          "number": "27",
-          "position": "M",
-          "name": "Oleh Ocheretko",
-          "appearances": 4,
-          "totalShots": 3,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
           "id": "314851",
           "number": "6",
-          "position": "M",
+          "position": "CM-L",
           "name": "Marlon Gomes",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 2,
           "shotsOnTarget": 0,
@@ -127844,21 +127925,51 @@
           "goalAssists": 0
         },
         {
-          "id": "235680",
-          "number": "29",
-          "position": "M",
-          "name": "Yehor Nazaryna",
-          "appearances": 3,
-          "totalShots": 1,
+          "id": "338311",
+          "number": "27",
+          "position": "CM-R",
+          "name": "Oleh Ocheretko",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 3,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
+        },
+        {
+          "id": "361629",
+          "number": "11",
+          "position": "LM",
+          "name": "Newertton",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 4,
+          "shotsOnTarget": 2,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "359420",
+          "number": "30",
+          "position": "RM",
+          "name": "Alisson Santana",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 8,
+          "shotsOnTarget": 2,
+          "totalGoals": 0,
+          "goalAssists": 1
         },
         {
           "id": "268019",
           "number": "2",
-          "position": "D",
+          "position": "F",
           "name": "Lassina Traoré",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 3,
           "totalShots": 1,
           "shotsOnTarget": 0,
@@ -127866,87 +127977,12 @@
           "goalAssists": 0
         },
         {
-          "id": "383068",
-          "number": "37",
+          "id": "380420",
+          "number": "24",
           "position": "M",
-          "name": "Lucas Ferreira",
-          "appearances": 3,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "396504",
-          "number": "49",
-          "position": "F",
-          "name": "Luca Meirelles",
-          "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "326670",
-          "number": "8",
-          "position": "M",
-          "name": "Dmytro Kryskiv",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "417344",
-          "number": "99",
-          "position": "M",
-          "name": "Bruninho",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "200651",
-          "number": "4",
-          "position": "D",
-          "name": "Marlon",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "289554",
-          "number": "16",
-          "position": "D",
-          "name": "Irakli Azarovi",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "314433",
-          "number": "18",
-          "position": "D",
-          "name": "Alaa Ghram",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "341774",
-          "number": "-",
-          "position": "D",
-          "name": "Alan Matturro",
+          "name": "Viktor Tsukanov",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -127958,6 +127994,8 @@
           "number": "20",
           "position": "M",
           "name": "Oleksandr Karavaev",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -127965,43 +128003,38 @@
           "goalAssists": 0
         },
         {
-          "id": "345648",
-          "number": "7",
-          "position": "M",
-          "name": "Eguinaldo",
-          "appearances": 0,
+          "id": "396504",
+          "number": "49",
+          "position": "F",
+          "name": "Luca Meirelles",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
         {
-          "id": "365817",
-          "number": "68",
+          "id": "326670",
+          "number": "8",
           "position": "M",
-          "name": "Prosper Obah",
-          "appearances": 0,
+          "name": "Dmytro Kryskiv",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
         {
-          "id": "380420",
-          "number": "24",
-          "position": "M",
-          "name": "Viktor Tsukanov",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "420713",
-          "number": "-",
-          "position": "M",
-          "name": "Denys Smetana",
+          "id": "314433",
+          "number": "18",
+          "position": "D",
+          "name": "Alaa Ghram",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -128013,6 +128046,8 @@
           "number": "25",
           "position": "F",
           "name": "Gabriel Teixeira",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -128020,10 +128055,12 @@
           "goalAssists": 0
         },
         {
-          "id": "417559",
-          "number": "-",
-          "position": "F",
-          "name": "Ryan Roberto",
+          "id": "289554",
+          "number": "16",
+          "position": "D",
+          "name": "Irakli Azarovi",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -128031,22 +128068,65 @@
           "goalAssists": 0
         },
         {
-          "id": "276081",
-          "number": "31",
-          "position": "G",
-          "name": "Dmytro Riznyk",
+          "id": "365817",
+          "number": "68",
+          "position": "M",
+          "name": "Prosper Obah",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "200651",
+          "number": "4",
+          "position": "D",
+          "name": "Marlon",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "382970",
+          "number": "14",
+          "position": "M",
+          "name": "Isaque",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
+          "totalShots": 1,
+          "shotsOnTarget": 1,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 2
         },
         {
           "id": "323228",
           "number": "23",
           "position": "G",
           "name": "Kiril Fesiun",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "417344",
+          "number": "99",
+          "position": "M",
+          "name": "Bruninho",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
@@ -128061,7 +128141,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "407170",
@@ -128072,10 +128154,116 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "341774",
+          "number": "-",
+          "position": "D",
+          "name": "Alan Matturro",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "253821",
+          "number": "10",
+          "position": "M",
+          "name": "Pedrinho",
+          "appearances": 2,
+          "totalShots": 2,
+          "shotsOnTarget": 2,
+          "totalGoals": 1,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "345648",
+          "number": "7",
+          "position": "M",
+          "name": "Eguinaldo",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "382379",
+          "number": "77",
+          "position": "M",
+          "name": "Gleiker Mendoza",
+          "appearances": 4,
+          "totalShots": 5,
+          "shotsOnTarget": 2,
+          "totalGoals": 2,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "383068",
+          "number": "37",
+          "position": "M",
+          "name": "Lucas Ferreira",
+          "appearances": 3,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "420713",
+          "number": "-",
+          "position": "M",
+          "name": "Denys Smetana",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "361432",
+          "number": "9",
+          "position": "F",
+          "name": "Kauã Elias",
+          "appearances": 4,
+          "totalShots": 8,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "417559",
+          "number": "-",
+          "position": "F",
+          "name": "Ryan Roberto",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "494",
@@ -128903,47 +129091,29 @@
       "stadiumCity": "Lisbon",
       "players": [
         {
-          "id": "272722",
-          "number": "97",
-          "position": "F",
-          "name": "Luis Suárez",
-          "appearances": 4,
-          "totalShots": 15,
-          "shotsOnTarget": 7,
-          "totalGoals": 4,
-          "goalAssists": 0
-        },
-        {
-          "id": "386592",
-          "number": "77",
-          "position": "M",
-          "name": "Issa Doumbia",
-          "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 2,
-          "totalGoals": 2,
-          "goalAssists": 0
-        },
-        {
-          "id": "287025",
-          "number": "20",
-          "position": "M",
-          "name": "Maxi Araújo",
-          "appearances": 4,
-          "totalShots": 4,
-          "shotsOnTarget": 2,
+          "id": "177898",
+          "number": "1",
+          "position": "G",
+          "name": "Rui Silva",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
         {
-          "id": "296969",
-          "number": "10",
-          "position": "M",
-          "name": "Geny Catamo",
-          "appearances": 4,
-          "totalShots": 6,
-          "shotsOnTarget": 1,
-          "totalGoals": 1,
+          "id": "105237",
+          "number": "55",
+          "position": "D",
+          "name": "Ibrahima Ba",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
           "goalAssists": 0
         },
         {
@@ -128951,108 +129121,11 @@
           "number": "28",
           "position": "F",
           "name": "Jesse Derry",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 2,
           "totalShots": 3,
           "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "290590",
-          "number": "72",
-          "position": "D",
-          "name": "Eduardo Quaresma",
-          "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "392622",
-          "number": "8",
-          "position": "M",
-          "name": "João Simões",
-          "appearances": 3,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "331426",
-          "number": "5",
-          "position": "M",
-          "name": "Sergi Altimira",
-          "appearances": 4,
-          "totalShots": 1,
-          "shotsOnTarget": 1,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "287494",
-          "number": "17",
-          "position": "M",
-          "name": "Rodrigo Zalazar",
-          "appearances": 2,
-          "totalShots": 1,
-          "shotsOnTarget": 1,
-          "totalGoals": 1,
-          "goalAssists": 0
-        },
-        {
-          "id": "328535",
-          "number": "19",
-          "position": "F",
-          "name": "Nestory Irankunda",
-          "appearances": 2,
-          "totalShots": 3,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "355408",
-          "number": "4",
-          "position": "M",
-          "name": "Silas Andersen",
-          "appearances": 3,
-          "totalShots": 2,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "304106",
-          "number": "25",
-          "position": "D",
-          "name": "Gonçalo Inácio",
-          "appearances": 4,
-          "totalShots": 1,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "361429",
-          "number": "31",
-          "position": "F",
-          "name": "Luis Guilherme",
-          "appearances": 3,
-          "totalShots": 1,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "333209",
-          "number": "22",
-          "position": "D",
-          "name": "Iván Fresneda",
-          "appearances": 4,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
@@ -129061,6 +129134,8 @@
           "number": "7",
           "position": "F",
           "name": "Fotis Ioannidis",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -129068,43 +129143,12 @@
           "goalAssists": 0
         },
         {
-          "id": "414123",
-          "number": "58",
-          "position": "F",
-          "name": "Flávio Gonçalves",
-          "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "300514",
-          "number": "13",
-          "position": "D",
-          "name": "Georgios Vagiannidis",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "314473",
-          "number": "6",
-          "position": "D",
-          "name": "Zeno Debast",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "414124",
-          "number": "70",
-          "position": "D",
-          "name": "Salvador Blopa",
+          "id": "398054",
+          "number": "73",
+          "position": "M",
+          "name": "Eduardo Felicíssimo",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 1,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -129116,6 +129160,8 @@
           "number": "21",
           "position": "M",
           "name": "Pedro Lima",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 1,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -129123,10 +129169,12 @@
           "goalAssists": 0
         },
         {
-          "id": "398054",
-          "number": "73",
-          "position": "M",
-          "name": "Eduardo Felicíssimo",
+          "id": "300514",
+          "number": "13",
+          "position": "D",
+          "name": "Georgios Vagiannidis",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 1,
           "totalShots": 0,
           "shotsOnTarget": 0,
@@ -129134,145 +129182,15 @@
           "goalAssists": 0
         },
         {
-          "id": "105237",
-          "number": "55",
-          "position": "D",
-          "name": "Ibrahima Ba",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "124204",
-          "number": "11",
-          "position": "D",
-          "name": "Nuno Santos",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "394429",
-          "number": "95",
-          "position": "D",
-          "name": "Lucas Taibo",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "403413",
-          "number": "18",
-          "position": "D",
-          "name": "Moncef Zekri",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "416643",
-          "number": "50",
-          "position": "D",
-          "name": "Rodrigo Dias",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "309478",
-          "number": "40",
+          "id": "392622",
+          "number": "8",
           "position": "M",
-          "name": "Mateo Tanlongo",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "364672",
-          "number": "96",
-          "position": "M",
-          "name": "Samuel Justo",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "349812",
-          "number": "78",
-          "position": "F",
-          "name": "Mauro Couto",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "380529",
-          "number": "9",
-          "position": "F",
-          "name": "Rafael Nel",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "403524",
-          "number": "76",
-          "position": "F",
-          "name": "Rodrigo Rodrigues",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "3124013",
-          "number": "87",
-          "position": "F",
-          "name": "Paulo Yanick Moreno Vieira Sanches Cardoso",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "177898",
-          "number": "1",
-          "position": "G",
-          "name": "Rui Silva",
-          "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "332352",
-          "number": "30",
-          "position": "G",
-          "name": "Kaique",
-          "appearances": 2,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
+          "name": "João Simões",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
           "totalGoals": 0,
           "goalAssists": 0
         },
@@ -129281,8 +129199,192 @@
           "number": "41",
           "position": "G",
           "name": "Diego Callai",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 0,
           "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "414123",
+          "number": "58",
+          "position": "F",
+          "name": "Flávio Gonçalves",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "287494",
+          "number": "17",
+          "position": "M",
+          "name": "Rodrigo Zalazar",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 1,
+          "shotsOnTarget": 1,
+          "totalGoals": 1,
+          "goalAssists": 0
+        },
+        {
+          "id": "328535",
+          "number": "19",
+          "position": "F",
+          "name": "Nestory Irankunda",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 3,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 1
+        },
+        {
+          "id": "332352",
+          "number": "30",
+          "position": "G",
+          "name": "Kaique",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 2,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "290590",
+          "number": "72",
+          "position": "CD",
+          "name": "Eduardo Quaresma",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "304106",
+          "number": "25",
+          "position": "CD-L",
+          "name": "Gonçalo Inácio",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 1,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "333209",
+          "number": "22",
+          "position": "CD-R",
+          "name": "Iván Fresneda",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "331426",
+          "number": "5",
+          "position": "SW",
+          "name": "Sergi Altimira",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 1,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "386592",
+          "number": "77",
+          "position": "CM-L",
+          "name": "Issa Doumbia",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 5,
+          "shotsOnTarget": 2,
+          "totalGoals": 2,
+          "goalAssists": 0
+        },
+        {
+          "id": "355408",
+          "number": "4",
+          "position": "CM-R",
+          "name": "Silas Andersen",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 2,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 1
+        },
+        {
+          "id": "287025",
+          "number": "20",
+          "position": "LM",
+          "name": "Maxi Araújo",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 4,
+          "shotsOnTarget": 2,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "296969",
+          "number": "10",
+          "position": "RM",
+          "name": "Geny Catamo",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 6,
+          "shotsOnTarget": 1,
+          "totalGoals": 1,
+          "goalAssists": 0
+        },
+        {
+          "id": "272722",
+          "number": "97",
+          "position": "CF-L",
+          "name": "Luis Suárez",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 15,
+          "shotsOnTarget": 7,
+          "totalGoals": 4,
+          "goalAssists": 0
+        },
+        {
+          "id": "361429",
+          "number": "31",
+          "position": "CF-R",
+          "name": "Luis Guilherme",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 1,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
@@ -129296,10 +129398,168 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "124204",
+          "number": "11",
+          "position": "D",
+          "name": "Nuno Santos",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "314473",
+          "number": "6",
+          "position": "D",
+          "name": "Zeno Debast",
+          "appearances": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "394429",
+          "number": "95",
+          "position": "D",
+          "name": "Lucas Taibo",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "403413",
+          "number": "18",
+          "position": "D",
+          "name": "Moncef Zekri",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "414124",
+          "number": "70",
+          "position": "D",
+          "name": "Salvador Blopa",
+          "appearances": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "416643",
+          "number": "50",
+          "position": "D",
+          "name": "Rodrigo Dias",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "309478",
+          "number": "40",
+          "position": "M",
+          "name": "Mateo Tanlongo",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "364672",
+          "number": "96",
+          "position": "M",
+          "name": "Samuel Justo",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "349812",
+          "number": "78",
+          "position": "F",
+          "name": "Mauro Couto",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "380529",
+          "number": "9",
+          "position": "F",
+          "name": "Rafael Nel",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "403524",
+          "number": "76",
+          "position": "F",
+          "name": "Rodrigo Rodrigues",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "3124013",
+          "number": "87",
+          "position": "F",
+          "name": "Paulo Yanick Moreno Vieira Sanches Cardoso",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "510",
@@ -129311,54 +129571,38 @@
       "stadiumCity": "Stavanger",
       "players": [
         {
-          "id": "164279",
-          "number": "10",
-          "position": "F",
-          "name": "Zlatko Tripic",
-          "appearances": 4,
-          "totalShots": 10,
-          "shotsOnTarget": 5,
-          "totalGoals": 2,
-          "goalAssists": 3
-        },
-        {
-          "id": "9167",
-          "number": "20",
-          "position": "F",
-          "name": "Peter Christiansen",
-          "appearances": 4,
-          "totalShots": 8,
-          "shotsOnTarget": 4,
-          "totalGoals": 2,
-          "goalAssists": 1
-        },
-        {
-          "id": "239925",
-          "number": "22",
-          "position": "F",
-          "name": "Erik Botheim",
-          "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 2,
-          "totalGoals": 2,
-          "goalAssists": 1
-        },
-        {
-          "id": "280963",
-          "number": "7",
-          "position": "M",
-          "name": "Kristoffer Askildsen",
-          "appearances": 4,
-          "totalShots": 5,
-          "shotsOnTarget": 1,
+          "id": "304956",
+          "number": "30",
+          "position": "G",
+          "name": "Lubomir Belko",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 1
+          "goalAssists": 0
+        },
+        {
+          "id": "303281",
+          "number": "25",
+          "position": "CD-L",
+          "name": "Henrik Falchener",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 3,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
+          "totalGoals": 1,
+          "goalAssists": 0
         },
         {
           "id": "286826",
           "number": "6",
-          "position": "D",
+          "position": "CD-R",
           "name": "Gianni Stensness",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 4,
           "shotsOnTarget": 1,
@@ -129368,8 +129612,10 @@
         {
           "id": "303977",
           "number": "5",
-          "position": "D",
+          "position": "LB",
           "name": "Henrik Heggheim",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 2,
           "shotsOnTarget": 1,
@@ -129377,10 +129623,90 @@
           "goalAssists": 0
         },
         {
+          "id": "303105",
+          "number": "2",
+          "position": "RB",
+          "name": "Herman Haugen",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 1,
+          "shotsOnTarget": 1,
+          "totalGoals": 1,
+          "goalAssists": 0
+        },
+        {
+          "id": "392602",
+          "number": "29",
+          "position": "CM",
+          "name": "Tobias Moi",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "320678",
+          "number": "26",
+          "position": "LM",
+          "name": "Simen Kvia-Egeskog",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 2,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "280963",
+          "number": "7",
+          "position": "RM",
+          "name": "Kristoffer Askildsen",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 5,
+          "shotsOnTarget": 1,
+          "totalGoals": 0,
+          "goalAssists": 1
+        },
+        {
+          "id": "239925",
+          "number": "22",
+          "position": "F",
+          "name": "Erik Botheim",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 5,
+          "shotsOnTarget": 2,
+          "totalGoals": 2,
+          "goalAssists": 1
+        },
+        {
+          "id": "164279",
+          "number": "10",
+          "position": "LF",
+          "name": "Zlatko Tripic",
+          "starter": true,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 10,
+          "shotsOnTarget": 5,
+          "totalGoals": 2,
+          "goalAssists": 3
+        },
+        {
           "id": "186172",
           "number": "16",
-          "position": "M",
+          "position": "RF",
           "name": "Henrik Bjørdal",
+          "starter": true,
+          "inMatchSquad": true,
           "appearances": 4,
           "totalShots": 2,
           "shotsOnTarget": 1,
@@ -129388,47 +129714,29 @@
           "goalAssists": 1
         },
         {
-          "id": "320678",
-          "number": "26",
-          "position": "M",
-          "name": "Simen Kvia-Egeskog",
+          "id": "149479",
+          "number": "1",
+          "position": "G",
+          "name": "Arild Østbø",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
         },
         {
-          "id": "392602",
-          "number": "29",
-          "position": "M",
-          "name": "Tobias Moi",
-          "appearances": 4,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
+          "id": "272701",
+          "number": "21",
+          "position": "D",
+          "name": "Anders Baertelsen",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "303281",
-          "number": "25",
-          "position": "D",
-          "name": "Henrik Falchener",
-          "appearances": 3,
-          "totalShots": 2,
-          "shotsOnTarget": 1,
-          "totalGoals": 1,
-          "goalAssists": 0
-        },
-        {
-          "id": "303105",
-          "number": "2",
-          "position": "D",
-          "name": "Herman Haugen",
-          "appearances": 4,
-          "totalShots": 1,
-          "shotsOnTarget": 1,
-          "totalGoals": 1,
           "goalAssists": 0
         },
         {
@@ -129436,8 +129744,23 @@
           "number": "27",
           "position": "D",
           "name": "Jesper Daland",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 3,
           "totalShots": 1,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "380299",
+          "number": "33",
+          "position": "M",
+          "name": "Jakob Segadal Hansen",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
+          "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
@@ -129447,6 +129770,8 @@
           "number": "24",
           "position": "D",
           "name": "Vetle Auklend",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 3,
           "totalShots": 1,
           "shotsOnTarget": 0,
@@ -129454,10 +129779,38 @@
           "goalAssists": 0
         },
         {
+          "id": "186071",
+          "number": "3",
+          "position": "D",
+          "name": "Viljar Vevatne",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "9167",
+          "number": "20",
+          "position": "F",
+          "name": "Peter Christiansen",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 4,
+          "totalShots": 8,
+          "shotsOnTarget": 4,
+          "totalGoals": 2,
+          "goalAssists": 1
+        },
+        {
           "id": "228294",
           "number": "8",
           "position": "M",
           "name": "Joe Bell",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 3,
           "totalShots": 1,
           "shotsOnTarget": 0,
@@ -129469,8 +129822,23 @@
           "number": "23",
           "position": "F",
           "name": "Niklas Fuglestad",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 1,
           "totalShots": 1,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "162495",
+          "number": "14",
+          "position": "F",
+          "name": "Veton Berisha",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
@@ -129480,11 +129848,39 @@
           "number": "19",
           "position": "F",
           "name": "Amin Cosic",
+          "starter": false,
+          "inMatchSquad": true,
           "appearances": 1,
           "totalShots": 1,
           "shotsOnTarget": 0,
           "totalGoals": 0,
           "goalAssists": 0
+        },
+        {
+          "id": "292270",
+          "number": "11",
+          "position": "F",
+          "name": "Romano Postema",
+          "starter": false,
+          "inMatchSquad": true,
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
+          "id": "256889",
+          "number": "12",
+          "position": "G",
+          "name": "Elrend Jacobsen",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "173356",
@@ -129495,40 +129891,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 1
-        },
-        {
-          "id": "186071",
-          "number": "3",
-          "position": "D",
-          "name": "Viljar Vevatne",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "365392",
-          "number": "17",
-          "position": "D",
-          "name": "Essien Bassey",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "380299",
-          "number": "33",
-          "position": "M",
-          "name": "Jakob Segadal Hansen",
-          "appearances": 1,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 1,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "224720",
@@ -129539,18 +129904,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "272701",
-          "number": "21",
-          "position": "D",
-          "name": "Anders Baertelsen",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "287265",
@@ -129561,7 +129917,22 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
+        },
+        {
+          "id": "365392",
+          "number": "17",
+          "position": "D",
+          "name": "Essien Bassey",
+          "appearances": 1,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "3139065",
@@ -129572,7 +129943,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "3139066",
@@ -129583,7 +129956,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "3139067",
@@ -129594,7 +129969,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "423020",
@@ -129605,7 +129982,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "3139064",
@@ -129616,7 +129995,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "3139072",
@@ -129627,18 +130008,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "162495",
-          "number": "14",
-          "position": "F",
-          "name": "Veton Berisha",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "217096",
@@ -129649,18 +130021,9 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "292270",
-          "number": "11",
-          "position": "F",
-          "name": "Romano Postema",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         },
         {
           "id": "420707",
@@ -129671,43 +130034,12 @@
           "totalShots": 0,
           "shotsOnTarget": 0,
           "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "3139068",
-          "number": "51",
-          "position": "F",
-          "name": "Christopher Salvesen-Svenning",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "3139069",
-          "number": "-",
-          "position": "F",
-          "name": "Sondre Bakken",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
-        },
-        {
-          "id": "3139070",
-          "number": "-",
-          "position": "F",
-          "name": "Rasmus Gjelsvik Steigen",
-          "appearances": 0,
-          "totalShots": 0,
-          "shotsOnTarget": 0,
-          "totalGoals": 0,
-          "goalAssists": 0
+          "goalAssists": 0,
+          "starter": false,
+          "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "441",
@@ -130082,7 +130414,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "20024",
@@ -130457,7 +130789,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "1929",
@@ -130821,7 +131153,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "1895",
@@ -131163,7 +131495,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "256",
@@ -131538,7 +131870,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "597",
@@ -131946,7 +132278,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "622",
@@ -132343,7 +132675,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "13083",
@@ -132740,7 +133072,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "11505",
@@ -133148,7 +133480,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2990",
@@ -133501,7 +133833,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "490",
@@ -133832,7 +134164,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "987",
@@ -134174,7 +134506,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3362",
@@ -134516,7 +134848,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "1010",
@@ -134924,7 +135256,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "435",
@@ -135332,7 +135664,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "617",
@@ -135718,7 +136050,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2790",
@@ -135963,7 +136295,7 @@
         {
           "id": "268019",
           "number": "48",
-          "position": "D",
+          "position": "F",
           "name": "Lassina Traoré",
           "appearances": 0,
           "totalShots": 0,
@@ -136104,7 +136436,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3746",
@@ -136501,7 +136833,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "433",
@@ -136887,7 +137219,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "21615",
@@ -137295,7 +137627,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "5807",
@@ -137637,7 +137969,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "11706",
@@ -137957,7 +138289,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "7853",
@@ -138332,7 +138664,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "20710",
@@ -138663,7 +138995,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2994",
@@ -139005,7 +139337,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "10834",
@@ -139325,7 +139657,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "8089",
@@ -139634,7 +139966,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "21943",
@@ -139954,7 +140286,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "909",
@@ -140296,7 +140628,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "7672",
@@ -140660,7 +140992,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "572",
@@ -141013,7 +141345,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3101",
@@ -141366,7 +141698,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3024",
@@ -141730,7 +142062,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "489",
@@ -142083,7 +142415,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "262",
@@ -142469,7 +142801,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "20025",
@@ -142855,7 +143187,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "20703",
@@ -143197,7 +143529,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "7922",
@@ -143572,7 +143904,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "3611",
@@ -143947,7 +144279,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2528",
@@ -144256,7 +144588,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "20028",
@@ -144598,7 +144930,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "8169",
@@ -144973,7 +145305,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "17856",
@@ -145260,7 +145592,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "20301",
@@ -145613,7 +145945,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "22281",
@@ -146010,7 +146342,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "443",
@@ -146396,7 +146728,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2290",
@@ -146705,6 +147037,17 @@
           "goalAssists": 0
         },
         {
+          "id": "5334418",
+          "number": "-",
+          "position": "F",
+          "name": "Novak Pribanović",
+          "appearances": 0,
+          "totalShots": 0,
+          "shotsOnTarget": 0,
+          "totalGoals": 0,
+          "goalAssists": 0
+        },
+        {
           "id": "158174",
           "number": "1",
           "position": "G",
@@ -146738,7 +147081,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "19246",
@@ -147146,7 +147489,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "936",
@@ -147455,7 +147798,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "620",
@@ -147808,7 +148151,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "997",
@@ -148216,7 +148559,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "202",
@@ -150031,7 +150374,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2637",
@@ -152481,7 +152824,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2646",
@@ -153622,7 +153965,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "208",
@@ -154228,7 +154571,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "214",
@@ -160323,7 +160666,7 @@
         {
           "id": "336049",
           "number": "6",
-          "position": "D",
+          "position": "M",
           "name": "Shuto Nakano",
           "starter": false,
           "inMatchSquad": true,
@@ -160438,7 +160781,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2917",
@@ -161827,7 +162170,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "4388",
@@ -162103,7 +162446,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2405",
@@ -162357,7 +162700,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "203",
@@ -164307,7 +164650,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "210",
@@ -164774,7 +165117,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "21640",
@@ -166252,7 +166595,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "476",
@@ -167937,7 +168280,7 @@
           "inMatchSquad": false
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "18243",
@@ -168585,7 +168928,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "2662",
@@ -170885,7 +171228,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "457",
@@ -173313,7 +173656,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 00:32:17"
+      "updatedAt": "2026-11-25 21:31:54"
     },
     {
       "teamId": "578",
@@ -173961,7 +174304,7 @@
           "goalAssists": 0
         }
       ],
-      "updatedAt": "2026-11-25 11:06:05"
+      "updatedAt": "2026-11-25 21:31:54"
     }
   ]
 }
