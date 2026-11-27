@@ -1,9 +1,9 @@
 # Football Intelligence Pro — Reporte en Vivo (UEFA, Selecciones, Primera Nacional, Brasil y Ligas)
 
-- **Última ejecución:** 26/11/2026 22:38 ART
-- **En vivo ahora:** 0 | **Próximos:** 17 | **Recién finalizados:** 94
+- **Última ejecución:** 27/11/2026 07:44 ART
+- **En vivo ahora:** 0 | **Próximos:** 18 | **Recién finalizados:** 93
 - **Equipos en BD histórica (`quant_master.db`):** 858
-- **Partidos reales acumulados:** 176 (+37 nuevos en esta ejecución)
+- **Partidos reales acumulados:** 176 (+0 nuevos en esta ejecución)
 - **Planteles actualizados en caché:** 532
 
 | Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |
@@ -15,6 +15,7 @@
 | LaLiga (España) | 27/11/2026 17:00 ART | Levante (0) vs (0) Racing Santander | Scheduled | Doble Oportunidad: Empate o Racing Santander (X2) | 64% | Roger Brugué (Levante, 2.42 rem/pj · 53% prob. 1+ arco) / Yassir Zabiri (Racing, 2.54 rem/pj · 73% prob. 1+ arco) |
 | Premier League (Inglaterra) | 27/11/2026 17:00 ART | Nottingham Forest (0) vs (0) Chelsea | Scheduled | Doble Oportunidad: Empate o Chelsea (X2) | 68% | Liam Delap (Nottm Forest, 2.8 rem/pj · 32% prob. 1+ arco) / João Pedro (Chelsea, 2.67 rem/pj · 64% prob. 1+ arco) |
 | Primera Nacional (Argentina) | 27/11/2026 19:00 ART | Atlanta (0) vs (0) Ciudad de Bolívar | Scheduled | Doble Oportunidad: Atlanta o Empate (1X) | 65% | Alejandro Quintana (Atlanta, F · 8% prob. 1+ arco) / Guillermo Sánchez (Ciudad Bolívar, F · 8% prob. 1+ arco) |
+| Brasileirão Série A | 27/11/2026 20:00 ART | Fluminense (0) vs (0) Cruzeiro | Scheduled | Doble Oportunidad: Fluminense o Empate (1X) | 69% | Hulk (Fluminense, 2.94 rem/pj · 68% prob. 1+ arco) / Kaio Jorge (Cruzeiro, 2.39 rem/pj · 57% prob. 1+ arco) |
 | Brasileirão Série B | 27/11/2026 20:00 ART | Vila Nova (0) vs (0) Atlético Goianiense | Scheduled | Doble Oportunidad: Vila Nova o Empate (1X) | 67% | Rafael Silva (Vila Nova, 2.2 rem/pj · 69% prob. 1+ arco) / Gustavo Coutinho (Atlético-GO, 2.68 rem/pj · 60% prob. 1+ arco) |
 | Primera Nacional (Argentina) | 27/11/2026 21:00 ART | Deportivo Morón (0) vs (0) Colón (Santa Fe) | Scheduled | Doble Oportunidad: Deportivo Morón o Empate (1X) | 72% | Franco Toloza (Morón, F · 8% prob. 1+ arco) / Ignacio Lagos (Colón SF, F · 8% prob. 1+ arco) |
 | Primera Nacional (Argentina) | 27/11/2026 21:00 ART | Tristán Suárez (0) vs (0) Gimnasia y Tiro (Salta) | Scheduled | Doble Oportunidad: Tristán Suárez o Empate (1X) | 68% | Maximiliano Álvarez (T. Suárez, F · 8% prob. 1+ arco) / Lautaro Gordillo (G y T (Salta), F · 8% prob. 1+ arco) |
@@ -42,4 +43,3 @@
 | MLS (EE.UU.) | 07/11/2026 21:00 ART | San Diego FC (0) vs (1) Sporting Kansas City | FT | Doble Oportunidad: San Diego FC o Empate (1X) | 64% | Marcus Ingvartsen (San Diego, F · 8% prob. 1+ arco) / Stephen Afrifa (Kansas City, CF-L · 8% prob. 1+ arco) |
 | Concacaf Nations League | 17/11/2026 16:00 ART | Belize (1) vs (2) Sint Maarten | FT | Doble Oportunidad: Belize o Empate (1X) | 64% | Nahjib Guerra (Belize, 1.33 rem/pj · 33% prob. 1+ arco) / Gerwin Lake (Sint Maarten, 4.5 rem/pj · 70% prob. 1+ arco) |
 | Concacaf Nations League | 17/11/2026 16:00 ART | Dominica (5) vs (0) Cayman Islands | FT | Doble Oportunidad: Dominica o Empate (1X) | 81% | Reon Cuffy (Dominica, 2.0 rem/pj · 66% prob. 1+ arco) / Jaydon Whittaker (Cayman Isl, 2.0 rem/pj · 20% prob. 1+ arco) |
-| Concacaf Nations League | 17/11/2026 16:00 ART | St. Kitts and Nevis (3) vs (2) Bonaire | FT | Doble Oportunidad: St. Kitts and Nevis o Empate (1X) | 70% | Tiquanny Williams (St Kitts & Nevis, 4.67 rem/pj · 91% prob. 1+ arco) / Myron Bostdorp (Bonaire, 3.17 rem/pj · 72% prob. 1+ arco) |
