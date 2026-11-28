@@ -1,26 +1,14 @@
 # Football Intelligence Pro — Reporte en Vivo (UEFA, Selecciones, Primera Nacional, Brasil y Ligas)
 
-- **Última ejecución:** 27/11/2026 18:00 ART
-- **En vivo ahora:** 6 | **Próximos:** 12 | **Recién finalizados:** 81
-- **Equipos en BD histórica (`quant_master.db`):** 858
-- **Partidos reales acumulados:** 176 (+0 nuevos en esta ejecución)
+- **Última ejecución:** 28/11/2026 00:49 ART
+- **En vivo ahora:** 1 | **Próximos:** 5 | **Recién finalizados:** 88
+- **Equipos en BD histórica (`quant_master.db`):** 864
+- **Partidos reales acumulados:** 188 (+12 nuevos en esta ejecución)
 - **Planteles actualizados en caché:** 532
 
 | Liga | Fecha (ART) | Partido | Estado | Pick Doble Oportunidad | Prob | Top Rematadores |
 |---|---|---|---|---|---|---|
-| Eredivisie (Países Bajos) | 27/11/2026 16:00 ART | FC Groningen (1) vs (1) Willem II | 90'+6' | Doble Oportunidad: FC Groningen o Empate (1X) | 69% | Thom Van Bergen (FC Groningen, 3.92 rem/pj · 80% prob. 1+ arco) / Devin Haen (Willem II, 2.15 rem/pj · 37% prob. 1+ arco) |
-| Bundesliga (Alemania) | 27/11/2026 16:30 ART | Werder Bremen (1) vs (2) Borussia Mönchengladbach | 69' | Doble Oportunidad: Werder Bremen o Empate (1X) | 71% | Niclas Füllkrug (Bremen, 3.8 rem/pj · 91% prob. 1+ arco) / Wael Mohya (Gladbach, 1.5 rem/pj · 35% prob. 1+ arco) |
-| Serie A (Italia) | 27/11/2026 16:45 ART | Venezia (0) vs (0) Bologna | 55' | Doble Oportunidad: Empate o Bologna (X2) | 66% | Akor Adams (Venezia, 2.92 rem/pj · 59% prob. 1+ arco) / Federico Bernardeschi (Bologna, 2.83 rem/pj · 57% prob. 1+ arco) |
-| Ligue 1 (Francia) | 27/11/2026 16:45 ART | Brest (1) vs (0) Paris FC | 57' | Doble Oportunidad: Empate o Paris FC (X2) | 67% | Ludovic Ajorque (Brest, 2.73 rem/pj · 60% prob. 1+ arco) / Lassine Sinayoko (Paris FC, 3.1 rem/pj · 77% prob. 1+ arco) |
-| LaLiga (España) | 27/11/2026 17:00 ART | Levante (1) vs (0) Racing Santander | HT | Doble Oportunidad: Empate o Racing Santander (X2) | 64% | Iván Romero (Levante, 1.85 rem/pj · 57% prob. 1+ arco) / Yassir Zabiri (Racing, 2.54 rem/pj · 73% prob. 1+ arco) |
-| Premier League (Inglaterra) | 27/11/2026 17:00 ART | Nottingham Forest (1) vs (0) Chelsea | HT | Doble Oportunidad: Empate o Chelsea (X2) | 68% | Liam Delap (Nottm Forest, 2.8 rem/pj · 32% prob. 1+ arco) / Morgan Rogers (Chelsea, 2.55 rem/pj · 52% prob. 1+ arco) |
-| Primera Nacional (Argentina) | 27/11/2026 19:00 ART | Atlanta (0) vs (0) Ciudad de Bolívar | Scheduled | Doble Oportunidad: Atlanta o Empate (1X) | 65% | Alejandro Quintana (Atlanta, F · 8% prob. 1+ arco) / Guillermo Sánchez (Ciudad Bolívar, F · 8% prob. 1+ arco) |
-| Brasileirão Série A | 27/11/2026 20:00 ART | Fluminense (0) vs (0) Cruzeiro | Scheduled | Doble Oportunidad: Fluminense o Empate (1X) | 69% | Hulk (Fluminense, 2.94 rem/pj · 68% prob. 1+ arco) / Kaio Jorge (Cruzeiro, 2.39 rem/pj · 57% prob. 1+ arco) |
-| Brasileirão Série B | 27/11/2026 20:00 ART | Vila Nova (0) vs (0) Atlético Goianiense | Scheduled | Doble Oportunidad: Vila Nova o Empate (1X) | 67% | Rafael Silva (Vila Nova, 2.2 rem/pj · 69% prob. 1+ arco) / Gustavo Coutinho (Atlético-GO, 2.68 rem/pj · 60% prob. 1+ arco) |
-| Primera Nacional (Argentina) | 27/11/2026 21:00 ART | Deportivo Morón (0) vs (0) Colón (Santa Fe) | Scheduled | Doble Oportunidad: Deportivo Morón o Empate (1X) | 72% | Franco Toloza (Morón, F · 8% prob. 1+ arco) / Ignacio Lagos (Colón SF, F · 8% prob. 1+ arco) |
-| Primera Nacional (Argentina) | 27/11/2026 21:00 ART | Tristán Suárez (0) vs (0) Gimnasia y Tiro (Salta) | Scheduled | Doble Oportunidad: Tristán Suárez o Empate (1X) | 68% | Maximiliano Álvarez (T. Suárez, F · 8% prob. 1+ arco) / Lautaro Gordillo (G y T (Salta), F · 8% prob. 1+ arco) |
-| MLS (EE.UU.) | 27/11/2026 22:00 ART | Columbus Crew (0) vs (0) Inter Miami CF | Scheduled | Doble Oportunidad: Columbus Crew o Empate (1X) | 82% | Santiago Rodríguez (Columbus, F · 10% prob. 1+ arco) / Lionel Messi (Miami, F · 8% prob. 1+ arco) |
-| MLS (EE.UU.) | 28/11/2026 00:00 ART | Real Salt Lake (0) vs (0) Vancouver Whitecaps | Scheduled | Doble Oportunidad: Empate o Vancouver Whitecaps (X2) | 66% | Saba Lobjanidze (Salt Lake, F · 8% prob. 1+ arco) / Brian White (Vancouver, F · 9% prob. 1+ arco) |
+| MLS (EE.UU.) | 28/11/2026 00:00 ART | Real Salt Lake (0) vs (0) Vancouver Whitecaps | 19' | Doble Oportunidad: Empate o Vancouver Whitecaps (X2) | 66% | Sergi Solans (Salt Lake, F · 8% prob. 1+ arco) / Emmanuel Sabbi (Vancouver, F · 9% prob. 1+ arco) |
 | Copa Libertadores | 28/11/2026 17:00 ART | Palmeiras (0) vs (0) Estudiantes de La Plata | Scheduled | Doble Oportunidad: Empate o Estudiantes de La Plata (X2) | 65% | Jhon Arias (Palmeiras, 2.4 rem/pj · 53% prob. 1+ arco) / Tiago Palacios (Estudiantes, 2.86 rem/pj · 48% prob. 1+ arco) |
 | Liga Profesional Argentina | 28/11/2026 20:00 ART | Vélez Sarsfield (0) vs (0) Independiente | Scheduled | Doble Oportunidad: Vélez Sarsfield o Empate (1X) | 71% | Juan Policella (Vélez , 1.9 rem/pj · 46% prob. 1+ arco) / Iván Morales (Independiente, 1.67 rem/pj · 28% prob. 1+ arco) |
 | Liga Profesional Argentina | 28/11/2026 22:00 ART | Instituto (Córdoba) (0) vs (0) River Plate | Scheduled | Doble Oportunidad: Empate o River Plate (X2) | 72% | Alex Luna (Instituto, 3.0 rem/pj · 51% prob. 1+ arco) / Ángel Correa (River Plate, 3.31 rem/pj · 63% prob. 1+ arco) |
@@ -41,5 +29,17 @@
 | MLS (EE.UU.) | 07/11/2026 21:00 ART | Seattle Sounders FC (2) vs (1) LAFC | FT | Doble Oportunidad: Seattle Sounders FC o Empate (1X) | 69% | Dejan Joveljic (Seattle, F · 10% prob. 1+ arco) / Son Heung-Min (LAFC, F · 8% prob. 1+ arco) |
 | MLS (EE.UU.) | 07/11/2026 21:00 ART | Minnesota United FC (3) vs (1) San Jose Earthquakes | FT | Doble Oportunidad: Minnesota United FC o Empate (1X) | 71% | Kelvin Yeboah (Minnesota, CF-L · 11% prob. 1+ arco) / Preston Judd (San Jose, F · 8% prob. 1+ arco) |
 | MLS (EE.UU.) | 07/11/2026 21:00 ART | San Diego FC (0) vs (1) Sporting Kansas City | FT | Doble Oportunidad: San Diego FC o Empate (1X) | 64% | Marcus Ingvartsen (San Diego, F · 8% prob. 1+ arco) / Stephen Afrifa (Kansas City, CF-L · 8% prob. 1+ arco) |
-| Concacaf Nations League | 17/11/2026 21:00 ART | French Guiana (1) vs (0) St. Vincent and the Grenadines | FT | Doble Oportunidad: French Guiana o Empate (1X) | 71% | Jean Yves Monimofou (French Guiana, 4.0 rem/pj · 63% prob. 1+ arco) / Cornelius Stewart (St. Vincent , 2.5 rem/pj · 42% prob. 1+ arco) |
-| Concacaf Nations League | 17/11/2026 21:00 ART | United States (2) vs (0) Haiti | FT | Doble Oportunidad: United States o Empate (1X) | 74% | Julian Hall (USA, 3.0 rem/pj · 68% prob. 1+ arco) / Wilson Isidor (Haiti, 3.5 rem/pj · 50% prob. 1+ arco) |
+| UEFA Champions Femenina | 19/11/2026 14:45 ART | Austria Vienna (0) vs (4) Bayern Munich | FT | Doble Oportunidad: Empate o Bayern Munich (X2) | 69% | Elisa Pfattner (Vienna, 2.0 rem/pj · 52% prob. 1+ arco) / Klara Bühl (Bayern, 3.4 rem/pj · 58% prob. 1+ arco) |
+| UEFA Champions Femenina | 19/11/2026 14:45 ART | Paris FC (2) vs (1) HB Køge | FT | Doble Oportunidad: Paris FC o Empate (1X) | 73% | Evelyne Viens (Paris FC, 3.2 rem/pj · 71% prob. 1+ arco) / Nadia Nadim (HB Køge, 2.75 rem/pj · 58% prob. 1+ arco) |
+| UEFA Champions Femenina | 19/11/2026 17:00 ART | Arsenal (0) vs (2) OL Lyonnes | FT | Doble Oportunidad: Empate o OL Lyonnes (X2) | 65% | Alessia Russo (Arsenal, 4.6 rem/pj · 59% prob. 1+ arco) / Marie-Antoinette Katoto (Lyonnes, 2.6 rem/pj · 69% prob. 1+ arco) |
+| UEFA Champions Femenina | 19/11/2026 17:00 ART | Barcelona (6) vs (0) Servette | FT | Doble Oportunidad: Barcelona o Empate (1X) | 85% | Clàudia Pina (Barcelona, 5.0 rem/pj · 91% prob. 1+ arco) / Magdalena Sobal (Servette, 1.8 rem/pj · 44% prob. 1+ arco) |
+| UEFA Champions Femenina | 19/11/2026 17:00 ART | Benfica (2) vs (3) Roma | FT | Doble Oportunidad: Empate o Roma (X2) | 73% | Nycole Raysla (Benfica, 1.75 rem/pj · 42% prob. 1+ arco) / Kayleigh Van Dooren (Roma, 2.0 rem/pj · 61% prob. 1+ arco) |
+| MLS (EE.UU.) | 19/11/2026 21:30 ART | Orlando City SC (1) vs (3) FC Cincinnati | FT | Doble Oportunidad: Orlando City SC o Empate (1X) | 73% | Martín Ojeda (Orlando, CF-L · 8% prob. 1+ arco) / Evander (Cincinnati, CF-L · 8% prob. 1+ arco) |
+| MLS (EE.UU.) | 20/11/2026 00:00 ART | Seattle Sounders FC (1) vs (1) Real Salt Lake | FT-Pens | Doble Oportunidad: Seattle Sounders FC o Empate (1X) | 71% | Dejan Joveljic (Seattle, F · 9% prob. 1+ arco) / Sergi Solans (Salt Lake, F · 8% prob. 1+ arco) |
+| MLS (EE.UU.) | 21/11/2026 16:00 ART | New England Revolution (2) vs (0) Philadelphia Union | FT | Doble Oportunidad: New England Revolution o Empate (1X) | 70% | Dor Turgeman (New England, F · 9% prob. 1+ arco) / Bruno Damiani (Philadelphia, CF-L · 8% prob. 1+ arco) |
+| MLS (EE.UU.) | 21/11/2026 18:00 ART | FC Dallas (3) vs (0) Portland Timbers | FT | Doble Oportunidad: FC Dallas o Empate (1X) | 76% | Petar Musa (Dallas, F · 11% prob. 1+ arco) / Vincent Janssen (Portland, F · 8% prob. 1+ arco) |
+| Copa Sudamericana | 21/11/2026 19:30 ART | Atlético-MG (0) vs (2) Boca Juniors | FT | Doble Oportunidad: Empate o Boca Juniors (X2) | 70% | Tomás Cuello (Atlético-MG, 1.78 rem/pj · 40% prob. 1+ arco) / Miguel Merentiel (Boca , 2.56 rem/pj · 48% prob. 1+ arco) |
+| MLS (EE.UU.) | 21/11/2026 20:00 ART | Inter Miami CF (0) vs (3) Columbus Crew | FT | Doble Oportunidad: Empate o Columbus Crew (X2) | 76% | Luis Suárez (Miami, F · 8% prob. 1+ arco) / Gonzalo Tapia (Columbus, F · 9% prob. 1+ arco) |
+| MLS (EE.UU.) | 22/11/2026 18:00 ART | Nashville SC (0) vs (1) FC Cincinnati | FT | Doble Oportunidad: Nashville SC o Empate (1X) | 75% | Hany Mukhtar (Nashville, F · 8% prob. 1+ arco) / Kévin Denkey (Cincinnati, CF-L · 8% prob. 1+ arco) |
+| MLS (EE.UU.) | 22/11/2026 20:30 ART | Chicago Fire FC (1) vs (2) Charlotte FC | FT | Doble Oportunidad: Empate o Charlotte FC (X2) | 65% | Maren Haile-Selassie (Chicago, CF-L · 9% prob. 1+ arco) / Idan Toklomati (Charlotte, CF-L · 9% prob. 1+ arco) |
+| MLS (EE.UU.) | 22/11/2026 22:30 ART | Vancouver Whitecaps (2) vs (0) Real Salt Lake | FT | Doble Oportunidad: Vancouver Whitecaps o Empate (1X) | 74% | Brian White (Vancouver, F · 10% prob. 1+ arco) / Sergi Solans (Salt Lake, F · 8% prob. 1+ arco) |
